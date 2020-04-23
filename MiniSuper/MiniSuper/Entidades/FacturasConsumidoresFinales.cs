@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MiniSuper.Entidades
 {
-    class FacturasConsumidoresFinales
+    public class FacturasConsumidoresFinales
     {
+        public int idFacturaCF { get; set; }
+        public int idCliente { get; set; }
+        public String numeroFactura { get; set; }
+        public int idProducto { get; set; }
+        public String fecha { get; set; }
+        public int cantidad { get; set; }
     }
 }

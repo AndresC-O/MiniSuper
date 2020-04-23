@@ -52,7 +52,11 @@
     <Compile Include="Entidades\Cargos.cs" />
     <Compile Include="Entidades\Categorias.cs" />
     <Compile Include="Entidades\Clientes.cs" />
+    <Compile Include="Entidades\Compras.cs" />
+    <Compile Include="Entidades\ComprasProveedores.cs" />
     <Compile Include="Entidades\Empleados.cs" />
+    <Compile Include="Entidades\FacturasCompras.cs" />
+    <Compile Include="Entidades\FacturasConsumidoresFinales.cs" />
     <Compile Include="Entidades\Productos.cs" />
     <Compile Include="Entidades\Proveedores.cs" />
     <Compile Include="Entidades\Sucursales.cs" />

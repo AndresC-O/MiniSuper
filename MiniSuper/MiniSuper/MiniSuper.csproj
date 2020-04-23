@@ -49,6 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Cargos.cs" />
+    <Compile Include="Entidades\Categorias.cs" />
+    <Compile Include="Entidades\Clientes.cs" />
+    <Compile Include="Entidades\Empleados.cs" />
+    <Compile Include="Entidades\Productos.cs" />
+    <Compile Include="Entidades\Proveedores.cs" />
+    <Compile Include="Entidades\Sucursales.cs" />
     <Compile Include="Loguin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,7 +93,6 @@
   <ItemGroup>
     <Folder Include="Conexion\" />
     <Folder Include="Controladores\" />
-    <Folder Include="Entidades\" />
     <Folder Include="Modelos\" />
     <Folder Include="Vistas\" />
   </ItemGroup>

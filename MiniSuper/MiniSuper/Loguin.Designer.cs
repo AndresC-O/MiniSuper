@@ -1,6 +1,6 @@
 ﻿namespace MiniSuper
 {
-    partial class Form1
+    partial class Loguin
     {
         /// <summary>
         /// Variable del diseñador necesaria.

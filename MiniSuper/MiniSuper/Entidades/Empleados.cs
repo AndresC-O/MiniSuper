@@ -14,7 +14,8 @@ namespace MiniSuper.Entidades
         public int idCargo { get; set; }
         public int idSucursal { get; set; }
         public String dui { get; set; }
-        public String nit { get; set; }
+        public String usuario { get; set; }
+        public String contrasenia { get; set; }
         public String codigoEmpleado { get; set; }
     }
 }

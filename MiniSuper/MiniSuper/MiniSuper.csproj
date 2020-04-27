@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="Entidades\Cargos.cs" />
     <Compile Include="Entidades\Categorias.cs" />
     <Compile Include="Entidades\Clientes.cs" />
@@ -95,7 +96,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Conexion\" />
     <Folder Include="Controladores\" />
     <Folder Include="Modelos\" />
     <Folder Include="Vistas\" />

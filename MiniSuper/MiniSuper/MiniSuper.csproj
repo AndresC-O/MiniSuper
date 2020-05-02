@@ -100,6 +100,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.Cargos.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.Categorias.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.Clientes.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.Compras.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.ComprasProveedores.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.Empleados.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.FacturasCompras.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.FacturasConsumidoresFinales.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.Productos.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.Proveedores.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.Sucursales.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

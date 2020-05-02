@@ -65,5 +65,23 @@ namespace MiniSuper.Modelos
             cn.Close();
             return lista;
         }
+
+        public void Loguin(Empleados e)
+        {
+            IDbConnection cn = Conexion.Conexion.Conectar();
+            DynamicParameters parametros = new DynamicParameters();
+            parametros.Add("@nombre", e.usuario, DbType.String);
+            parametros.Add("@contra", e.contrasenia, DbType.String);
+            cn.Open();
+            cn.Execute("sp_PRUEBA", parametros, commandType: CommandType.StoredProcedure);
+            cn.Close();
+
+            //IDbConnection cn = Conexion.Conexion.Conectar();
+            //String Consulta = "Select usuario, contrasenia from Empleados where usuario = '" + e.usuario +
+            //                  "' and contrasenia ='" + e.contrasenia + "'";
+            //cn.Open();
+            //cn.Execute(Consulta, commandType: CommandType.Text);
+            //cn.Close();
+        }
     }
 }

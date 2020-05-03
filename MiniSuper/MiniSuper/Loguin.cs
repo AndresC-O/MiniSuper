@@ -36,13 +36,31 @@ namespace MiniSuper
                             && em.usuario == usuarioTextBox.Text
                             select em;
 
-                      if (lista.Count() > 0)
-                      {
-                    MessageBox.Show("Funciona");
-                      }
+                if (lista.Count() > 0)
+                {
+                    var cargo = from emp in bd.Empleados
+                                where emp.usuario == usuarioTextBox.Text
+
+                                select new
+                                {
+                                    emp.idCargo
+                                };
+
+                    foreach (var iterar in cargo)
+                    {
+                        if(iterar.idCargo == 1)
+                        {
+                            MessageBox.Show("Funciona, su cargo es: Gerente");
+                        }
+                        else if(iterar.idCargo == 2)
+                        {
+                            MessageBox.Show("Funciona, su cargo es: Cajero");
+                        }
+                    }
+                }
                 else
                 {
-                    MessageBox.Show("No funciona");
+                    MessageBox.Show("El usuario no existe.");
                 }
 
             }

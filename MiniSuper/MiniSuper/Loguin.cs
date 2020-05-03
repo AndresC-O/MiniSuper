@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using MiniSuper.Controladores;
 using MiniSuper.Entidades;
 using MiniSuper.Model;
-
+using MiniSuper.Vistas.Gerente;
 
 namespace MiniSuper
 {
@@ -61,8 +61,10 @@ namespace MiniSuper
                         {
                             if (iterar.idCargo == 1)
                             {
-                                MessageBox.Show("Funciona, su cargo es: Gerente");
-                                Limpiar();
+                                AccesoGerente manager = new AccesoGerente();
+                                manager.Show();
+                                this.Hide();
+                                //Limpiar();
                             }
                             else if (iterar.idCargo == 2)
                             {

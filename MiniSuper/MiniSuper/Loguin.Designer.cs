@@ -108,7 +108,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(79, 9);
+            label1.Location = new System.Drawing.Point(80, 9);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(159, 44);
             label1.TabIndex = 0;
@@ -123,7 +123,7 @@
             this.AcceptButton = this.btnAcceder;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 388);
+            this.ClientSize = new System.Drawing.Size(316, 388);
             this.Controls.Add(label1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAcceder);
@@ -146,9 +146,9 @@
 
         private System.Windows.Forms.BindingSource empleadosBindingSource;
         private System.Windows.Forms.TextBox txtContra;
-        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Button btnAcceder;
         private System.Windows.Forms.Button btnSalir;
+        public System.Windows.Forms.TextBox txtUsuario;
     }
 }
 

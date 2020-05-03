@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="976a02b69e2e437cb03e81e8838ecdaa" Name="Diagram1">
+        <EntityTypeShape EntityType="MiniSuperModel.Cargo" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Categoria" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Cliente" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Empleado" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.FacturaCompra" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.FacturaCosumidoresFinale" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Producto" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Proveedore" Width="1.5" PointX="7.5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Sucursale" Width="1.5" PointX="0.75" PointY="12.625" IsExpanded="true" />
+        <AssociationConnector Association="MiniSuperModel.FK__Empleados__idCar__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__Productos__idCat__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__FacturaCo__idCli__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__Empleados__idSuc__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__FacturaCo__idPro__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__FacturaCo__idPro__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__FacturaCo__idPro__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__Productos__idPro__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.Compras" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.ComprasVendedores" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

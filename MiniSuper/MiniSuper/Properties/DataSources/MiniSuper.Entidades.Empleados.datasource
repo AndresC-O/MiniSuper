@@ -9,52 +9,66 @@
    <TypeInfo>MiniSuper.Entidades.Empleados, MiniSuper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
    <TypeUISetting>
       <PropertyUISettings>
+         <PropertyUISetting Name="contrasenia">
+            <ControlSettings>
+               <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+               </ControlSetting>
+            </ControlSettings>
+         </PropertyUISetting>
+         <PropertyUISetting Name="usuario">
+            <ControlSettings>
+               <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+               </ControlSetting>
+            </ControlSettings>
+         </PropertyUISetting>
          <PropertyUISetting Name="apellidosEmpleado">
             <ControlSettings>
                <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-                  <BindableControlInfo Name="[Ninguno]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
                </ControlSetting>
             </ControlSettings>
          </PropertyUISetting>
          <PropertyUISetting Name="codigoEmpleado">
             <ControlSettings>
                <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-                  <BindableControlInfo Name="[Ninguno]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
                </ControlSetting>
             </ControlSettings>
          </PropertyUISetting>
          <PropertyUISetting Name="dui">
             <ControlSettings>
                <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-                  <BindableControlInfo Name="[Ninguno]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
                </ControlSetting>
             </ControlSettings>
          </PropertyUISetting>
          <PropertyUISetting Name="idCargo">
             <ControlSettings>
                <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-                  <BindableControlInfo Name="[Ninguno]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
                </ControlSetting>
             </ControlSettings>
          </PropertyUISetting>
          <PropertyUISetting Name="idEmpleado">
             <ControlSettings>
                <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-                  <BindableControlInfo Name="[Ninguno]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
                </ControlSetting>
             </ControlSettings>
          </PropertyUISetting>
          <PropertyUISetting Name="idSucursal">
             <ControlSettings>
                <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-                  <BindableControlInfo Name="[Ninguno]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
                </ControlSetting>
             </ControlSettings>
          </PropertyUISetting>
          <PropertyUISetting Name="nombresEmpleado">
             <ControlSettings>
                <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-                  <BindableControlInfo Name="[Ninguno]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
                </ControlSetting>
             </ControlSettings>
          </PropertyUISetting>

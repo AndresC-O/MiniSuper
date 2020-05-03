@@ -1,6 +1,4 @@
-﻿using MiniSuper.Controladores;
-using MiniSuper.Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiniSuper.Controladores;
+using MiniSuper.Entidades;
+using MiniSuper.Model;
+
 
 namespace MiniSuper
 {
@@ -19,36 +21,30 @@ namespace MiniSuper
             InitializeComponent();
         }
 
-        CEmpleados cEmp = new CEmpleados();
-
         private void Loguin_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+      
+        private void btnAcceder_Click_1(object sender, EventArgs e)
         {
-            if(txtUsuario.Text.Equals("")|| txtContra.Text.Equals(""))
+            using (MiniSuperEntities bd = new MiniSuperEntities())
             {
-                MessageBox.Show("¡Complete todos los campos \npara iniciar sesión!", "Completar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                Empleados emp = new Empleados();
-                emp.usuario = txtUsuario.Text;
-                emp.contrasenia = txtContra.Text;
+                var lista = from em in bd.Empleados
+                            where em.contrasenia == contraseniaTextBox.Text
+                            && em.usuario == usuarioTextBox.Text
+                            select em;
 
-                empleadosBindingSource.MoveLast();
-                cEmp.Loguin(emp);
-
-                if (empleadosBindingSource.Count > 0)
-                {
-                    MessageBox.Show("SE PUDOOOOOOOOOOOOOOOOOOO");
-                }
+                      if (lista.Count() > 0)
+                      {
+                    MessageBox.Show("Funciona");
+                      }
                 else
                 {
-                    MessageBox.Show("AUN NO CRACK :'v");
+                    MessageBox.Show("No funciona");
                 }
+
             }
         }
     }

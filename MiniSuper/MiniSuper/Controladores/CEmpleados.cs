@@ -31,10 +31,5 @@ namespace MiniSuper.Controladores
         {
             return mEmpleados.ListadoEmpleados();
         }
-
-        public void Loguin(Empleados e)
-        {
-            mEmpleados.Loguin(e);
-        }
     }
 }

@@ -13,6 +13,5 @@ namespace MiniSuper.Entidades
         public int idProveedor { get; set; }
         public int cantidad { get; set; }
         public String Fecha { get; set; }
-        public Double total { get; set; }
     }
 }

@@ -19,6 +19,7 @@ namespace MiniSuper
         public Loguin()
         {
             InitializeComponent();
+            txtContra.UseSystemPasswordChar = true;
         }
 
         private void Loguin_Load(object sender, EventArgs e)
@@ -83,13 +84,26 @@ namespace MiniSuper
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void pbCerrar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Estás seguro que quieres salir?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
-            if(result == DialogResult.OK)
+            if (result == DialogResult.OK)
             {
                 Application.Exit();
+            }
+
+        }
+
+        private void cbVerContra_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbVerContra.CheckState == CheckState.Checked)
+            {
+                txtContra.UseSystemPasswordChar = false;
+            }
+            else if (cbVerContra.CheckState == CheckState.Unchecked)
+            {
+                txtContra.UseSystemPasswordChar = true;
             }
         }
     }

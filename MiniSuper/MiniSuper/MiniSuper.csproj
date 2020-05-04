@@ -144,6 +144,12 @@
     <Compile Include="Vistas\Gerente\AccesoGerente.Designer.cs">
       <DependentUpon>AccesoGerente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Gerente\MenuBotones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Gerente\MenuBotones.Designer.cs">
+      <DependentUpon>MenuBotones.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Loguin.resx">
       <DependentUpon>Loguin.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,9 +161,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Vistas\Gerente\AccesoGerente.resx">
       <DependentUpon>AccesoGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Gerente\MenuBotones.resx">
+      <DependentUpon>MenuBotones.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -205,6 +215,20 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\minimizar.png" />
+    <None Include="Resources\proveedor.png" />
+    <None Include="Resources\empleado.png" />
+    <None Include="Resources\sucursal.png" />
+    <None Include="Resources\producto.png" />
+    <None Include="Resources\categoria.png" />
+    <None Include="Resources\cargos.png" />
+    <None Include="Resources\cajero.png" />
+    <None Include="Resources\Clientes1.png" />
+    <None Include="Resources\Clientes.png" />
+    <None Include="Resources\cerrar sesion.png" />
+    <None Include="Resources\zuperMART.png" />
+    <None Include="Resources\32officeicons-2_89706.png" />
+    <None Include="Resources\cerrar.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

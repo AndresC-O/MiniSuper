@@ -17,6 +17,7 @@ namespace MiniSuper.Vistas.Gerente
         Inventario inv = new Inventario();
         Productos p = new Productos();
         CProducto cp = new CProducto();
+
         public CRUD_Producto()
         {
             InitializeComponent();
@@ -37,8 +38,7 @@ namespace MiniSuper.Vistas.Gerente
         }
 
         private void CRUD_Producto_Load(object sender, EventArgs e)
-        {
-            
+        { 
             productosBindingSource.DataSource = p;
             
             CProveedores cProveedor = new CProveedores();

@@ -60,11 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-<<<<<<< HEAD
             this.panel1.Size = new System.Drawing.Size(320, 800);
-=======
-            this.panel1.Size = new System.Drawing.Size(326, 788);
->>>>>>> 1a9183a6bf2579419d7e0a170d61a9f4166e5363
             this.panel1.TabIndex = 3;
             // 
             // panel3
@@ -73,11 +69,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-<<<<<<< HEAD
             this.panel3.Size = new System.Drawing.Size(320, 40);
-=======
-            this.panel3.Size = new System.Drawing.Size(326, 40);
->>>>>>> 1a9183a6bf2579419d7e0a170d61a9f4166e5363
             this.panel3.TabIndex = 6;
             // 
             // lblHora
@@ -145,11 +137,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(320, 0);
             this.panel2.Name = "panel2";
-<<<<<<< HEAD
             this.panel2.Size = new System.Drawing.Size(1072, 40);
-=======
-            this.panel2.Size = new System.Drawing.Size(1060, 40);
->>>>>>> 1a9183a6bf2579419d7e0a170d61a9f4166e5363
             this.panel2.TabIndex = 5;
             // 
             // pictureBox4

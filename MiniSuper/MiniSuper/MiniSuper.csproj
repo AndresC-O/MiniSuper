@@ -144,6 +144,18 @@
     <Compile Include="Vistas\Gerente\AccesoGerente.Designer.cs">
       <DependentUpon>AccesoGerente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Gerente\CRUD_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Gerente\CRUD_Producto.Designer.cs">
+      <DependentUpon>CRUD_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Gerente\Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Gerente\Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Gerente\MenuBotones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +177,12 @@
     </Compile>
     <EmbeddedResource Include="Vistas\Gerente\AccesoGerente.resx">
       <DependentUpon>AccesoGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Gerente\CRUD_Producto.resx">
+      <DependentUpon>CRUD_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Gerente\Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\MenuBotones.resx">
       <DependentUpon>MenuBotones.cs</DependentUpon>
@@ -205,16 +223,6 @@
     <Folder Include="Vistas\Cajero\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
-      <DependentUpon>Model.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\minimizar.png" />
     <None Include="Resources\proveedor.png" />
     <None Include="Resources\empleado.png" />
@@ -232,6 +240,19 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\salir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

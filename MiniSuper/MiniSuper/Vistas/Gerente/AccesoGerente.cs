@@ -12,6 +12,8 @@ namespace MiniSuper.Vistas.Gerente
 {
     public partial class AccesoGerente : Form
     {
+
+        Loguin lo = new Loguin();
         public AccesoGerente()
         {
             InitializeComponent();
@@ -33,15 +35,15 @@ namespace MiniSuper.Vistas.Gerente
 
             if (result == DialogResult.OK)
             {
-                Loguin loguin = new Loguin();
-                loguin.Show();
+                
+                lo.Show();
                 this.Close();
             }
         }
 
         private void AccesoGerente_Load(object sender, EventArgs e)
         {
-            Loguin lo = new Loguin();
+            
             lblUsuario.Text = lo.txtUsuario.Text;
             lblHora.Text = DateTime.Now.ToShortTimeString();
             MenuBotones b = new MenuBotones();
@@ -67,8 +69,8 @@ namespace MiniSuper.Vistas.Gerente
 
             if (result == DialogResult.OK)
             {
-                Loguin log = new Loguin();
-                log.Show();
+                
+                lo.Show();
                 this.Close();
             }
         }

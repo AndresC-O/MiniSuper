@@ -13,10 +13,10 @@ namespace MiniSuper.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MiniSuperEntities : DbContext
+    public partial class MiniSuperEntities1 : DbContext
     {
-        public MiniSuperEntities()
-            : base("name=MiniSuperEntities")
+        public MiniSuperEntities1()
+            : base("name=MiniSuperEntities1")
         {
         }
     

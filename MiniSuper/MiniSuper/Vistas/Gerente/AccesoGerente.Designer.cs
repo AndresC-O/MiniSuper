@@ -60,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(326, 788);
+            this.panel1.Size = new System.Drawing.Size(320, 800);
             this.panel1.TabIndex = 3;
             // 
             // panel3
@@ -69,7 +69,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(326, 40);
+            this.panel3.Size = new System.Drawing.Size(320, 40);
             this.panel3.TabIndex = 6;
             // 
             // lblHora
@@ -84,7 +84,6 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Enabled = false;
             this.monthCalendar1.Location = new System.Drawing.Point(42, 493);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 4;
@@ -136,9 +135,9 @@
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(326, 0);
+            this.panel2.Location = new System.Drawing.Point(320, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1060, 40);
+            this.panel2.Size = new System.Drawing.Size(1072, 40);
             this.panel2.TabIndex = 5;
             // 
             // pictureBox4
@@ -190,7 +189,6 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblHora;
@@ -199,5 +197,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.Label lblUsuario;
     }
 }

@@ -545,7 +545,7 @@ advertencia 6002: La tabla o vista 'MiniSuper.dbo.ComprasVendedores' no tiene de
           <End Role="FacturaCompras" Type="Self.FacturaCompra" Multiplicity="*" />
           <End Role="Proveedores" Type="Self.Proveedore" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="MiniSuperEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MiniSuperEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cargos" EntityType="Self.Cargo" />
           <EntitySet Name="Categorias" EntityType="Self.Categoria" />
           <EntitySet Name="Clientes" EntityType="Self.Cliente" />
@@ -601,7 +601,7 @@ advertencia 6002: La tabla o vista 'MiniSuper.dbo.ComprasVendedores' no tiene de
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MiniSuperModelStoreContainer" CdmEntityContainer="MiniSuperEntities">
+        <EntityContainerMapping StorageEntityContainer="MiniSuperModelStoreContainer" CdmEntityContainer="MiniSuperEntities1">
           <EntitySetMapping Name="Cargos">
             <EntityTypeMapping TypeName="MiniSuperModel.Cargo">
               <MappingFragment StoreEntitySet="Cargos">

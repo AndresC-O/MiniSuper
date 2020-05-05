@@ -51,7 +51,7 @@ namespace MiniSuper.Modelos
             List<Productos> lista = new List<Productos>();
             IDbConnection cn = Conexion.Conexion.Conectar();
             cn.Open();
-            lista = cn.Query<Productos>("p_ConsultarProductos", commandType: CommandType.StoredProcedure).ToList();
+            lista = cn.Query<Productos>("sp_ConsultarProductos", commandType: CommandType.StoredProcedure).ToList();
             cn.Close();
             return lista;
         }

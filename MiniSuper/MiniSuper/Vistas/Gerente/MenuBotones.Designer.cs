@@ -30,48 +30,48 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnProveedor = new System.Windows.Forms.Panel();
+            this.lblProveedor = new System.Windows.Forms.Label();
+            this.pbProveedor = new System.Windows.Forms.PictureBox();
+            this.pnEmpleado = new System.Windows.Forms.Panel();
+            this.lblEmpleado = new System.Windows.Forms.Label();
+            this.pbEmpleado = new System.Windows.Forms.PictureBox();
+            this.pnSucursal = new System.Windows.Forms.Panel();
+            this.lblSucursal = new System.Windows.Forms.Label();
+            this.pbSucursal = new System.Windows.Forms.PictureBox();
+            this.pnProducto = new System.Windows.Forms.Panel();
+            this.lblProducto = new System.Windows.Forms.Label();
+            this.pbProducto = new System.Windows.Forms.PictureBox();
+            this.pnCategoria = new System.Windows.Forms.Panel();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.pbCategoria = new System.Windows.Forms.PictureBox();
+            this.pnCargo = new System.Windows.Forms.Panel();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.pbCargo = new System.Windows.Forms.PictureBox();
+            this.pnVenta = new System.Windows.Forms.Panel();
+            this.lblVenta = new System.Windows.Forms.Label();
+            this.pbVenta = new System.Windows.Forms.PictureBox();
+            this.pnCliente = new System.Windows.Forms.Panel();
+            this.lblCliente = new System.Windows.Forms.Label();
+            this.pbCliente = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnProveedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProveedor)).BeginInit();
+            this.pnEmpleado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).BeginInit();
+            this.pnSucursal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSucursal)).BeginInit();
+            this.pnProducto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
+            this.pnCategoria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCategoria)).BeginInit();
+            this.pnCargo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCargo)).BeginInit();
+            this.pnVenta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVenta)).BeginInit();
+            this.pnCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -89,258 +89,283 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.panel9);
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.pnProveedor);
+            this.panel1.Controls.Add(this.pnEmpleado);
+            this.panel1.Controls.Add(this.pnSucursal);
+            this.panel1.Controls.Add(this.pnProducto);
+            this.panel1.Controls.Add(this.pnCategoria);
+            this.panel1.Controls.Add(this.pnCargo);
+            this.panel1.Controls.Add(this.pnVenta);
+            this.panel1.Controls.Add(this.pnCliente);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1039, 1510);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel2
+            // pnProveedor
             // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(105, 55);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(314, 296);
-            this.panel2.TabIndex = 0;
+            this.pnProveedor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnProveedor.Controls.Add(this.lblProveedor);
+            this.pnProveedor.Controls.Add(this.pbProveedor);
+            this.pnProveedor.Location = new System.Drawing.Point(588, 1149);
+            this.pnProveedor.Name = "pnProveedor";
+            this.pnProveedor.Size = new System.Drawing.Size(314, 296);
+            this.pnProveedor.TabIndex = 3;
+            this.pnProveedor.Click += new System.EventHandler(this.pnProveedor_Click);
             // 
-            // label1
+            // lblProveedor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(84, 204);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Clientes";
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedor.Location = new System.Drawing.Point(55, 204);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(208, 38);
+            this.lblProveedor.TabIndex = 1;
+            this.lblProveedor.Text = "Proveedores";
+            this.lblProveedor.Click += new System.EventHandler(this.lblProveedor_Click);
             // 
-            // panel3
+            // pbProveedor
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(588, 55);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(314, 296);
-            this.panel3.TabIndex = 2;
+            this.pbProveedor.Image = global::MiniSuper.Properties.Resources.proveedor;
+            this.pbProveedor.Location = new System.Drawing.Point(91, 51);
+            this.pbProveedor.Name = "pbProveedor";
+            this.pbProveedor.Size = new System.Drawing.Size(128, 128);
+            this.pbProveedor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbProveedor.TabIndex = 0;
+            this.pbProveedor.TabStop = false;
+            this.pbProveedor.Click += new System.EventHandler(this.pbProveedor_Click);
             // 
-            // label2
+            // pnEmpleado
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(102, 204);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 38);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Venta";
+            this.pnEmpleado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnEmpleado.Controls.Add(this.lblEmpleado);
+            this.pnEmpleado.Controls.Add(this.pbEmpleado);
+            this.pnEmpleado.Location = new System.Drawing.Point(105, 1150);
+            this.pnEmpleado.Name = "pnEmpleado";
+            this.pnEmpleado.Size = new System.Drawing.Size(314, 296);
+            this.pnEmpleado.TabIndex = 7;
+            this.pnEmpleado.Click += new System.EventHandler(this.pnEmpleado_Click);
             // 
-            // panel4
+            // lblEmpleado
             // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(105, 417);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(314, 296);
-            this.panel4.TabIndex = 3;
+            this.lblEmpleado.AutoSize = true;
+            this.lblEmpleado.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.Location = new System.Drawing.Point(67, 204);
+            this.lblEmpleado.Name = "lblEmpleado";
+            this.lblEmpleado.Size = new System.Drawing.Size(175, 38);
+            this.lblEmpleado.TabIndex = 1;
+            this.lblEmpleado.Text = "Empleado";
+            this.lblEmpleado.Click += new System.EventHandler(this.lblEmpleado_Click);
             // 
-            // label3
+            // pbEmpleado
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(88, 204);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 38);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Cargos";
+            this.pbEmpleado.Image = global::MiniSuper.Properties.Resources.empleado;
+            this.pbEmpleado.Location = new System.Drawing.Point(91, 51);
+            this.pbEmpleado.Name = "pbEmpleado";
+            this.pbEmpleado.Size = new System.Drawing.Size(128, 128);
+            this.pbEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbEmpleado.TabIndex = 0;
+            this.pbEmpleado.TabStop = false;
+            this.pbEmpleado.Click += new System.EventHandler(this.pbEmpleado_Click);
             // 
-            // panel5
+            // pnSucursal
             // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(588, 417);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(314, 296);
-            this.panel5.TabIndex = 4;
+            this.pnSucursal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnSucursal.Controls.Add(this.lblSucursal);
+            this.pnSucursal.Controls.Add(this.pbSucursal);
+            this.pnSucursal.Location = new System.Drawing.Point(588, 783);
+            this.pnSucursal.Name = "pnSucursal";
+            this.pnSucursal.Size = new System.Drawing.Size(314, 296);
+            this.pnSucursal.TabIndex = 6;
+            this.pnSucursal.Click += new System.EventHandler(this.pnSucursal_Click);
             // 
-            // label4
+            // lblSucursal
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(61, 204);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(187, 38);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Categorias";
+            this.lblSucursal.AutoSize = true;
+            this.lblSucursal.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSucursal.Location = new System.Drawing.Point(81, 204);
+            this.lblSucursal.Name = "lblSucursal";
+            this.lblSucursal.Size = new System.Drawing.Size(145, 38);
+            this.lblSucursal.TabIndex = 1;
+            this.lblSucursal.Text = "Sucursal";
+            this.lblSucursal.Click += new System.EventHandler(this.lblSucursal_Click);
             // 
-            // panel6
+            // pbSucursal
             // 
-            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(105, 783);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(314, 296);
-            this.panel6.TabIndex = 5;
+            this.pbSucursal.Image = global::MiniSuper.Properties.Resources.sucursal;
+            this.pbSucursal.Location = new System.Drawing.Point(91, 51);
+            this.pbSucursal.Name = "pbSucursal";
+            this.pbSucursal.Size = new System.Drawing.Size(128, 128);
+            this.pbSucursal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbSucursal.TabIndex = 0;
+            this.pbSucursal.TabStop = false;
+            this.pbSucursal.Click += new System.EventHandler(this.pbSucursal_Click);
             // 
-            // label5
+            // pnProducto
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(67, 204);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(169, 38);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Productos";
+            this.pnProducto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnProducto.Controls.Add(this.lblProducto);
+            this.pnProducto.Controls.Add(this.pbProducto);
+            this.pnProducto.Location = new System.Drawing.Point(105, 783);
+            this.pnProducto.Name = "pnProducto";
+            this.pnProducto.Size = new System.Drawing.Size(314, 296);
+            this.pnProducto.TabIndex = 5;
+            this.pnProducto.Click += new System.EventHandler(this.panel6_Click);
             // 
-            // panel7
+            // lblProducto
             // 
-            this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Location = new System.Drawing.Point(588, 783);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(314, 296);
-            this.panel7.TabIndex = 6;
+            this.lblProducto.AutoSize = true;
+            this.lblProducto.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.Location = new System.Drawing.Point(67, 204);
+            this.lblProducto.Name = "lblProducto";
+            this.lblProducto.Size = new System.Drawing.Size(169, 38);
+            this.lblProducto.TabIndex = 1;
+            this.lblProducto.Text = "Productos";
+            this.lblProducto.Click += new System.EventHandler(this.lblProducto_Click);
             // 
-            // label6
+            // pbProducto
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(81, 204);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 38);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Sucursal";
+            this.pbProducto.Image = global::MiniSuper.Properties.Resources.producto;
+            this.pbProducto.Location = new System.Drawing.Point(91, 51);
+            this.pbProducto.Name = "pbProducto";
+            this.pbProducto.Size = new System.Drawing.Size(128, 128);
+            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbProducto.TabIndex = 0;
+            this.pbProducto.TabStop = false;
+            this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
             // 
-            // panel8
+            // pnCategoria
             // 
-            this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel8.Controls.Add(this.label7);
-            this.panel8.Controls.Add(this.pictureBox7);
-            this.panel8.Location = new System.Drawing.Point(105, 1150);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(314, 296);
-            this.panel8.TabIndex = 7;
+            this.pnCategoria.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnCategoria.Controls.Add(this.lblCategoria);
+            this.pnCategoria.Controls.Add(this.pbCategoria);
+            this.pnCategoria.Location = new System.Drawing.Point(588, 417);
+            this.pnCategoria.Name = "pnCategoria";
+            this.pnCategoria.Size = new System.Drawing.Size(314, 296);
+            this.pnCategoria.TabIndex = 4;
+            this.pnCategoria.Click += new System.EventHandler(this.pnCategoria_Click);
             // 
-            // label7
+            // lblCategoria
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(67, 204);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(175, 38);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Empleado";
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(61, 204);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(187, 38);
+            this.lblCategoria.TabIndex = 1;
+            this.lblCategoria.Text = "Categorias";
+            this.lblCategoria.Click += new System.EventHandler(this.lblCategoria_Click);
             // 
-            // panel9
+            // pbCategoria
             // 
-            this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel9.Controls.Add(this.label8);
-            this.panel9.Controls.Add(this.pictureBox8);
-            this.panel9.Location = new System.Drawing.Point(588, 1149);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(314, 296);
-            this.panel9.TabIndex = 3;
+            this.pbCategoria.Image = global::MiniSuper.Properties.Resources.categoria;
+            this.pbCategoria.Location = new System.Drawing.Point(91, 51);
+            this.pbCategoria.Name = "pbCategoria";
+            this.pbCategoria.Size = new System.Drawing.Size(128, 128);
+            this.pbCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbCategoria.TabIndex = 0;
+            this.pbCategoria.TabStop = false;
+            this.pbCategoria.Click += new System.EventHandler(this.pbCategoria_Click);
             // 
-            // label8
+            // pnCargo
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(55, 204);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(208, 38);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Proveedores";
+            this.pnCargo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnCargo.Controls.Add(this.lblCargo);
+            this.pnCargo.Controls.Add(this.pbCargo);
+            this.pnCargo.Location = new System.Drawing.Point(105, 417);
+            this.pnCargo.Name = "pnCargo";
+            this.pnCargo.Size = new System.Drawing.Size(314, 296);
+            this.pnCargo.TabIndex = 3;
+            this.pnCargo.Click += new System.EventHandler(this.pnCargo_Click);
             // 
-            // pictureBox8
+            // lblCargo
             // 
-            this.pictureBox8.Image = global::MiniSuper.Properties.Resources.proveedor;
-            this.pictureBox8.Location = new System.Drawing.Point(91, 51);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.Location = new System.Drawing.Point(88, 204);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(128, 38);
+            this.lblCargo.TabIndex = 1;
+            this.lblCargo.Text = "Cargos";
+            this.lblCargo.Click += new System.EventHandler(this.lblCargo_Click);
             // 
-            // pictureBox7
+            // pbCargo
             // 
-            this.pictureBox7.Image = global::MiniSuper.Properties.Resources.empleado;
-            this.pictureBox7.Location = new System.Drawing.Point(91, 51);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
+            this.pbCargo.Image = global::MiniSuper.Properties.Resources.cargos;
+            this.pbCargo.Location = new System.Drawing.Point(91, 87);
+            this.pbCargo.Name = "pbCargo";
+            this.pbCargo.Size = new System.Drawing.Size(128, 84);
+            this.pbCargo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbCargo.TabIndex = 0;
+            this.pbCargo.TabStop = false;
+            this.pbCargo.Click += new System.EventHandler(this.pbCargo_Click);
             // 
-            // pictureBox6
+            // pnVenta
             // 
-            this.pictureBox6.Image = global::MiniSuper.Properties.Resources.sucursal;
-            this.pictureBox6.Location = new System.Drawing.Point(91, 51);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
+            this.pnVenta.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnVenta.Controls.Add(this.lblVenta);
+            this.pnVenta.Controls.Add(this.pbVenta);
+            this.pnVenta.Location = new System.Drawing.Point(588, 55);
+            this.pnVenta.Name = "pnVenta";
+            this.pnVenta.Size = new System.Drawing.Size(314, 296);
+            this.pnVenta.TabIndex = 2;
+            this.pnVenta.Click += new System.EventHandler(this.pnVenta_Click);
             // 
-            // pictureBox5
+            // lblVenta
             // 
-            this.pictureBox5.Image = global::MiniSuper.Properties.Resources.producto;
-            this.pictureBox5.Location = new System.Drawing.Point(91, 51);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
+            this.lblVenta.AutoSize = true;
+            this.lblVenta.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVenta.Location = new System.Drawing.Point(102, 204);
+            this.lblVenta.Name = "lblVenta";
+            this.lblVenta.Size = new System.Drawing.Size(109, 38);
+            this.lblVenta.TabIndex = 1;
+            this.lblVenta.Text = "Venta";
+            this.lblVenta.Click += new System.EventHandler(this.lblVenta_Click);
             // 
-            // pictureBox4
+            // pbVenta
             // 
-            this.pictureBox4.Image = global::MiniSuper.Properties.Resources.categoria;
-            this.pictureBox4.Location = new System.Drawing.Point(91, 51);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
+            this.pbVenta.Image = global::MiniSuper.Properties.Resources.cajero;
+            this.pbVenta.Location = new System.Drawing.Point(95, 53);
+            this.pbVenta.Name = "pbVenta";
+            this.pbVenta.Size = new System.Drawing.Size(128, 128);
+            this.pbVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbVenta.TabIndex = 0;
+            this.pbVenta.TabStop = false;
+            this.pbVenta.Click += new System.EventHandler(this.pbVenta_Click);
             // 
-            // pictureBox3
+            // pnCliente
             // 
-            this.pictureBox3.Image = global::MiniSuper.Properties.Resources.cargos;
-            this.pictureBox3.Location = new System.Drawing.Point(91, 87);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(128, 84);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.pnCliente.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnCliente.Controls.Add(this.lblCliente);
+            this.pnCliente.Controls.Add(this.pbCliente);
+            this.pnCliente.Location = new System.Drawing.Point(105, 55);
+            this.pnCliente.Name = "pnCliente";
+            this.pnCliente.Size = new System.Drawing.Size(314, 296);
+            this.pnCliente.TabIndex = 0;
+            this.pnCliente.Click += new System.EventHandler(this.pnCliente_Click);
             // 
-            // pictureBox2
+            // lblCliente
             // 
-            this.pictureBox2.Image = global::MiniSuper.Properties.Resources.cajero;
-            this.pictureBox2.Location = new System.Drawing.Point(95, 53);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Location = new System.Drawing.Point(84, 204);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(141, 38);
+            this.lblCliente.TabIndex = 1;
+            this.lblCliente.Text = "Clientes";
+            this.lblCliente.Click += new System.EventHandler(this.lblCliente_Click);
             // 
-            // pictureBox1
+            // pbCliente
             // 
-            this.pictureBox1.Image = global::MiniSuper.Properties.Resources.Clientes1;
-            this.pictureBox1.Location = new System.Drawing.Point(91, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbCliente.Image = global::MiniSuper.Properties.Resources.Clientes1;
+            this.pbCliente.Location = new System.Drawing.Point(91, 51);
+            this.pbCliente.Name = "pbCliente";
+            this.pbCliente.Size = new System.Drawing.Size(128, 128);
+            this.pbCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbCliente.TabIndex = 0;
+            this.pbCliente.TabStop = false;
+            this.pbCliente.Click += new System.EventHandler(this.pbCliente_Click);
             // 
             // MenuBotones
             // 
@@ -354,30 +379,30 @@
             this.Load += new System.EventHandler(this.MenuBotones_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnProveedor.ResumeLayout(false);
+            this.pnProveedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProveedor)).EndInit();
+            this.pnEmpleado.ResumeLayout(false);
+            this.pnEmpleado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).EndInit();
+            this.pnSucursal.ResumeLayout(false);
+            this.pnSucursal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSucursal)).EndInit();
+            this.pnProducto.ResumeLayout(false);
+            this.pnProducto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
+            this.pnCategoria.ResumeLayout(false);
+            this.pnCategoria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCategoria)).EndInit();
+            this.pnCargo.ResumeLayout(false);
+            this.pnCargo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCargo)).EndInit();
+            this.pnVenta.ResumeLayout(false);
+            this.pnVenta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVenta)).EndInit();
+            this.pnCliente.ResumeLayout(false);
+            this.pnCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -386,29 +411,29 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Panel pnCliente;
+        private System.Windows.Forms.PictureBox pbCliente;
+        private System.Windows.Forms.Label lblCliente;
+        private System.Windows.Forms.Panel pnProducto;
+        private System.Windows.Forms.Label lblProducto;
+        private System.Windows.Forms.PictureBox pbProducto;
+        private System.Windows.Forms.Panel pnCategoria;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.PictureBox pbCategoria;
+        private System.Windows.Forms.Panel pnCargo;
+        private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.PictureBox pbCargo;
+        private System.Windows.Forms.Panel pnVenta;
+        private System.Windows.Forms.Label lblVenta;
+        private System.Windows.Forms.PictureBox pbVenta;
+        private System.Windows.Forms.Panel pnEmpleado;
+        private System.Windows.Forms.Label lblEmpleado;
+        private System.Windows.Forms.PictureBox pbEmpleado;
+        private System.Windows.Forms.Panel pnSucursal;
+        private System.Windows.Forms.Label lblSucursal;
+        private System.Windows.Forms.PictureBox pbSucursal;
+        private System.Windows.Forms.Panel pnProveedor;
+        private System.Windows.Forms.Label lblProveedor;
+        private System.Windows.Forms.PictureBox pbProveedor;
     }
 }

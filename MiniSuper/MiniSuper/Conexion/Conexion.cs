@@ -14,7 +14,8 @@ namespace MiniSuper.Conexion
         //Método que nos servirá para conectarnos a nuestro servidor donde se encuentra la base de datos.
         public static IDbConnection Conectar()
         {
-            String cadena = "Data Source=CLARIEL\\SQLEXPRESS;Initial Catalog=MiniSuper;Integrated Security=True";
+            String cadena = "Data Source=.;Initial Catalog=MiniSuper;Integrated Security=True";
+            //String cadena = "Data Source=CLARIEL\\SQLEXPRESS;Initial Catalog=MiniSuper;Integrated Security=True";
             SqlConnection cn = new SqlConnection(cadena);
             IDbConnection conexion = cn;
             return conexion;

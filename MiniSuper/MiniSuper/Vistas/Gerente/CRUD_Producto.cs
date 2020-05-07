@@ -62,6 +62,9 @@ namespace MiniSuper.Vistas.Gerente
             productosBindingSource.EndEdit();
             cEliminar.EliminarProducto((Productos)productosBindingSource.Current);
             MessageBox.Show("¡Producto eliminado con éxito!");
+            Inventario inve = new Inventario();
+            inve.Show();
+            inve.CargarTabla();
             this.Close();
         }
 
@@ -70,6 +73,16 @@ namespace MiniSuper.Vistas.Gerente
             this.Close();
             this.Dispose();
             inv.Show();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

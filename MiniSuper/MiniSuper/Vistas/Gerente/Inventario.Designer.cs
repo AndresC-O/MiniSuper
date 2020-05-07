@@ -36,12 +36,12 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.nombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProveedor = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.idCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.idProveedor = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.productosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
@@ -53,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(290, 51);
+            this.label1.Location = new System.Drawing.Point(395, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(452, 38);
             this.label1.TabIndex = 0;
@@ -134,39 +134,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // nombreProducto
-            // 
-            this.nombreProducto.DataPropertyName = "nombreProducto";
-            this.nombreProducto.FillWeight = 130F;
-            this.nombreProducto.HeaderText = "PRODUCTO";
-            this.nombreProducto.Name = "nombreProducto";
-            // 
-            // idProveedor
-            // 
-            this.idProveedor.DataPropertyName = "idProveedor";
-            this.idProveedor.DataSource = this.proveedoresBindingSource;
-            this.idProveedor.DisplayMember = "nombreProveedor";
-            this.idProveedor.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.idProveedor.FillWeight = 70F;
-            this.idProveedor.HeaderText = "PROVEEDOR";
-            this.idProveedor.Name = "idProveedor";
-            this.idProveedor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idProveedor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idProveedor.ValueMember = "idProveedor";
-            // 
-            // idCategoriaDataGridViewTextBoxColumn
-            // 
-            this.idCategoriaDataGridViewTextBoxColumn.DataPropertyName = "idCategoria";
-            this.idCategoriaDataGridViewTextBoxColumn.DataSource = this.categoriasBindingSource;
-            this.idCategoriaDataGridViewTextBoxColumn.DisplayMember = "nombreCategoria";
-            this.idCategoriaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.idCategoriaDataGridViewTextBoxColumn.FillWeight = 70F;
-            this.idCategoriaDataGridViewTextBoxColumn.HeaderText = "CATEGORIA";
-            this.idCategoriaDataGridViewTextBoxColumn.Name = "idCategoriaDataGridViewTextBoxColumn";
-            this.idCategoriaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idCategoriaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idCategoriaDataGridViewTextBoxColumn.ValueMember = "idCategoria";
-            // 
             // categoriasBindingSource
             // 
             this.categoriasBindingSource.DataSource = typeof(MiniSuper.Entidades.Categorias);
@@ -178,6 +145,42 @@
             // productosBindingSource
             // 
             this.productosBindingSource.DataSource = typeof(MiniSuper.Entidades.Productos);
+            // 
+            // nombreProducto
+            // 
+            this.nombreProducto.DataPropertyName = "nombreProducto";
+            this.nombreProducto.FillWeight = 130F;
+            this.nombreProducto.HeaderText = "PRODUCTO";
+            this.nombreProducto.Name = "nombreProducto";
+            this.nombreProducto.ReadOnly = true;
+            // 
+            // idCategoriaDataGridViewTextBoxColumn
+            // 
+            this.idCategoriaDataGridViewTextBoxColumn.DataPropertyName = "idCategoria";
+            this.idCategoriaDataGridViewTextBoxColumn.DataSource = this.categoriasBindingSource;
+            this.idCategoriaDataGridViewTextBoxColumn.DisplayMember = "nombreCategoria";
+            this.idCategoriaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.idCategoriaDataGridViewTextBoxColumn.FillWeight = 70F;
+            this.idCategoriaDataGridViewTextBoxColumn.HeaderText = "CATEGORIA";
+            this.idCategoriaDataGridViewTextBoxColumn.Name = "idCategoriaDataGridViewTextBoxColumn";
+            this.idCategoriaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idCategoriaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idCategoriaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idCategoriaDataGridViewTextBoxColumn.ValueMember = "idCategoria";
+            // 
+            // idProveedor
+            // 
+            this.idProveedor.DataPropertyName = "idProveedor";
+            this.idProveedor.DataSource = this.proveedoresBindingSource;
+            this.idProveedor.DisplayMember = "nombreProveedor";
+            this.idProveedor.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.idProveedor.FillWeight = 70F;
+            this.idProveedor.HeaderText = "PROVEEDOR";
+            this.idProveedor.Name = "idProveedor";
+            this.idProveedor.ReadOnly = true;
+            this.idProveedor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idProveedor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idProveedor.ValueMember = "idProveedor";
             // 
             // Inventario
             // 
@@ -208,14 +211,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource productosBindingSource;
-        private System.Windows.Forms.DataGridView productosDataGridView;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
         private System.Windows.Forms.BindingSource proveedoresBindingSource;
+        public System.Windows.Forms.Button btnModificar;
+        public System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.DataGridView productosDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreProducto;
         private System.Windows.Forms.DataGridViewComboBoxColumn idCategoriaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn idProveedor;
-        public System.Windows.Forms.Button btnModificar;
-        public System.Windows.Forms.Button btnGuardar;
     }
 }

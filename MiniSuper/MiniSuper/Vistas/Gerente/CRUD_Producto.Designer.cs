@@ -137,12 +137,13 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(324, 577);
+            this.btnModificar.Location = new System.Drawing.Point(123, 577);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(149, 49);
             this.btnModificar.TabIndex = 72;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // rbModificar
             // 
@@ -177,12 +178,13 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(121, 577);
+            this.btnGuardar.Location = new System.Drawing.Point(322, 577);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(149, 49);
             this.btnGuardar.TabIndex = 71;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblModo
             // 
@@ -329,11 +331,8 @@
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.RadioButton rbModificar;
         private System.Windows.Forms.RadioButton rbNuevo;
-        private System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.Label lblModo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
@@ -345,5 +344,8 @@
         public System.Windows.Forms.ComboBox idCategoriaComboBox;
         public System.Windows.Forms.ComboBox idProveedorComboBox;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.Button btnModificar;
+        public System.Windows.Forms.Button btnGuardar;
     }
 }

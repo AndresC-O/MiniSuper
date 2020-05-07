@@ -17,7 +17,7 @@ namespace MiniSuper
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CRUD_Producto());
+            Application.Run(new Loguin());
         }
     }
 }

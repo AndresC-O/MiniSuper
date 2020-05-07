@@ -22,27 +22,43 @@ namespace MiniSuper.Vistas.Gerente
             InitializeComponent();
         }
 
-        private void Inventario_Load(object sender, EventArgs e)
+        public void CargarTabla()
         {
+            productosDataGridView.Rows.Clear();
+
             productosBindingSource.DataSource = cProducto.ListadoProductos();
             proveedoresBindingSource.DataSource = cProveedor.ListadoProveedores();
             categoriasBindingSource.DataSource = cCategoria.ListadoCategorias();
         }
 
+        private void Inventario_Load(object sender, EventArgs e)
+        {
+            CargarTabla();
+        }
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Productos p = new Productos();
-            p = (Productos)productosBindingSource.Current;
+            if(productosDataGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("¡Aún no hay productos para modificar/eliminar!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                Productos p = new Productos();
+                p = (Productos)productosBindingSource.Current;
 
-            CRUD_Producto crud = new CRUD_Producto(p);
-            crud.Show();
+                CRUD_Producto crud = new CRUD_Producto(p);
+                crud.Show();
+                crud.btnGuardar.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             CRUD_Producto crud = new CRUD_Producto();
             crud.Show();
+            crud.btnEliminar.Visible = false;
+            crud.btnModificar.Visible = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

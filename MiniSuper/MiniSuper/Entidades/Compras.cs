@@ -8,7 +8,10 @@ namespace MiniSuper.Entidades
 {
     public class Compras
     {
-        public int idFacturaCF { get; set; }
-        public int idCliente { get; set; }
+        public int idCompra { get; set; }
+        public int idEmpleado { get; set; }
+        public int idProveedor { get; set; }
+        public Double TotalCompra { get; set; }
+        public String Fecha { get; set; }
     }
 }

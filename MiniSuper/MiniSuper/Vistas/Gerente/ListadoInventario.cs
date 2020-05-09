@@ -12,12 +12,12 @@ using MiniSuper.Entidades;
 
 namespace MiniSuper.Vistas.Gerente
 {
-    public partial class Inventario : Form
+    public partial class ListadoInventario : Form
     {
         CProducto cProducto = new CProducto();
         CProveedores cProveedor = new CProveedores();
         CCategoria cCategoria = new CCategoria();
-        public Inventario()
+        public ListadoInventario()
         {
             InitializeComponent();
         }

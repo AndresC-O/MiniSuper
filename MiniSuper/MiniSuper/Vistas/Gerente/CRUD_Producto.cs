@@ -14,7 +14,7 @@ namespace MiniSuper.Vistas.Gerente
 {
     public partial class CRUD_Producto : Form
     {
-        Inventario inv = new Inventario();
+        ListadoInventario inv = new ListadoInventario();
         Productos p = new Productos();
         CProducto cp = new CProducto();
 
@@ -62,7 +62,7 @@ namespace MiniSuper.Vistas.Gerente
             productosBindingSource.EndEdit();
             cEliminar.EliminarProducto((Productos)productosBindingSource.Current);
             MessageBox.Show("¡Producto eliminado con éxito!");
-            Inventario inve = new Inventario();
+            ListadoInventario inve = new ListadoInventario();
             inve.Show();
             inve.CargarTabla();
             this.Close();

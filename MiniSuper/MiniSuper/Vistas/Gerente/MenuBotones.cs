@@ -45,7 +45,7 @@ namespace MiniSuper.Vistas.Gerente
 
         void CargarFrmProducto()
         {
-            Inventario inv = new Inventario();
+            ListadoInventario inv = new ListadoInventario();
             this.Close();
             this.Dispose();
             ag.Dispose();

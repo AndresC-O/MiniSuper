@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace MiniSuper.Entidades
 {
-    public class Productos
+    public class Inventario
     {
-        public int idProducto { get; set; }
+        public int idInventario { get; set; }
         public String nombreProducto { get; set; }
         public int idCategoria { get; set; }
         public int idProveedor { get; set; }
+        public int existencias { get; set; }
+        public Double costo { get; set; }
+        public Double precioVenta { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MiniSuper.Vistas.Gerente
 {
-    partial class Inventario
+    partial class ListadoInventario
     {
         /// <summary>
         /// Required designer variable.

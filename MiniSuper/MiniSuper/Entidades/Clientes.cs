@@ -13,7 +13,6 @@ namespace MiniSuper.Entidades
         public String apellidosCliente { get; set; }
         public String direccion { get; set; }
         public String telefono { get; set; }
-        public String MyProperty { get; set; }
         public String dui { get; set; }
         public String nit { get; set; }
     }

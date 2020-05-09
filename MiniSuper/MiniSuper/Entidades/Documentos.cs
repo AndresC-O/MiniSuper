@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace MiniSuper.Entidades
 {
-    public class Cargos
+    public class Documentos
     {
-        public int idCargo { get; set; }
-        public String nombreCargo { get; set; }
-        public Double sueldo { get; set; }
+        public int idDocumento { get; set; }
+        public String tipoDocumento { get; set; }
     }
 }

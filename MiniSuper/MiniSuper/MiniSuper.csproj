@@ -68,17 +68,17 @@
     <Compile Include="Controladores\CProducto.cs" />
     <Compile Include="Controladores\CProveedores.cs" />
     <Compile Include="Controladores\CSucursales.cs" />
-    <Compile Include="Entidades\Cargos.cs" />
     <Compile Include="Entidades\Categorias.cs" />
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Compras.cs" />
-    <Compile Include="Entidades\ComprasProveedores.cs" />
+    <Compile Include="Entidades\DetallesCompra.cs" />
+    <Compile Include="Entidades\DetallesVenta.cs" />
+    <Compile Include="Entidades\Documentos.cs" />
     <Compile Include="Entidades\Empleados.cs" />
-    <Compile Include="Entidades\FacturasCompras.cs" />
-    <Compile Include="Entidades\FacturasConsumidoresFinales.cs" />
-    <Compile Include="Entidades\Productos.cs" />
+    <Compile Include="Entidades\Inventario.cs" />
     <Compile Include="Entidades\Proveedores.cs" />
     <Compile Include="Entidades\Sucursales.cs" />
+    <Compile Include="Entidades\Ventas.cs" />
     <Compile Include="Loguin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,11 +150,11 @@
     <Compile Include="Vistas\Gerente\CRUD_Producto.Designer.cs">
       <DependentUpon>CRUD_Producto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Gerente\Inventario.cs">
+    <Compile Include="Vistas\Gerente\ListadoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Gerente\Inventario.Designer.cs">
-      <DependentUpon>Inventario.cs</DependentUpon>
+    <Compile Include="Vistas\Gerente\ListadoInventario.Designer.cs">
+      <DependentUpon>ListadoInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Gerente\MenuBotones.cs">
       <SubType>Form</SubType>
@@ -181,8 +181,8 @@
     <EmbeddedResource Include="Vistas\Gerente\CRUD_Producto.resx">
       <DependentUpon>CRUD_Producto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Gerente\Inventario.resx">
-      <DependentUpon>Inventario.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Gerente\ListadoInventario.resx">
+      <DependentUpon>ListadoInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\MenuBotones.resx">
       <DependentUpon>MenuBotones.cs</DependentUpon>

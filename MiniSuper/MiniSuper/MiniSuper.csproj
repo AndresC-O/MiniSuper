@@ -59,15 +59,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Conexion.cs" />
-    <Compile Include="Controladores\CCargos.cs" />
     <Compile Include="Controladores\CCategoria.cs" />
     <Compile Include="Controladores\CClientes.cs" />
+    <Compile Include="Controladores\CCompras.cs" />
+    <Compile Include="Controladores\CDetallesCompra.cs" />
+    <Compile Include="Controladores\CDetallesVenta.cs" />
+    <Compile Include="Controladores\CDocumentos.cs" />
     <Compile Include="Controladores\CEmpleados.cs" />
-    <Compile Include="Controladores\CFacturaCompras.cs" />
-    <Compile Include="Controladores\CFacturaConsumidoresFinales.cs" />
-    <Compile Include="Controladores\CProducto.cs" />
+    <Compile Include="Controladores\CInventario.cs" />
     <Compile Include="Controladores\CProveedores.cs" />
     <Compile Include="Controladores\CSucursales.cs" />
+    <Compile Include="Controladores\CVentas.cs" />
     <Compile Include="Entidades\Categorias.cs" />
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Compras.cs" />
@@ -85,15 +87,17 @@
     <Compile Include="Loguin.Designer.cs">
       <DependentUpon>Loguin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modelos\MCargos.cs" />
     <Compile Include="Modelos\MCategorias.cs" />
     <Compile Include="Modelos\MClientes.cs" />
+    <Compile Include="Modelos\MCompras.cs" />
+    <Compile Include="Modelos\MDetallesCompra.cs" />
+    <Compile Include="Modelos\MDetallesVenta.cs" />
+    <Compile Include="Modelos\MDocumentos.cs" />
     <Compile Include="Modelos\MEmpleados.cs" />
-    <Compile Include="Modelos\MFacturaCompras.cs" />
-    <Compile Include="Modelos\MFacturaConsumidoresFinales.cs" />
-    <Compile Include="Modelos\MProductos.cs" />
+    <Compile Include="Modelos\MInventario.cs" />
     <Compile Include="Modelos\MProveedores.cs" />
     <Compile Include="Modelos\MSucursales.cs" />
+    <Compile Include="Modelos\MVentas.cs" />
     <Compile Include="Model\Cargo.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

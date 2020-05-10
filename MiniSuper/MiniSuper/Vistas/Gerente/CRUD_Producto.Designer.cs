@@ -58,7 +58,6 @@
             // 
             // productosBindingSource
             // 
-            this.productosBindingSource.DataSource = typeof(MiniSuper.Entidades.Productos);
             // 
             // label12
             // 

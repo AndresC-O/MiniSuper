@@ -12,26 +12,28 @@ namespace MiniSuper.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Proveedore
+    public partial class Inventario
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Proveedore()
+        public Inventario()
         {
-            this.FacturaCompras = new HashSet<FacturaCompra>();
-            this.Productos = new HashSet<Producto>();
-            this.FacturaCompras1 = new HashSet<FacturaCompra>();
+            this.DetallesCompra = new HashSet<DetallesCompra>();
+            this.DetallesVenta = new HashSet<DetallesVenta>();
         }
     
+        public int idInventario { get; set; }
+        public string nombreProducto { get; set; }
+        public int idCategoria { get; set; }
         public int idProveedor { get; set; }
-        public string nombreProveedor { get; set; }
-        public string direccion { get; set; }
-        public string telefono { get; set; }
+        public int existencias { get; set; }
+        public Nullable<decimal> costo { get; set; }
+        public Nullable<decimal> precioVenta { get; set; }
     
+        public virtual Categorias Categorias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FacturaCompra> FacturaCompras { get; set; }
+        public virtual ICollection<DetallesCompra> DetallesCompra { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Producto> Productos { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FacturaCompra> FacturaCompras1 { get; set; }
+        public virtual ICollection<DetallesVenta> DetallesVenta { get; set; }
+        public virtual Proveedores Proveedores { get; set; }
     }
 }

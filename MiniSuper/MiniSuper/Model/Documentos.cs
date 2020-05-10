@@ -12,19 +12,18 @@ namespace MiniSuper.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Sucursale
+    public partial class Documentos
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Sucursale()
+        public Documentos()
         {
-            this.Empleados = new HashSet<Empleado>();
+            this.Ventas = new HashSet<Ventas>();
         }
     
-        public int idSucursal { get; set; }
-        public string nombreSucursal { get; set; }
-        public string ubicacion { get; set; }
+        public int idDocumento { get; set; }
+        public string tipoDocumento { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Empleado> Empleados { get; set; }
+        public virtual ICollection<Ventas> Ventas { get; set; }
     }
 }

@@ -12,26 +12,28 @@ namespace MiniSuper.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Cliente
+    public partial class Empleados
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cliente()
+        public Empleados()
         {
-            this.FacturaCosumidoresFinales = new HashSet<FacturaCosumidoresFinale>();
-            this.FacturaCosumidoresFinales1 = new HashSet<FacturaCosumidoresFinale>();
+            this.Compras = new HashSet<Compras>();
+            this.Ventas = new HashSet<Ventas>();
         }
     
-        public int idCliente { get; set; }
-        public string nombreCliente { get; set; }
-        public string apellidosCliente { get; set; }
-        public string direccion { get; set; }
-        public string telefono { get; set; }
+        public int idEmpleado { get; set; }
+        public int cargo { get; set; }
+        public int idSucursal { get; set; }
+        public string nombreEmpleado { get; set; }
+        public string apellidos { get; set; }
         public string dui { get; set; }
-        public string nit { get; set; }
+        public string usuario { get; set; }
+        public string contrasenia { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FacturaCosumidoresFinale> FacturaCosumidoresFinales { get; set; }
+        public virtual ICollection<Compras> Compras { get; set; }
+        public virtual Sucursales Sucursales { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FacturaCosumidoresFinale> FacturaCosumidoresFinales1 { get; set; }
+        public virtual ICollection<Ventas> Ventas { get; set; }
     }
 }

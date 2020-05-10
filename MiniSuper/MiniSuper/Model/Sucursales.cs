@@ -12,25 +12,19 @@ namespace MiniSuper.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Producto
+    public partial class Sucursales
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Producto()
+        public Sucursales()
         {
-            this.FacturaCompras = new HashSet<FacturaCompra>();
-            this.FacturaCosumidoresFinales = new HashSet<FacturaCosumidoresFinale>();
+            this.Empleados = new HashSet<Empleados>();
         }
     
-        public int idProducto { get; set; }
-        public string nombreProducto { get; set; }
-        public int idCategoria { get; set; }
-        public int idProveedor { get; set; }
+        public int idSucursal { get; set; }
+        public string nombreSucursal { get; set; }
+        public string ubicacion { get; set; }
     
-        public virtual Categoria Categoria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FacturaCompra> FacturaCompras { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FacturaCosumidoresFinale> FacturaCosumidoresFinales { get; set; }
-        public virtual Proveedore Proveedore { get; set; }
+        public virtual ICollection<Empleados> Empleados { get; set; }
     }
 }

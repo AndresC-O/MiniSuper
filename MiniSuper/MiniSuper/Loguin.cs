@@ -41,33 +41,29 @@ namespace MiniSuper
             }
             else
             {
-                using (MiniSuperEntities1 bd = new MiniSuperEntities1())
+                using (MiniSuperEntities2 bd = new MiniSuperEntities2())
                 {
                     var lista = from em in bd.Empleados
                                 where em.contrasenia == txtContra.Text
                                 && em.usuario == txtUsuario.Text
-                                select em;
+
+                                select new
+                                {
+                                    em.cargo
+                                };
 
                     if (lista.Count() > 0)
                     {
-                        var cargo = from emp in bd.Empleados
-                                    where emp.usuario == txtUsuario.Text
-
-                                    select new
-                                    {
-                                        emp.idCargo
-                                    };
-
-                        foreach (var iterar in cargo)
+                        foreach (var iterar in lista)
                         {
-                            if (iterar.idCargo == 1)
+                            if (iterar.cargo == 1)
                             {
                                 AccesoGerente manager = new AccesoGerente();
                                 manager.Show();
                                 this.Hide();
-                                //Limpiar();
+                                Limpiar();
                             }
-                            else if (iterar.idCargo == 2)
+                            else if (iterar.cargo == 2)
                             {
                                 MessageBox.Show("Funciona, su cargo es: Cajero");
                                 Limpiar();

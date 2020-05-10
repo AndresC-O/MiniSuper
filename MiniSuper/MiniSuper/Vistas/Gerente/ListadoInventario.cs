@@ -14,9 +14,10 @@ namespace MiniSuper.Vistas.Gerente
 {
     public partial class ListadoInventario : Form
     {
-        CProducto cProducto = new CProducto();
+        CInventario cProducto = new CInventario();
         CProveedores cProveedor = new CProveedores();
         CCategoria cCategoria = new CCategoria();
+
         public ListadoInventario()
         {
             InitializeComponent();
@@ -24,50 +25,14 @@ namespace MiniSuper.Vistas.Gerente
 
         public void CargarTabla()
         {
-            productosDataGridView.Rows.Clear();
-
-            productosBindingSource.DataSource = cProducto.ListadoProductos();
-            proveedoresBindingSource.DataSource = cProveedor.ListadoProveedores();
+            inventarioBindingSource.DataSource = cProducto.ListadoInventarios();
             categoriasBindingSource.DataSource = cCategoria.ListadoCategorias();
+            proveedoresBindingSource.DataSource = cProveedor.ListadoProveedores();
         }
 
-        private void Inventario_Load(object sender, EventArgs e)
+        private void ListadoInventario_Load(object sender, EventArgs e)
         {
             CargarTabla();
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            if(productosDataGridView.Rows.Count == 0)
-            {
-                MessageBox.Show("¡Aún no hay productos para modificar/eliminar!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                Productos p = new Productos();
-                p = (Productos)productosBindingSource.Current;
-
-                CRUD_Producto crud = new CRUD_Producto(p);
-                crud.Show();
-                crud.btnGuardar.Visible = false;
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CRUD_Producto crud = new CRUD_Producto();
-            crud.Show();
-            crud.btnEliminar.Visible = false;
-            crud.btnModificar.Visible = false;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            AccesoGerente mb = new AccesoGerente();
-            this.Close();
-            this.Dispose();
-            mb.Show();
-
         }
     }
 }

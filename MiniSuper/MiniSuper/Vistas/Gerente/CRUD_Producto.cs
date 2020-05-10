@@ -15,19 +15,19 @@ namespace MiniSuper.Vistas.Gerente
     public partial class CRUD_Producto : Form
     {
         ListadoInventario inv = new ListadoInventario();
-        Productos p = new Productos();
-        CProducto cp = new CProducto();
+        //Productos p = new Productos();
+        //CProducto cp = new CProducto();
 
         public CRUD_Producto()
         {
             InitializeComponent();
         }
 
-        public CRUD_Producto(Productos p)
-        {
-            InitializeComponent();
-            this.p = p;
-        }
+        //public CRUD_Producto(Productos p)
+        //{
+        //    InitializeComponent();
+        //    this.p = p;
+        //}
 
         
 
@@ -39,12 +39,12 @@ namespace MiniSuper.Vistas.Gerente
 
         private void CRUD_Producto_Load(object sender, EventArgs e)
         { 
-            productosBindingSource.DataSource = p;
+            //productosBindingSource.DataSource = p;
             
-            CProveedores cProveedor = new CProveedores();
-            proveedoresBindingSource.DataSource = cProveedor.ListadoProveedores();
-            CCategoria cCategoria = new CCategoria();
-            categoriasBindingSource.DataSource = cCategoria.ListadoCategorias();
+            //CProveedores cProveedor = new CProveedores();
+            //proveedoresBindingSource.DataSource = cProveedor.ListadoProveedores();
+            //CCategoria cCategoria = new CCategoria();
+            //categoriasBindingSource.DataSource = cCategoria.ListadoCategorias();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -58,14 +58,10 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            CProducto cEliminar = new CProducto();
-            productosBindingSource.EndEdit();
-            cEliminar.EliminarProducto((Productos)productosBindingSource.Current);
-            MessageBox.Show("¡Producto eliminado con éxito!");
-            ListadoInventario inve = new ListadoInventario();
-            inve.Show();
-            inve.CargarTabla();
-            this.Close();
+            //CProducto cEliminar = new CProducto();
+            //productosBindingSource.EndEdit();
+            //cEliminar.EliminarProducto((Productos)productosBindingSource.Current);
+            //MessageBox.Show("¡Producto eliminado con éxito!");
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)

@@ -98,47 +98,53 @@
     <Compile Include="Modelos\MProveedores.cs" />
     <Compile Include="Modelos\MSucursales.cs" />
     <Compile Include="Modelos\MVentas.cs" />
-    <Compile Include="Model\Cargo.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="Model\Categorias.cs">
+      <DependentUpon>MiniSuper.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Categoria.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="Model\Clientes.cs">
+      <DependentUpon>MiniSuper.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Cliente.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="Model\Compras.cs">
+      <DependentUpon>MiniSuper.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Empleado.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="Model\DetallesCompra.cs">
+      <DependentUpon>MiniSuper.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\FacturaCompra.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="Model\DetallesVenta.cs">
+      <DependentUpon>MiniSuper.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\FacturaCosumidoresFinale.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="Model\Documentos.cs">
+      <DependentUpon>MiniSuper.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model.Context.cs">
+    <Compile Include="Model\Empleados.cs">
+      <DependentUpon>MiniSuper.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Inventario.cs">
+      <DependentUpon>MiniSuper.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MiniSuper.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.Context.tt</DependentUpon>
+      <DependentUpon>MiniSuper.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model.cs">
+    <Compile Include="Model\MiniSuper.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>MiniSuper.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model.Designer.cs">
+    <Compile Include="Model\MiniSuper.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.edmx</DependentUpon>
+      <DependentUpon>MiniSuper.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\Producto.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="Model\Proveedores.cs">
+      <DependentUpon>MiniSuper.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Proveedore.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="Model\Sucursales.cs">
+      <DependentUpon>MiniSuper.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Sucursale.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="Model\Ventas.cs">
+      <DependentUpon>MiniSuper.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -191,25 +197,25 @@
     <EmbeddedResource Include="Vistas\Gerente\MenuBotones.resx">
       <DependentUpon>MenuBotones.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\Model.edmx">
+    <EntityDeploy Include="Model\MiniSuper.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>MiniSuper.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\Model.edmx.diagram">
-      <DependentUpon>Model.edmx</DependentUpon>
+    <None Include="Model\MiniSuper.edmx.diagram">
+      <DependentUpon>MiniSuper.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\MiniSuper.Entidades.Cargos.datasource" />
     <None Include="Properties\DataSources\MiniSuper.Entidades.Categorias.datasource" />
     <None Include="Properties\DataSources\MiniSuper.Entidades.Clientes.datasource" />
     <None Include="Properties\DataSources\MiniSuper.Entidades.Compras.datasource" />
-    <None Include="Properties\DataSources\MiniSuper.Entidades.ComprasProveedores.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.DetallesCompra.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.DetallesVenta.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.Documentos.datasource" />
     <None Include="Properties\DataSources\MiniSuper.Entidades.Empleados.datasource" />
-    <None Include="Properties\DataSources\MiniSuper.Entidades.FacturasCompras.datasource" />
-    <None Include="Properties\DataSources\MiniSuper.Entidades.FacturasConsumidoresFinales.datasource" />
-    <None Include="Properties\DataSources\MiniSuper.Entidades.Productos.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.Inventario.datasource" />
     <None Include="Properties\DataSources\MiniSuper.Entidades.Proveedores.datasource" />
     <None Include="Properties\DataSources\MiniSuper.Entidades.Sucursales.datasource" />
+    <None Include="Properties\DataSources\MiniSuper.Entidades.Ventas.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -246,17 +252,19 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\MiniSuper.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MiniSuper.edmx</DependentUpon>
+      <LastGenOutput>MiniSuper.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\MiniSuper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MiniSuper.edmx</DependentUpon>
+      <LastGenOutput>MiniSuper.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

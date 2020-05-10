@@ -12,19 +12,15 @@ namespace MiniSuper.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Empleado
+    public partial class DetallesVenta
     {
-        public int idEmpleado { get; set; }
-        public string nombreEmpleado { get; set; }
-        public string apellidos { get; set; }
-        public int idCargo { get; set; }
-        public int idSucursal { get; set; }
-        public string dui { get; set; }
-        public string usuario { get; set; }
-        public string contrasenia { get; set; }
-        public string codigoEmpleado { get; set; }
+        public int idDetalleVenta { get; set; }
+        public int idVenta { get; set; }
+        public int idInventario { get; set; }
+        public Nullable<int> cantidad { get; set; }
+        public Nullable<decimal> precio { get; set; }
     
-        public virtual Cargo Cargo { get; set; }
-        public virtual Sucursale Sucursale { get; set; }
+        public virtual Inventario Inventario { get; set; }
+        public virtual Ventas Ventas { get; set; }
     }
 }

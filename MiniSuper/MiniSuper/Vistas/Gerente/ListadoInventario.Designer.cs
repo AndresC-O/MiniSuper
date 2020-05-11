@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.inventarioDataGridView = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnEditarEliminar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -40,7 +43,6 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
@@ -66,6 +68,38 @@
             this.inventarioDataGridView.Name = "inventarioDataGridView";
             this.inventarioDataGridView.Size = new System.Drawing.Size(1107, 445);
             this.inventarioDataGridView.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(377, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(514, 39);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "PRODUCTOS EN INVENTARIO";
+            // 
+            // btnEditarEliminar
+            // 
+            this.btnEditarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarEliminar.Location = new System.Drawing.Point(318, 629);
+            this.btnEditarEliminar.Name = "btnEditarEliminar";
+            this.btnEditarEliminar.Size = new System.Drawing.Size(190, 67);
+            this.btnEditarEliminar.TabIndex = 3;
+            this.btnEditarEliminar.Text = "Editar o eliminar seleccionado";
+            this.btnEditarEliminar.UseVisualStyleBackColor = true;
+            this.btnEditarEliminar.Click += new System.EventHandler(this.btnEditarEliminar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Location = new System.Drawing.Point(687, 629);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(190, 67);
+            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.Text = "Nuevo Producto";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -135,19 +169,11 @@
             // 
             this.inventarioBindingSource.DataSource = typeof(MiniSuper.Entidades.Inventario);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(377, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(514, 39);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "PRODUCTOS EN INVENTARIO";
-            // 
             // ListadoInventario
             // 
             this.ClientSize = new System.Drawing.Size(1205, 751);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.btnEditarEliminar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.inventarioDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -182,5 +208,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnEditarEliminar;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }

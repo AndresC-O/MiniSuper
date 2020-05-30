@@ -12,13 +12,13 @@ namespace MiniSuper.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Empleados
+    public partial class Empleado
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Empleados()
+        public Empleado()
         {
-            this.Compras = new HashSet<Compras>();
-            this.Ventas = new HashSet<Ventas>();
+            this.Compras = new HashSet<Compra>();
+            this.Ventas = new HashSet<Venta>();
         }
     
         public int idEmpleado { get; set; }
@@ -31,9 +31,9 @@ namespace MiniSuper.Model
         public string contrasenia { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Compras> Compras { get; set; }
-        public virtual Sucursales Sucursales { get; set; }
+        public virtual ICollection<Compra> Compras { get; set; }
+        public virtual Sucursale Sucursale { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ventas> Ventas { get; set; }
+        public virtual ICollection<Venta> Ventas { get; set; }
     }
 }

@@ -41,7 +41,7 @@ namespace MiniSuper
             }
             else
             {
-                using (MiniSuperEntities2 bd = new MiniSuperEntities2())
+                using (MiniSuperEntities1 bd = new MiniSuperEntities1())
                 {
                     var lista = from em in bd.Empleados
                                 where em.contrasenia == txtContra.Text

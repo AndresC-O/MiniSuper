@@ -29,7 +29,7 @@ namespace MiniSuper.Vistas.Gerente
             this.p = inv;
         }
 
-
+      
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -70,13 +70,13 @@ namespace MiniSuper.Vistas.Gerente
             cEliminar.EliminarInventario((Inventario)inventarioBindingSource.Current);
             MessageBox.Show("¡Producto eliminado con éxito!");
             Limpiar();
+            this.Close();
+         
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            this.Dispose();
-            inv.Show();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -111,6 +111,8 @@ namespace MiniSuper.Vistas.Gerente
             inventarioBindingSource.EndEdit();
             pnuevo.RegistrarInventario((Inventario)inventarioBindingSource.Current);
             MessageBox.Show("¡Producto registrado con éxito!");
+            this.Close();
+           
         }
 
         private void txtCosto_TextChanged(object sender, EventArgs e)

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e55ee3d3679641309142a2e1b0f42d82" Name="Diagram1">
+        <EntityTypeShape EntityType="MiniSuperModel.Categoria" Width="1.5" PointX="6" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Cliente" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Compra" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.DetallesCompra" Width="1.5" PointX="10.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.DetallesVenta" Width="1.5" PointX="13.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Documento" Width="1.5" PointX="6" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Empleado" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Inventario" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Proveedore" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Sucursale" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniSuperModel.Venta" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="MiniSuperModel.FK__Inventari__idCat__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__Ventas__idClient__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__Compras__idEmple__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__Compras__idProve__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__DetallesC__idCom__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__DetallesC__idInv__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__DetallesV__idInv__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__DetallesV__idVen__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__Ventas__idDocume__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__Empleados__idSuc__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__Ventas__idEmplea__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniSuperModel.FK__Inventari__idPro__2B3F6F97" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

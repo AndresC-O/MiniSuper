@@ -28,80 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.flpPanelScroll = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlBotonoes = new System.Windows.Forms.Panel();
             this.pnProveedor = new System.Windows.Forms.Panel();
             this.lblProveedor = new System.Windows.Forms.Label();
-            this.pbProveedor = new System.Windows.Forms.PictureBox();
             this.pnEmpleado = new System.Windows.Forms.Panel();
             this.lblEmpleado = new System.Windows.Forms.Label();
-            this.pbEmpleado = new System.Windows.Forms.PictureBox();
             this.pnSucursal = new System.Windows.Forms.Panel();
             this.lblSucursal = new System.Windows.Forms.Label();
-            this.pbSucursal = new System.Windows.Forms.PictureBox();
             this.pnProducto = new System.Windows.Forms.Panel();
             this.lblProducto = new System.Windows.Forms.Label();
-            this.pbProducto = new System.Windows.Forms.PictureBox();
             this.pnCategoria = new System.Windows.Forms.Panel();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.pbCategoria = new System.Windows.Forms.PictureBox();
             this.pnCargo = new System.Windows.Forms.Panel();
             this.lblCargo = new System.Windows.Forms.Label();
-            this.pbCargo = new System.Windows.Forms.PictureBox();
             this.pnVenta = new System.Windows.Forms.Panel();
             this.lblVenta = new System.Windows.Forms.Label();
-            this.pbVenta = new System.Windows.Forms.PictureBox();
             this.pnCliente = new System.Windows.Forms.Panel();
             this.lblCliente = new System.Windows.Forms.Label();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.pbProveedor = new System.Windows.Forms.PictureBox();
+            this.pbEmpleado = new System.Windows.Forms.PictureBox();
+            this.pbSucursal = new System.Windows.Forms.PictureBox();
+            this.pbProducto = new System.Windows.Forms.PictureBox();
+            this.pbCategoria = new System.Windows.Forms.PictureBox();
+            this.pbCargo = new System.Windows.Forms.PictureBox();
+            this.pbVenta = new System.Windows.Forms.PictureBox();
             this.pbCliente = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.flpPanelScroll.SuspendLayout();
+            this.pnlBotonoes.SuspendLayout();
             this.pnProveedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProveedor)).BeginInit();
             this.pnEmpleado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).BeginInit();
             this.pnSucursal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSucursal)).BeginInit();
             this.pnProducto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
             this.pnCategoria.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCategoria)).BeginInit();
             this.pnCargo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCargo)).BeginInit();
             this.pnVenta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVenta)).BeginInit();
             this.pnCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProveedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSucursal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCategoria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCargo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).BeginInit();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flpPanelScroll
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1077, 785);
-            this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.flpPanelScroll.AutoScroll = true;
+            this.flpPanelScroll.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.flpPanelScroll.Controls.Add(this.pnlBotonoes);
+            this.flpPanelScroll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpPanelScroll.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpPanelScroll.Location = new System.Drawing.Point(0, 0);
+            this.flpPanelScroll.Name = "flpPanelScroll";
+            this.flpPanelScroll.Size = new System.Drawing.Size(1077, 785);
+            this.flpPanelScroll.TabIndex = 0;
+            this.flpPanelScroll.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // panel1
+            // pnlBotonoes
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.pnProveedor);
-            this.panel1.Controls.Add(this.pnEmpleado);
-            this.panel1.Controls.Add(this.pnSucursal);
-            this.panel1.Controls.Add(this.pnProducto);
-            this.panel1.Controls.Add(this.pnCategoria);
-            this.panel1.Controls.Add(this.pnCargo);
-            this.panel1.Controls.Add(this.pnVenta);
-            this.panel1.Controls.Add(this.pnCliente);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1039, 1510);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlBotonoes.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlBotonoes.Controls.Add(this.PanelContenedor);
+            this.pnlBotonoes.Controls.Add(this.pnProveedor);
+            this.pnlBotonoes.Controls.Add(this.pnEmpleado);
+            this.pnlBotonoes.Controls.Add(this.pnSucursal);
+            this.pnlBotonoes.Controls.Add(this.pnProducto);
+            this.pnlBotonoes.Controls.Add(this.pnCategoria);
+            this.pnlBotonoes.Controls.Add(this.pnCargo);
+            this.pnlBotonoes.Controls.Add(this.pnVenta);
+            this.pnlBotonoes.Controls.Add(this.pnCliente);
+            this.pnlBotonoes.Location = new System.Drawing.Point(3, 3);
+            this.pnlBotonoes.Name = "pnlBotonoes";
+            this.pnlBotonoes.Size = new System.Drawing.Size(1039, 1513);
+            this.pnlBotonoes.TabIndex = 0;
+            this.pnlBotonoes.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnProveedor
             // 
@@ -125,17 +128,6 @@
             this.lblProveedor.Text = "Proveedores";
             this.lblProveedor.Click += new System.EventHandler(this.lblProveedor_Click);
             // 
-            // pbProveedor
-            // 
-            this.pbProveedor.Image = global::MiniSuper.Properties.Resources.proveedor;
-            this.pbProveedor.Location = new System.Drawing.Point(91, 51);
-            this.pbProveedor.Name = "pbProveedor";
-            this.pbProveedor.Size = new System.Drawing.Size(128, 128);
-            this.pbProveedor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbProveedor.TabIndex = 0;
-            this.pbProveedor.TabStop = false;
-            this.pbProveedor.Click += new System.EventHandler(this.pbProveedor_Click);
-            // 
             // pnEmpleado
             // 
             this.pnEmpleado.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -157,17 +149,6 @@
             this.lblEmpleado.TabIndex = 1;
             this.lblEmpleado.Text = "Empleado";
             this.lblEmpleado.Click += new System.EventHandler(this.lblEmpleado_Click);
-            // 
-            // pbEmpleado
-            // 
-            this.pbEmpleado.Image = global::MiniSuper.Properties.Resources.empleado;
-            this.pbEmpleado.Location = new System.Drawing.Point(91, 51);
-            this.pbEmpleado.Name = "pbEmpleado";
-            this.pbEmpleado.Size = new System.Drawing.Size(128, 128);
-            this.pbEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbEmpleado.TabIndex = 0;
-            this.pbEmpleado.TabStop = false;
-            this.pbEmpleado.Click += new System.EventHandler(this.pbEmpleado_Click);
             // 
             // pnSucursal
             // 
@@ -191,17 +172,6 @@
             this.lblSucursal.Text = "Sucursal";
             this.lblSucursal.Click += new System.EventHandler(this.lblSucursal_Click);
             // 
-            // pbSucursal
-            // 
-            this.pbSucursal.Image = global::MiniSuper.Properties.Resources.sucursal;
-            this.pbSucursal.Location = new System.Drawing.Point(91, 51);
-            this.pbSucursal.Name = "pbSucursal";
-            this.pbSucursal.Size = new System.Drawing.Size(128, 128);
-            this.pbSucursal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbSucursal.TabIndex = 0;
-            this.pbSucursal.TabStop = false;
-            this.pbSucursal.Click += new System.EventHandler(this.pbSucursal_Click);
-            // 
             // pnProducto
             // 
             this.pnProducto.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -223,17 +193,6 @@
             this.lblProducto.TabIndex = 1;
             this.lblProducto.Text = "Productos";
             this.lblProducto.Click += new System.EventHandler(this.lblProducto_Click);
-            // 
-            // pbProducto
-            // 
-            this.pbProducto.Image = global::MiniSuper.Properties.Resources.producto;
-            this.pbProducto.Location = new System.Drawing.Point(91, 51);
-            this.pbProducto.Name = "pbProducto";
-            this.pbProducto.Size = new System.Drawing.Size(128, 128);
-            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbProducto.TabIndex = 0;
-            this.pbProducto.TabStop = false;
-            this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
             // 
             // pnCategoria
             // 
@@ -257,17 +216,6 @@
             this.lblCategoria.Text = "Categorias";
             this.lblCategoria.Click += new System.EventHandler(this.lblCategoria_Click);
             // 
-            // pbCategoria
-            // 
-            this.pbCategoria.Image = global::MiniSuper.Properties.Resources.categoria;
-            this.pbCategoria.Location = new System.Drawing.Point(91, 51);
-            this.pbCategoria.Name = "pbCategoria";
-            this.pbCategoria.Size = new System.Drawing.Size(128, 128);
-            this.pbCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbCategoria.TabIndex = 0;
-            this.pbCategoria.TabStop = false;
-            this.pbCategoria.Click += new System.EventHandler(this.pbCategoria_Click);
-            // 
             // pnCargo
             // 
             this.pnCargo.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -289,17 +237,6 @@
             this.lblCargo.TabIndex = 1;
             this.lblCargo.Text = "Cargos";
             this.lblCargo.Click += new System.EventHandler(this.lblCargo_Click);
-            // 
-            // pbCargo
-            // 
-            this.pbCargo.Image = global::MiniSuper.Properties.Resources.cargos;
-            this.pbCargo.Location = new System.Drawing.Point(91, 87);
-            this.pbCargo.Name = "pbCargo";
-            this.pbCargo.Size = new System.Drawing.Size(128, 84);
-            this.pbCargo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbCargo.TabIndex = 0;
-            this.pbCargo.TabStop = false;
-            this.pbCargo.Click += new System.EventHandler(this.pbCargo_Click);
             // 
             // pnVenta
             // 
@@ -323,17 +260,6 @@
             this.lblVenta.Text = "Venta";
             this.lblVenta.Click += new System.EventHandler(this.lblVenta_Click);
             // 
-            // pbVenta
-            // 
-            this.pbVenta.Image = global::MiniSuper.Properties.Resources.cajero;
-            this.pbVenta.Location = new System.Drawing.Point(95, 53);
-            this.pbVenta.Name = "pbVenta";
-            this.pbVenta.Size = new System.Drawing.Size(128, 128);
-            this.pbVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbVenta.TabIndex = 0;
-            this.pbVenta.TabStop = false;
-            this.pbVenta.Click += new System.EventHandler(this.pbVenta_Click);
-            // 
             // pnCliente
             // 
             this.pnCliente.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -356,6 +282,90 @@
             this.lblCliente.Text = "Clientes";
             this.lblCliente.Click += new System.EventHandler(this.lblCliente_Click);
             // 
+            // PanelContenedor
+            // 
+            this.PanelContenedor.Location = new System.Drawing.Point(3, 3);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(1038, 760);
+            this.PanelContenedor.TabIndex = 8;
+            // 
+            // pbProveedor
+            // 
+            this.pbProveedor.Image = global::MiniSuper.Properties.Resources.proveedor;
+            this.pbProveedor.Location = new System.Drawing.Point(91, 51);
+            this.pbProveedor.Name = "pbProveedor";
+            this.pbProveedor.Size = new System.Drawing.Size(128, 128);
+            this.pbProveedor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbProveedor.TabIndex = 0;
+            this.pbProveedor.TabStop = false;
+            this.pbProveedor.Click += new System.EventHandler(this.pbProveedor_Click);
+            // 
+            // pbEmpleado
+            // 
+            this.pbEmpleado.Image = global::MiniSuper.Properties.Resources.empleado;
+            this.pbEmpleado.Location = new System.Drawing.Point(91, 51);
+            this.pbEmpleado.Name = "pbEmpleado";
+            this.pbEmpleado.Size = new System.Drawing.Size(128, 128);
+            this.pbEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbEmpleado.TabIndex = 0;
+            this.pbEmpleado.TabStop = false;
+            this.pbEmpleado.Click += new System.EventHandler(this.pbEmpleado_Click);
+            // 
+            // pbSucursal
+            // 
+            this.pbSucursal.Image = global::MiniSuper.Properties.Resources.sucursal;
+            this.pbSucursal.Location = new System.Drawing.Point(91, 51);
+            this.pbSucursal.Name = "pbSucursal";
+            this.pbSucursal.Size = new System.Drawing.Size(128, 128);
+            this.pbSucursal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbSucursal.TabIndex = 0;
+            this.pbSucursal.TabStop = false;
+            this.pbSucursal.Click += new System.EventHandler(this.pbSucursal_Click);
+            // 
+            // pbProducto
+            // 
+            this.pbProducto.Image = global::MiniSuper.Properties.Resources.producto;
+            this.pbProducto.Location = new System.Drawing.Point(91, 51);
+            this.pbProducto.Name = "pbProducto";
+            this.pbProducto.Size = new System.Drawing.Size(128, 128);
+            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbProducto.TabIndex = 0;
+            this.pbProducto.TabStop = false;
+            this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
+            // 
+            // pbCategoria
+            // 
+            this.pbCategoria.Image = global::MiniSuper.Properties.Resources.categoria;
+            this.pbCategoria.Location = new System.Drawing.Point(91, 51);
+            this.pbCategoria.Name = "pbCategoria";
+            this.pbCategoria.Size = new System.Drawing.Size(128, 128);
+            this.pbCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbCategoria.TabIndex = 0;
+            this.pbCategoria.TabStop = false;
+            this.pbCategoria.Click += new System.EventHandler(this.pbCategoria_Click);
+            // 
+            // pbCargo
+            // 
+            this.pbCargo.Image = global::MiniSuper.Properties.Resources.cargos;
+            this.pbCargo.Location = new System.Drawing.Point(91, 87);
+            this.pbCargo.Name = "pbCargo";
+            this.pbCargo.Size = new System.Drawing.Size(128, 84);
+            this.pbCargo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbCargo.TabIndex = 0;
+            this.pbCargo.TabStop = false;
+            this.pbCargo.Click += new System.EventHandler(this.pbCargo_Click);
+            // 
+            // pbVenta
+            // 
+            this.pbVenta.Image = global::MiniSuper.Properties.Resources.cajero;
+            this.pbVenta.Location = new System.Drawing.Point(95, 53);
+            this.pbVenta.Name = "pbVenta";
+            this.pbVenta.Size = new System.Drawing.Size(128, 128);
+            this.pbVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbVenta.TabIndex = 0;
+            this.pbVenta.TabStop = false;
+            this.pbVenta.Click += new System.EventHandler(this.pbVenta_Click);
+            // 
             // pbCliente
             // 
             this.pbCliente.Image = global::MiniSuper.Properties.Resources.Clientes1;
@@ -372,45 +382,43 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 785);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flpPanelScroll);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuBotones";
             this.Text = "MenuBotones";
             this.Load += new System.EventHandler(this.MenuBotones_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.flpPanelScroll.ResumeLayout(false);
+            this.pnlBotonoes.ResumeLayout(false);
             this.pnProveedor.ResumeLayout(false);
             this.pnProveedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProveedor)).EndInit();
             this.pnEmpleado.ResumeLayout(false);
             this.pnEmpleado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).EndInit();
             this.pnSucursal.ResumeLayout(false);
             this.pnSucursal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSucursal)).EndInit();
             this.pnProducto.ResumeLayout(false);
             this.pnProducto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
             this.pnCategoria.ResumeLayout(false);
             this.pnCategoria.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCategoria)).EndInit();
             this.pnCargo.ResumeLayout(false);
             this.pnCargo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCargo)).EndInit();
             this.pnVenta.ResumeLayout(false);
             this.pnVenta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVenta)).EndInit();
             this.pnCliente.ResumeLayout(false);
             this.pnCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProveedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSucursal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCategoria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCargo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlBotonoes;
         private System.Windows.Forms.Panel pnCliente;
         private System.Windows.Forms.PictureBox pbCliente;
         private System.Windows.Forms.Label lblCliente;
@@ -435,5 +443,7 @@
         private System.Windows.Forms.Panel pnProveedor;
         private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.PictureBox pbProveedor;
+        public System.Windows.Forms.FlowLayoutPanel flpPanelScroll;
+        public System.Windows.Forms.Panel PanelContenedor;
     }
 }

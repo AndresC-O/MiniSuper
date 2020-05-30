@@ -19,6 +19,7 @@ namespace MiniSuper.Vistas.Gerente
             InitializeComponent();
         }
 
+        
         private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Estás seguro que quieres salir?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -40,6 +41,15 @@ namespace MiniSuper.Vistas.Gerente
                 this.Close();
             }
         }
+
+        public void FormInventario()
+        {
+            ListadoInventario b = new ListadoInventario();
+            b.MdiParent = this;
+            b.Dock = DockStyle.Fill;
+            b.Show();
+        }
+
 
         private void AccesoGerente_Load(object sender, EventArgs e)
         {

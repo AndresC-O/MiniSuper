@@ -21,6 +21,6 @@ namespace MiniSuper.Model
         public Nullable<decimal> precio { get; set; }
     
         public virtual Inventario Inventario { get; set; }
-        public virtual Ventas Ventas { get; set; }
+        public virtual Venta Venta { get; set; }
     }
 }

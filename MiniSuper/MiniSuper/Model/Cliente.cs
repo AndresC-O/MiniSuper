@@ -12,25 +12,23 @@ namespace MiniSuper.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Ventas
+    public partial class Cliente
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Ventas()
+        public Cliente()
         {
-            this.DetallesVenta = new HashSet<DetallesVenta>();
+            this.Ventas = new HashSet<Venta>();
         }
     
-        public int idVenta { get; set; }
-        public int idEmpleado { get; set; }
         public int idCliente { get; set; }
-        public int idDocumento { get; set; }
-        public Nullable<decimal> totalVenta { get; set; }
-        public Nullable<System.DateTime> fecha { get; set; }
+        public string nombreCliente { get; set; }
+        public string apellidosCliente { get; set; }
+        public string direccion { get; set; }
+        public string telefono { get; set; }
+        public string dui { get; set; }
+        public string nit { get; set; }
     
-        public virtual Clientes Clientes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetallesVenta> DetallesVenta { get; set; }
-        public virtual Documentos Documentos { get; set; }
-        public virtual Empleados Empleados { get; set; }
+        public virtual ICollection<Venta> Ventas { get; set; }
     }
 }

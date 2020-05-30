@@ -12,28 +12,25 @@ namespace MiniSuper.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Inventario
+    public partial class Venta
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Inventario()
+        public Venta()
         {
-            this.DetallesCompras = new HashSet<DetallesCompra>();
             this.DetallesVentas = new HashSet<DetallesVenta>();
         }
     
-        public int idInventario { get; set; }
-        public string nombreProducto { get; set; }
-        public int idCategoria { get; set; }
-        public int idProveedor { get; set; }
-        public int existencias { get; set; }
-        public Nullable<decimal> costo { get; set; }
-        public Nullable<decimal> precioVenta { get; set; }
+        public int idVenta { get; set; }
+        public int idEmpleado { get; set; }
+        public int idCliente { get; set; }
+        public int idDocumento { get; set; }
+        public Nullable<decimal> totalVenta { get; set; }
+        public Nullable<System.DateTime> fecha { get; set; }
     
-        public virtual Categoria Categoria { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetallesCompra> DetallesCompras { get; set; }
+        public virtual Cliente Cliente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetallesVenta> DetallesVentas { get; set; }
-        public virtual Proveedore Proveedore { get; set; }
+        public virtual Documento Documento { get; set; }
+        public virtual Empleado Empleado { get; set; }
     }
 }

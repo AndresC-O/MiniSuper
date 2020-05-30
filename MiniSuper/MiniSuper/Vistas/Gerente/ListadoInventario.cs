@@ -17,12 +17,15 @@ namespace MiniSuper.Vistas.Gerente
         CInventario cProducto = new CInventario();
         CProveedores cProveedor = new CProveedores();
         CCategoria cCategoria = new CCategoria();
+       
+        
 
         public ListadoInventario()
         {
             InitializeComponent();
         }
 
+        
         public void CargarTabla()
         {
             inventarioBindingSource.DataSource = cProducto.ListadoInventarios();
@@ -37,6 +40,7 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnEditarEliminar_Click(object sender, EventArgs e)
         {
+            
             if (inventarioDataGridView.Rows.Count == 0)
             {
                 MessageBox.Show("¡Aún no hay productos para modificar/eliminar!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -60,6 +64,18 @@ namespace MiniSuper.Vistas.Gerente
             crud.btnEliminar.Visible = false;
             crud.btnModificar.Visible = false;
             crud.btnHabEdi.Visible = false;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            AccesoGerente ag = new AccesoGerente();
+            ag.Show();
+        }
+
+        private void pbActualizar_Click(object sender, EventArgs e)
+        {
+            CargarTabla();
         }
     }
 }

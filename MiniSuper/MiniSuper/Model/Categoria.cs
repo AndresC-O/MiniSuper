@@ -12,15 +12,18 @@ namespace MiniSuper.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class DetallesCompra
+    public partial class Categoria
     {
-        public int idDetalleCompra { get; set; }
-        public int idCompra { get; set; }
-        public int idInventario { get; set; }
-        public Nullable<int> cantidad { get; set; }
-        public Nullable<decimal> precio { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Categoria()
+        {
+            this.Inventarios = new HashSet<Inventario>();
+        }
     
-        public virtual Compra Compra { get; set; }
-        public virtual Inventario Inventario { get; set; }
+        public int idCategoria { get; set; }
+        public string nombreCategoria { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Inventario> Inventarios { get; set; }
     }
 }

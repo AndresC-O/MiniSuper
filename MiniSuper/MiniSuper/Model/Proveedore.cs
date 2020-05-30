@@ -12,28 +12,23 @@ namespace MiniSuper.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Inventario
+    public partial class Proveedore
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Inventario()
+        public Proveedore()
         {
-            this.DetallesCompras = new HashSet<DetallesCompra>();
-            this.DetallesVentas = new HashSet<DetallesVenta>();
+            this.Compras = new HashSet<Compra>();
+            this.Inventarios = new HashSet<Inventario>();
         }
     
-        public int idInventario { get; set; }
-        public string nombreProducto { get; set; }
-        public int idCategoria { get; set; }
         public int idProveedor { get; set; }
-        public int existencias { get; set; }
-        public Nullable<decimal> costo { get; set; }
-        public Nullable<decimal> precioVenta { get; set; }
+        public string nombreProveedor { get; set; }
+        public string direccion { get; set; }
+        public string telefono { get; set; }
     
-        public virtual Categoria Categoria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetallesCompra> DetallesCompras { get; set; }
+        public virtual ICollection<Compra> Compras { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetallesVenta> DetallesVentas { get; set; }
-        public virtual Proveedore Proveedore { get; set; }
+        public virtual ICollection<Inventario> Inventarios { get; set; }
     }
 }

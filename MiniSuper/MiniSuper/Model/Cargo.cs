@@ -12,23 +12,19 @@ namespace MiniSuper.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Proveedores
+    public partial class Cargo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Proveedores()
+        public Cargo()
         {
-            this.Compras = new HashSet<Compras>();
-            this.Inventario = new HashSet<Inventario>();
+            this.Empleados = new HashSet<Empleado>();
         }
     
-        public int idProveedor { get; set; }
-        public string nombreProveedor { get; set; }
-        public string direccion { get; set; }
-        public string telefono { get; set; }
+        public int idCargo { get; set; }
+        public string nombreCargo { get; set; }
+        public Nullable<decimal> sueldo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Compras> Compras { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Inventario> Inventario { get; set; }
+        public virtual ICollection<Empleado> Empleados { get; set; }
     }
 }

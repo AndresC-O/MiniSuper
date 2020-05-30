@@ -33,10 +33,7 @@
             System.Windows.Forms.Label existenciasLabel;
             System.Windows.Forms.Label precioVentaLabel;
             System.Windows.Forms.Label idInventarioLabel;
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.lblCategoria = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -110,17 +107,6 @@
             idInventarioLabel.TabIndex = 0;
             idInventarioLabel.Text = "Id:";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DimGray;
-            this.label12.Location = new System.Drawing.Point(472, 211);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 38);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "  Proveedor\r\n     Actual";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -131,28 +117,6 @@
             this.label13.Size = new System.Drawing.Size(119, 57);
             this.label13.TabIndex = 7;
             this.label13.Text = "Seleccionar o \r\n   Cambiar\r\n  Proveedor";
-            // 
-            // lblCategoria
-            // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCategoria.Location = new System.Drawing.Point(574, 247);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(17, 19);
-            this.lblCategoria.TabIndex = 10;
-            this.lblCategoria.Text = "  ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(477, 134);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 38);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "  Categoria\r\n     Actual";
             // 
             // label8
             // 
@@ -368,6 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(715, 553);
             this.Controls.Add(this.btnHabEdi);
             this.Controls.Add(this.idInventarioLabel2);
@@ -383,10 +348,7 @@
             this.Controls.Add(this.txtPrecioVenta);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblProveedor);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.lblCategoria);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -408,10 +370,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblProveedor;

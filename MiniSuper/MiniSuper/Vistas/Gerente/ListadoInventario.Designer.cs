@@ -33,6 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnEditarEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.pbActualizar = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -44,6 +46,8 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.inventarioDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
@@ -66,14 +70,14 @@
             this.inventarioDataGridView.DataSource = this.inventarioBindingSource;
             this.inventarioDataGridView.Location = new System.Drawing.Point(51, 145);
             this.inventarioDataGridView.Name = "inventarioDataGridView";
-            this.inventarioDataGridView.Size = new System.Drawing.Size(1107, 445);
+            this.inventarioDataGridView.Size = new System.Drawing.Size(900, 445);
             this.inventarioDataGridView.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(377, 42);
+            this.label2.Location = new System.Drawing.Point(269, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(514, 39);
             this.label2.TabIndex = 2;
@@ -82,7 +86,7 @@
             // btnEditarEliminar
             // 
             this.btnEditarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarEliminar.Location = new System.Drawing.Point(318, 629);
+            this.btnEditarEliminar.Location = new System.Drawing.Point(212, 621);
             this.btnEditarEliminar.Name = "btnEditarEliminar";
             this.btnEditarEliminar.Size = new System.Drawing.Size(190, 67);
             this.btnEditarEliminar.TabIndex = 3;
@@ -93,13 +97,35 @@
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(687, 629);
+            this.btnNuevo.Location = new System.Drawing.Point(581, 621);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(190, 67);
             this.btnNuevo.TabIndex = 4;
             this.btnNuevo.Text = "Nuevo Producto";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // pbActualizar
+            // 
+            this.pbActualizar.Image = global::MiniSuper.Properties.Resources.actualizar;
+            this.pbActualizar.Location = new System.Drawing.Point(926, 115);
+            this.pbActualizar.Name = "pbActualizar";
+            this.pbActualizar.Size = new System.Drawing.Size(21, 23);
+            this.pbActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbActualizar.TabIndex = 6;
+            this.pbActualizar.TabStop = false;
+            this.pbActualizar.Click += new System.EventHandler(this.pbActualizar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MiniSuper.Properties.Resources.salir;
+            this.pictureBox2.Location = new System.Drawing.Point(28, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -171,7 +197,9 @@
             // 
             // ListadoInventario
             // 
-            this.ClientSize = new System.Drawing.Size(1205, 751);
+            this.ClientSize = new System.Drawing.Size(1010, 751);
+            this.Controls.Add(this.pbActualizar);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnEditarEliminar);
             this.Controls.Add(this.label2);
@@ -181,6 +209,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.ListadoInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventarioDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).EndInit();
@@ -210,5 +240,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEditarEliminar;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbActualizar;
     }
 }

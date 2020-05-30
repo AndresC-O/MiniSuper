@@ -16,11 +16,34 @@ namespace MiniSuper.Vistas.Gerente
     public partial class MenuBotones : Form
     {
 
-        AccesoGerente ag = new AccesoGerente();
+       
 
         public MenuBotones()
         {
             InitializeComponent();
+            PanelContenedor.Visible = false;
+        }
+
+        public void Invertir()
+        {
+            PanelContenedor.Dispose();
+            PanelContenedor.Visible = false;
+            flpPanelScroll.AutoScroll = false;
+        }
+
+        public void AbrirFormHijo(object formhijo)
+        {
+            flpPanelScroll.AutoScroll = false;
+            PanelContenedor.Visible = true;
+            if (this.PanelContenedor.Controls.Count > 0)
+                this.PanelContenedor.Controls.RemoveAt(0);
+            Form fh = formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.PanelContenedor.Controls.Add(fh);
+            this.PanelContenedor.Tag = fh;
+            fh.Show();
+
         }
 
         void CargarFrmCargo()
@@ -45,13 +68,7 @@ namespace MiniSuper.Vistas.Gerente
 
         void CargarFrmProducto()
         {
-            ListadoInventario inv = new ListadoInventario();
-            this.Close();
-            this.Dispose();
-            ag.Dispose();
-            ag.Close();
-            inv.Show();
-
+            
         }
 
         
@@ -133,7 +150,7 @@ namespace MiniSuper.Vistas.Gerente
 
         private void pbProducto_Click(object sender, EventArgs e)
         {
-            CargarFrmProducto();
+            AbrirFormHijo(new ListadoInventario());
         }
 
         private void lblProducto_Click(object sender, EventArgs e)

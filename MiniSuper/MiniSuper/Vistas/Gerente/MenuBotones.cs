@@ -15,9 +15,6 @@ namespace MiniSuper.Vistas.Gerente
 {
     public partial class MenuBotones : Form
     {
-
-       
-
         public MenuBotones()
         {
             InitializeComponent();
@@ -140,7 +137,7 @@ namespace MiniSuper.Vistas.Gerente
 
         private void pbCategoria_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormHijo(new ListadoCategorias());
         }
 
         private void lblCategoria_Click(object sender, EventArgs e)

@@ -77,5 +77,10 @@ namespace MiniSuper.Vistas.Gerente
         {
             CargarTabla();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

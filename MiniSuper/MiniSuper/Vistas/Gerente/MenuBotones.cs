@@ -95,7 +95,7 @@ namespace MiniSuper.Vistas.Gerente
 
         private void pbCliente_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormHijo(new ListadoClientes());
         }
 
         private void lblCliente_Click(object sender, EventArgs e)
@@ -204,6 +204,11 @@ namespace MiniSuper.Vistas.Gerente
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pbDocumentos_Click(object sender, EventArgs e)
         {
 
         }

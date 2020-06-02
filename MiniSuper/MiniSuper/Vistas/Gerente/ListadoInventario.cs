@@ -40,7 +40,6 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnEditarEliminar_Click(object sender, EventArgs e)
         {
-            
             if (inventarioDataGridView.Rows.Count == 0)
             {
                 MessageBox.Show("¡Aún no hay productos para modificar/eliminar!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -195,7 +195,7 @@ namespace MiniSuper.Vistas.Gerente
 
         private void pbProveedor_Click(object sender, EventArgs e)
         {
-           
+            AbrirFormHijo(new ListadoProveedores());
         }
 
         private void lblProveedor_Click(object sender, EventArgs e)

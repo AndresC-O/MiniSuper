@@ -166,6 +166,12 @@
     <Compile Include="Vistas\Gerente\CRUD_Producto.Designer.cs">
       <DependentUpon>CRUD_Producto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Gerente\CRUD_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Gerente\CRUD_Proveedores.Designer.cs">
+      <DependentUpon>CRUD_Proveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Gerente\ListadoClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,12 @@
     </Compile>
     <Compile Include="Vistas\Gerente\ListadoInventario.Designer.cs">
       <DependentUpon>ListadoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Gerente\ListadoProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Gerente\ListadoProveedores.Designer.cs">
+      <DependentUpon>ListadoProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Gerente\MenuBotones.cs">
       <SubType>Form</SubType>
@@ -206,11 +218,17 @@
     <EmbeddedResource Include="Vistas\Gerente\CRUD_Producto.resx">
       <DependentUpon>CRUD_Producto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Gerente\CRUD_Proveedores.resx">
+      <DependentUpon>CRUD_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\ListadoClientes.resx">
       <DependentUpon>ListadoClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\ListadoInventario.resx">
       <DependentUpon>ListadoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Gerente\ListadoProveedores.resx">
+      <DependentUpon>ListadoProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\MenuBotones.resx">
       <DependentUpon>MenuBotones.cs</DependentUpon>

@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.clientesDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEditarEliminar = new System.Windows.Forms.Button();
-            this.pbActualizar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,10 +39,14 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEditarEliminar = new System.Windows.Forms.Button();
+            this.pbActualizar = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -58,6 +58,7 @@
             this.label2.Size = new System.Drawing.Size(398, 39);
             this.label2.TabIndex = 7;
             this.label2.Text = "LISTADO DE CLIENTES";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // clientesDataGridView
             // 
@@ -77,50 +78,6 @@
             this.clientesDataGridView.Name = "clientesDataGridView";
             this.clientesDataGridView.Size = new System.Drawing.Size(983, 448);
             this.clientesDataGridView.TabIndex = 10;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(585, 612);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(190, 67);
-            this.btnNuevo.TabIndex = 12;
-            this.btnNuevo.Text = "Nuevo Cliente";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnEditarEliminar
-            // 
-            this.btnEditarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarEliminar.Location = new System.Drawing.Point(216, 612);
-            this.btnEditarEliminar.Name = "btnEditarEliminar";
-            this.btnEditarEliminar.Size = new System.Drawing.Size(190, 67);
-            this.btnEditarEliminar.TabIndex = 11;
-            this.btnEditarEliminar.Text = "Editar o eliminar seleccionado";
-            this.btnEditarEliminar.UseVisualStyleBackColor = true;
-            this.btnEditarEliminar.Click += new System.EventHandler(this.btnEditarEliminar_Click);
-            // 
-            // pbActualizar
-            // 
-            this.pbActualizar.Image = global::MiniSuper.Properties.Resources.actualizar;
-            this.pbActualizar.Location = new System.Drawing.Point(953, 91);
-            this.pbActualizar.Name = "pbActualizar";
-            this.pbActualizar.Size = new System.Drawing.Size(21, 23);
-            this.pbActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbActualizar.TabIndex = 9;
-            this.pbActualizar.TabStop = false;
-            this.pbActualizar.Click += new System.EventHandler(this.pbActualizar_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MiniSuper.Properties.Resources.salir;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -170,6 +127,50 @@
             // 
             this.clientesBindingSource.DataSource = typeof(MiniSuper.Entidades.Clientes);
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Location = new System.Drawing.Point(585, 612);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(190, 67);
+            this.btnNuevo.TabIndex = 12;
+            this.btnNuevo.Text = "Nuevo Cliente";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnEditarEliminar
+            // 
+            this.btnEditarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarEliminar.Location = new System.Drawing.Point(216, 612);
+            this.btnEditarEliminar.Name = "btnEditarEliminar";
+            this.btnEditarEliminar.Size = new System.Drawing.Size(190, 67);
+            this.btnEditarEliminar.TabIndex = 11;
+            this.btnEditarEliminar.Text = "Editar o eliminar seleccionado";
+            this.btnEditarEliminar.UseVisualStyleBackColor = true;
+            this.btnEditarEliminar.Click += new System.EventHandler(this.btnEditarEliminar_Click);
+            // 
+            // pbActualizar
+            // 
+            this.pbActualizar.Image = global::MiniSuper.Properties.Resources.actualizar;
+            this.pbActualizar.Location = new System.Drawing.Point(953, 91);
+            this.pbActualizar.Name = "pbActualizar";
+            this.pbActualizar.Size = new System.Drawing.Size(21, 23);
+            this.pbActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbActualizar.TabIndex = 9;
+            this.pbActualizar.TabStop = false;
+            this.pbActualizar.Click += new System.EventHandler(this.pbActualizar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MiniSuper.Properties.Resources.salir;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // ListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,9 +187,9 @@
             this.Text = "ListadoClientes";
             this.Load += new System.EventHandler(this.ListadoClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

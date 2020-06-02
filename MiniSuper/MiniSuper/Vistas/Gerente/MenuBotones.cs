@@ -177,7 +177,7 @@ namespace MiniSuper.Vistas.Gerente
 
         private void pbEmpleado_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormHijo(new ListadoEmpleados());
         }
 
         private void lblEmpleado_Click(object sender, EventArgs e)

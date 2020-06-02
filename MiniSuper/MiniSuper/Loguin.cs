@@ -60,6 +60,7 @@ namespace MiniSuper
                             {
                                 AccesoGerente manager = new AccesoGerente();
                                 manager.Show();
+                                manager.lblUsuario.Text = txtUsuario.Text;
                                 this.Hide();
                                 Limpiar();
                             }

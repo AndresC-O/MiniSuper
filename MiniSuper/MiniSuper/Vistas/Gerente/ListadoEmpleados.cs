@@ -12,19 +12,15 @@ using System.Windows.Forms;
 
 namespace MiniSuper.Vistas.Gerente
 {
-    public partial class ListadoClientes : Form
+    public partial class ListadoEmpleados : Form
     {
-        public ListadoClientes()
+        public ListadoEmpleados()
         {
             InitializeComponent();
         }
 
-        CClientes cClientes = new CClientes();
-        public void CargarTabla()
-        {
-            clientesDataGridView.Rows.Clear();
-            clientesBindingSource.DataSource = cClientes.ListadoClientes();
-        }
+        CEmpleados cEmpleados = new CEmpleados();
+        CSucursales cSucursales = new CSucursales();
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -32,28 +28,36 @@ namespace MiniSuper.Vistas.Gerente
             ag.Show();
         }
 
-        private void ListadoClientes_Load(object sender, EventArgs e)
+        public void CargarDatos()
         {
-            CargarTabla();
+            empleadosDataGridView.Rows.Clear();
+
+            empleadosBindingSource.DataSource = cEmpleados.ListadoEmpleados();
+            sucursalesBindingSource.DataSource = cSucursales.ListadoSucursales();
+        }
+
+        private void ListadoEmpleados_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
         }
 
         private void pbActualizar_Click(object sender, EventArgs e)
         {
-            CargarTabla();
+            CargarDatos();
         }
 
         private void btnEditarEliminar_Click(object sender, EventArgs e)
         {
-            if (clientesDataGridView.Rows.Count == 0)
+            if (empleadosDataGridView.Rows.Count == 0)
             {
-                MessageBox.Show("¡Aún no hay productos para modificar/eliminar!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("¡Aún no hay empleados para modificar/eliminar!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                Clientes customer = new Clientes();
-                customer = (Clientes)clientesBindingSource.Current;
+                Empleados emp = new Empleados();
+                emp = (Empleados)empleadosBindingSource.Current;
 
-                CRUD_Clientes crud = new CRUD_Clientes(customer);
+                CRUD_Empleados crud = new CRUD_Empleados(emp);
                 crud.Show();
                 crud.btnGuardar.Visible = false;
                 crud.btnNuevo.Visible = false;
@@ -62,16 +66,11 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            CRUD_Clientes crud = new CRUD_Clientes();
+            CRUD_Empleados crud = new CRUD_Empleados();
             crud.Show();
             crud.btnEliminar.Visible = false;
             crud.btnModificar.Visible = false;
             crud.btnHabEdi.Visible = false;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

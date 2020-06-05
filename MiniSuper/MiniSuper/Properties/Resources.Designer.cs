@@ -83,6 +83,16 @@ namespace MiniSuper.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow__1_ {
+            get {
+                object obj = ResourceManager.GetObject("arrow (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cajero {
             get {
                 object obj = ResourceManager.GetObject("cajero", resourceCulture);

@@ -146,3 +146,11 @@ precio decimal(18,5)
 Go
 
 Insert into DetallesVenta values (1, 1, 5, 0.73)
+
+--Actualizacion [03/06/2020]----------------------------
+Alter table DetallesCompra add total decimal(18,5)
+Alter table DetallesVenta add total decimal(18,5)
+/*Tambien deben de eliminar los procedimientos siguientes:
+	-InsertarDetalleCompra
+	-InsertarDetalleVenta
+luego de eso, ejecutan UNICAMENTE esos dos NADA MAS.*/

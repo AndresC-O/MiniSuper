@@ -184,6 +184,12 @@
     <Compile Include="Vistas\Gerente\CRUD_Proveedores.Designer.cs">
       <DependentUpon>CRUD_Proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Gerente\FrmComprar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Gerente\FrmComprar.Designer.cs">
+      <DependentUpon>FrmComprar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Gerente\ListadoCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\CRUD_Proveedores.resx">
       <DependentUpon>CRUD_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Gerente\FrmComprar.resx">
+      <DependentUpon>FrmComprar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\ListadoCategorias.resx">
       <DependentUpon>ListadoCategorias.cs</DependentUpon>
@@ -337,6 +346,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\arrow %281%29.png" />
     <None Include="Resources\documents.png" />
     <None Include="Resources\actualizar.png" />
   </ItemGroup>

@@ -33,45 +33,50 @@
             this.pnlBotonoes = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbDocumentos = new System.Windows.Forms.PictureBox();
             this.pnProveedor = new System.Windows.Forms.Panel();
             this.lblProveedor = new System.Windows.Forms.Label();
-            this.pbProveedor = new System.Windows.Forms.PictureBox();
             this.pnEmpleado = new System.Windows.Forms.Panel();
             this.lblEmpleado = new System.Windows.Forms.Label();
-            this.pbEmpleado = new System.Windows.Forms.PictureBox();
             this.pnSucursal = new System.Windows.Forms.Panel();
             this.lblSucursal = new System.Windows.Forms.Label();
-            this.pbSucursal = new System.Windows.Forms.PictureBox();
             this.pnProducto = new System.Windows.Forms.Panel();
             this.lblProducto = new System.Windows.Forms.Label();
-            this.pbProducto = new System.Windows.Forms.PictureBox();
             this.pnCategoria = new System.Windows.Forms.Panel();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.pbCategoria = new System.Windows.Forms.PictureBox();
             this.pnVenta = new System.Windows.Forms.Panel();
             this.lblVenta = new System.Windows.Forms.Label();
-            this.pbVenta = new System.Windows.Forms.PictureBox();
             this.pnCliente = new System.Windows.Forms.Panel();
             this.lblCliente = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pbComprar = new System.Windows.Forms.PictureBox();
+            this.pbDocumentos = new System.Windows.Forms.PictureBox();
+            this.pbProveedor = new System.Windows.Forms.PictureBox();
+            this.pbEmpleado = new System.Windows.Forms.PictureBox();
+            this.pbSucursal = new System.Windows.Forms.PictureBox();
+            this.pbProducto = new System.Windows.Forms.PictureBox();
+            this.pbCategoria = new System.Windows.Forms.PictureBox();
+            this.pbVenta = new System.Windows.Forms.PictureBox();
             this.pbCliente = new System.Windows.Forms.PictureBox();
             this.flpPanelScroll.SuspendLayout();
             this.pnlBotonoes.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDocumentos)).BeginInit();
             this.pnProveedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProveedor)).BeginInit();
             this.pnEmpleado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).BeginInit();
             this.pnSucursal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSucursal)).BeginInit();
             this.pnProducto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
             this.pnCategoria.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCategoria)).BeginInit();
             this.pnVenta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVenta)).BeginInit();
             this.pnCliente.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbComprar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDocumentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProveedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSucursal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCategoria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,12 +98,13 @@
             // 
             this.PanelContenedor.Location = new System.Drawing.Point(3, 3);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1051, 1533);
+            this.PanelContenedor.Size = new System.Drawing.Size(1054, 1800);
             this.PanelContenedor.TabIndex = 8;
             // 
             // pnlBotonoes
             // 
             this.pnlBotonoes.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlBotonoes.Controls.Add(this.panel2);
             this.pnlBotonoes.Controls.Add(this.panel1);
             this.pnlBotonoes.Controls.Add(this.pnProveedor);
             this.pnlBotonoes.Controls.Add(this.pnEmpleado);
@@ -107,9 +113,9 @@
             this.pnlBotonoes.Controls.Add(this.pnCategoria);
             this.pnlBotonoes.Controls.Add(this.pnVenta);
             this.pnlBotonoes.Controls.Add(this.pnCliente);
-            this.pnlBotonoes.Location = new System.Drawing.Point(1060, 3);
+            this.pnlBotonoes.Location = new System.Drawing.Point(1063, 3);
             this.pnlBotonoes.Name = "pnlBotonoes";
-            this.pnlBotonoes.Size = new System.Drawing.Size(1039, 1513);
+            this.pnlBotonoes.Size = new System.Drawing.Size(1039, 1800);
             this.pnlBotonoes.TabIndex = 0;
             this.pnlBotonoes.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -133,17 +139,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Documentos";
             // 
-            // pbDocumentos
-            // 
-            this.pbDocumentos.Image = global::MiniSuper.Properties.Resources.documents;
-            this.pbDocumentos.Location = new System.Drawing.Point(91, 51);
-            this.pbDocumentos.Name = "pbDocumentos";
-            this.pbDocumentos.Size = new System.Drawing.Size(128, 128);
-            this.pbDocumentos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbDocumentos.TabIndex = 0;
-            this.pbDocumentos.TabStop = false;
-            this.pbDocumentos.Click += new System.EventHandler(this.pbDocumentos_Click);
-            // 
             // pnProveedor
             // 
             this.pnProveedor.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -165,17 +160,6 @@
             this.lblProveedor.TabIndex = 1;
             this.lblProveedor.Text = "Proveedores";
             this.lblProveedor.Click += new System.EventHandler(this.lblProveedor_Click);
-            // 
-            // pbProveedor
-            // 
-            this.pbProveedor.Image = global::MiniSuper.Properties.Resources.proveedor;
-            this.pbProveedor.Location = new System.Drawing.Point(91, 51);
-            this.pbProveedor.Name = "pbProveedor";
-            this.pbProveedor.Size = new System.Drawing.Size(128, 128);
-            this.pbProveedor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbProveedor.TabIndex = 0;
-            this.pbProveedor.TabStop = false;
-            this.pbProveedor.Click += new System.EventHandler(this.pbProveedor_Click);
             // 
             // pnEmpleado
             // 
@@ -199,17 +183,6 @@
             this.lblEmpleado.Text = "Empleado";
             this.lblEmpleado.Click += new System.EventHandler(this.lblEmpleado_Click);
             // 
-            // pbEmpleado
-            // 
-            this.pbEmpleado.Image = global::MiniSuper.Properties.Resources.empleado;
-            this.pbEmpleado.Location = new System.Drawing.Point(91, 51);
-            this.pbEmpleado.Name = "pbEmpleado";
-            this.pbEmpleado.Size = new System.Drawing.Size(128, 128);
-            this.pbEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbEmpleado.TabIndex = 0;
-            this.pbEmpleado.TabStop = false;
-            this.pbEmpleado.Click += new System.EventHandler(this.pbEmpleado_Click);
-            // 
             // pnSucursal
             // 
             this.pnSucursal.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -231,17 +204,6 @@
             this.lblSucursal.TabIndex = 1;
             this.lblSucursal.Text = "Sucursales";
             this.lblSucursal.Click += new System.EventHandler(this.lblSucursal_Click);
-            // 
-            // pbSucursal
-            // 
-            this.pbSucursal.Image = global::MiniSuper.Properties.Resources.sucursal;
-            this.pbSucursal.Location = new System.Drawing.Point(91, 51);
-            this.pbSucursal.Name = "pbSucursal";
-            this.pbSucursal.Size = new System.Drawing.Size(128, 128);
-            this.pbSucursal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbSucursal.TabIndex = 0;
-            this.pbSucursal.TabStop = false;
-            this.pbSucursal.Click += new System.EventHandler(this.pbSucursal_Click);
             // 
             // pnProducto
             // 
@@ -265,17 +227,6 @@
             this.lblProducto.Text = "Productos";
             this.lblProducto.Click += new System.EventHandler(this.lblProducto_Click);
             // 
-            // pbProducto
-            // 
-            this.pbProducto.Image = global::MiniSuper.Properties.Resources.producto;
-            this.pbProducto.Location = new System.Drawing.Point(91, 51);
-            this.pbProducto.Name = "pbProducto";
-            this.pbProducto.Size = new System.Drawing.Size(128, 128);
-            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbProducto.TabIndex = 0;
-            this.pbProducto.TabStop = false;
-            this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
-            // 
             // pnCategoria
             // 
             this.pnCategoria.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -297,17 +248,6 @@
             this.lblCategoria.TabIndex = 1;
             this.lblCategoria.Text = "Categorias";
             this.lblCategoria.Click += new System.EventHandler(this.lblCategoria_Click);
-            // 
-            // pbCategoria
-            // 
-            this.pbCategoria.Image = global::MiniSuper.Properties.Resources.categoria;
-            this.pbCategoria.Location = new System.Drawing.Point(91, 51);
-            this.pbCategoria.Name = "pbCategoria";
-            this.pbCategoria.Size = new System.Drawing.Size(128, 128);
-            this.pbCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbCategoria.TabIndex = 0;
-            this.pbCategoria.TabStop = false;
-            this.pbCategoria.Click += new System.EventHandler(this.pbCategoria_Click);
             // 
             // pnVenta
             // 
@@ -331,17 +271,6 @@
             this.lblVenta.Text = "Ventas";
             this.lblVenta.Click += new System.EventHandler(this.lblVenta_Click);
             // 
-            // pbVenta
-            // 
-            this.pbVenta.Image = global::MiniSuper.Properties.Resources.cajero;
-            this.pbVenta.Location = new System.Drawing.Point(95, 53);
-            this.pbVenta.Name = "pbVenta";
-            this.pbVenta.Size = new System.Drawing.Size(128, 128);
-            this.pbVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbVenta.TabIndex = 0;
-            this.pbVenta.TabStop = false;
-            this.pbVenta.Click += new System.EventHandler(this.pbVenta_Click);
-            // 
             // pnCliente
             // 
             this.pnCliente.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -363,6 +292,114 @@
             this.lblCliente.TabIndex = 1;
             this.lblCliente.Text = "Clientes";
             this.lblCliente.Click += new System.EventHandler(this.lblCliente_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.pbComprar);
+            this.panel2.Location = new System.Drawing.Point(105, 1472);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(314, 296);
+            this.panel2.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(84, 204);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 38);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Comprar";
+            // 
+            // pbComprar
+            // 
+            this.pbComprar.Image = global::MiniSuper.Properties.Resources.arrow__1_;
+            this.pbComprar.Location = new System.Drawing.Point(91, 51);
+            this.pbComprar.Name = "pbComprar";
+            this.pbComprar.Size = new System.Drawing.Size(128, 128);
+            this.pbComprar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbComprar.TabIndex = 0;
+            this.pbComprar.TabStop = false;
+            this.pbComprar.Click += new System.EventHandler(this.pbComprar_Click);
+            // 
+            // pbDocumentos
+            // 
+            this.pbDocumentos.Image = global::MiniSuper.Properties.Resources.documents;
+            this.pbDocumentos.Location = new System.Drawing.Point(91, 51);
+            this.pbDocumentos.Name = "pbDocumentos";
+            this.pbDocumentos.Size = new System.Drawing.Size(128, 128);
+            this.pbDocumentos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbDocumentos.TabIndex = 0;
+            this.pbDocumentos.TabStop = false;
+            this.pbDocumentos.Click += new System.EventHandler(this.pbDocumentos_Click);
+            // 
+            // pbProveedor
+            // 
+            this.pbProveedor.Image = global::MiniSuper.Properties.Resources.proveedor;
+            this.pbProveedor.Location = new System.Drawing.Point(91, 51);
+            this.pbProveedor.Name = "pbProveedor";
+            this.pbProveedor.Size = new System.Drawing.Size(128, 128);
+            this.pbProveedor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbProveedor.TabIndex = 0;
+            this.pbProveedor.TabStop = false;
+            this.pbProveedor.Click += new System.EventHandler(this.pbProveedor_Click);
+            // 
+            // pbEmpleado
+            // 
+            this.pbEmpleado.Image = global::MiniSuper.Properties.Resources.empleado;
+            this.pbEmpleado.Location = new System.Drawing.Point(91, 51);
+            this.pbEmpleado.Name = "pbEmpleado";
+            this.pbEmpleado.Size = new System.Drawing.Size(128, 128);
+            this.pbEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbEmpleado.TabIndex = 0;
+            this.pbEmpleado.TabStop = false;
+            this.pbEmpleado.Click += new System.EventHandler(this.pbEmpleado_Click);
+            // 
+            // pbSucursal
+            // 
+            this.pbSucursal.Image = global::MiniSuper.Properties.Resources.sucursal;
+            this.pbSucursal.Location = new System.Drawing.Point(91, 51);
+            this.pbSucursal.Name = "pbSucursal";
+            this.pbSucursal.Size = new System.Drawing.Size(128, 128);
+            this.pbSucursal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbSucursal.TabIndex = 0;
+            this.pbSucursal.TabStop = false;
+            this.pbSucursal.Click += new System.EventHandler(this.pbSucursal_Click);
+            // 
+            // pbProducto
+            // 
+            this.pbProducto.Image = global::MiniSuper.Properties.Resources.producto;
+            this.pbProducto.Location = new System.Drawing.Point(91, 51);
+            this.pbProducto.Name = "pbProducto";
+            this.pbProducto.Size = new System.Drawing.Size(128, 128);
+            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbProducto.TabIndex = 0;
+            this.pbProducto.TabStop = false;
+            this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
+            // 
+            // pbCategoria
+            // 
+            this.pbCategoria.Image = global::MiniSuper.Properties.Resources.categoria;
+            this.pbCategoria.Location = new System.Drawing.Point(91, 51);
+            this.pbCategoria.Name = "pbCategoria";
+            this.pbCategoria.Size = new System.Drawing.Size(128, 128);
+            this.pbCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbCategoria.TabIndex = 0;
+            this.pbCategoria.TabStop = false;
+            this.pbCategoria.Click += new System.EventHandler(this.pbCategoria_Click);
+            // 
+            // pbVenta
+            // 
+            this.pbVenta.Image = global::MiniSuper.Properties.Resources.cajero;
+            this.pbVenta.Location = new System.Drawing.Point(95, 53);
+            this.pbVenta.Name = "pbVenta";
+            this.pbVenta.Size = new System.Drawing.Size(128, 128);
+            this.pbVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbVenta.TabIndex = 0;
+            this.pbVenta.TabStop = false;
+            this.pbVenta.Click += new System.EventHandler(this.pbVenta_Click);
             // 
             // pbCliente
             // 
@@ -389,27 +426,30 @@
             this.pnlBotonoes.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDocumentos)).EndInit();
             this.pnProveedor.ResumeLayout(false);
             this.pnProveedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProveedor)).EndInit();
             this.pnEmpleado.ResumeLayout(false);
             this.pnEmpleado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).EndInit();
             this.pnSucursal.ResumeLayout(false);
             this.pnSucursal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSucursal)).EndInit();
             this.pnProducto.ResumeLayout(false);
             this.pnProducto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
             this.pnCategoria.ResumeLayout(false);
             this.pnCategoria.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCategoria)).EndInit();
             this.pnVenta.ResumeLayout(false);
             this.pnVenta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVenta)).EndInit();
             this.pnCliente.ResumeLayout(false);
             this.pnCliente.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbComprar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDocumentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProveedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSucursal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCategoria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).EndInit();
             this.ResumeLayout(false);
 
@@ -443,5 +483,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbDocumentos;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pbComprar;
     }
 }

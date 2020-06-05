@@ -2,6 +2,7 @@
 using MiniSuper.Modelos;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,11 @@ namespace MiniSuper.Controladores
         public List<DetallesCompra> ListadoDetallesCompra()
         {
             return mDetallesCompra.ListadoDetallesCompra();
+        }
+
+        internal void GuardarMaestroDetalle(BindingList<DetallesCompra> detatlles)
+        {
+            mDetallesCompra.GuardarMaestroDetalle(detatlles);
         }
     }
 }

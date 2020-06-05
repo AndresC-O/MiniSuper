@@ -13,5 +13,6 @@ namespace MiniSuper.Entidades
         public int idInventario { get; set; }
         public int cantidad { get; set; }
         public Double precio { get; set; }
+        public Double total { get; set; }
     }
 }

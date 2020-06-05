@@ -100,12 +100,12 @@ Go
 
 --[DETALLES DE COMPRAS]-------------------------------------------------
 Create procedure sp_InsertarDetalleCompra
-@idCompra int, @idInventario int, @cantidad int, @precio decimal(18,5)
+@idCompra int, @idInventario int, @cantidad int, @precio decimal(18,5), @total decimal(18,5)
 	As
 	Begin
 		set nocount on;
-		Insert into DetallesCompra(idCompra, idInventario, cantidad, precio)
-		values (@idCompra, @idInventario, @cantidad, @precio)
+		Insert into DetallesCompra(idCompra, idInventario, cantidad, precio, total)
+		values (@idCompra, @idInventario, @cantidad, @precio, @total)
 	End
 Go
 
@@ -152,12 +152,12 @@ Go
 
 --[DETALLES DE VENTA]-------------------------------------------------
 Create procedure sp_InsertarDetalleVenta
-@idVenta int, @idInventario int, @cantidad int, @precio decimal(18,5)
+@idVenta int, @idInventario int, @cantidad int, @precio decimal(18,5), @total decimal(18,5)
 	As
 	Begin
 		set nocount on;
-		Insert into DetallesCompra(idCompra, idInventario, cantidad, precio)
-		values (@idVenta, @idInventario, @cantidad, @precio)
+		Insert into DetallesCompra(idCompra, idInventario, cantidad, precio, total)
+		values (@idVenta, @idInventario, @cantidad, @precio, @total)
 	End
 Go
 
@@ -351,4 +351,20 @@ As
 	Begin
 	Delete from Sucursales where idSucursal=@id
 	End
+Go
+
+--[GUARDAR MAESTRO DETALLE COMPRAS]-------------------------------------------------
+Create procedure sp_MaestroDetalleCOMPRAS
+@idInventario int, @cantidad int, @precio decimal(18,5), @total decimal(18,5)
+As
+declare @id int
+Select top 1
+@id = idCompra
+from Compras
+order by idCompra desc
+begin
+set nocount on;
+Insert into DetallesCompra(idCompra, idInventario, cantidad, precio, total)
+values (@id, @idInventario, @cantidad, @precio, @total);
+End
 Go

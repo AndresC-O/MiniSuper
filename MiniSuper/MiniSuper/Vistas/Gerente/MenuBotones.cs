@@ -209,5 +209,10 @@ namespace MiniSuper.Vistas.Gerente
         {
 
         }
+
+        private void pbComprar_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new FrmComprar());
+        }
     }
 }

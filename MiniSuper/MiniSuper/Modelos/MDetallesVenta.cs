@@ -19,6 +19,7 @@ namespace MiniSuper.Modelos
             paramentros.Add("@idInventario", dv.idInventario, DbType.Int32);
             paramentros.Add("@cantidad", dv.cantidad, DbType.Int32);
             paramentros.Add("@precio", dv.precio, DbType.Double);
+            paramentros.Add("@total", dv.total, DbType.Double);
             cn.Open();
             cn.Execute("sp_InsertarDetalleVenta", paramentros, commandType: CommandType.StoredProcedure);
             cn.Close();

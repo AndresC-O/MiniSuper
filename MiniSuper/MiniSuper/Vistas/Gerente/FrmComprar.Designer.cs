@@ -62,6 +62,7 @@
             this.precioTextBox = new System.Windows.Forms.TextBox();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.totalCompraTextBox = new System.Windows.Forms.TextBox();
+            this.lblRetornoID = new System.Windows.Forms.Label();
             idEmpleadoLabel = new System.Windows.Forms.Label();
             idProveedorLabel = new System.Windows.Forms.Label();
             totalCompraLabel = new System.Windows.Forms.Label();
@@ -390,11 +391,21 @@
             this.totalCompraTextBox.Size = new System.Drawing.Size(141, 31);
             this.totalCompraTextBox.TabIndex = 50;
             // 
+            // lblRetornoID
+            // 
+            this.lblRetornoID.AutoSize = true;
+            this.lblRetornoID.Location = new System.Drawing.Point(432, 116);
+            this.lblRetornoID.Name = "lblRetornoID";
+            this.lblRetornoID.Size = new System.Drawing.Size(35, 13);
+            this.lblRetornoID.TabIndex = 51;
+            this.lblRetornoID.Text = "label1";
+            // 
             // FrmComprar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 751);
+            this.Controls.Add(this.lblRetornoID);
             this.Controls.Add(this.totalCompraTextBox);
             this.Controls.Add(cantidadLabel);
             this.Controls.Add(this.cantidadNumericUpDown);
@@ -462,5 +473,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Label lblRetornoID;
     }
 }

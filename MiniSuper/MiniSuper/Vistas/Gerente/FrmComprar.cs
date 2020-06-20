@@ -119,28 +119,44 @@ namespace MiniSuper.Vistas.Gerente
 
         private void button1_Click(object sender, EventArgs e)
         {
-            detalles.Add((DetallesCompra)detallesCompraBindingSource.Current);
-            detallesCompraBindingSource1.DataSource = detalles;
-            detallesCompraBindingSource1.ResetBindings(true);
+            if (precioTextBox.Text.Equals("") || cantidadNumericUpDown.Value.Equals(0) || totalTextBox.Text.Equals(""))
+            {
+                MessageBox.Show("¡Complete todos los campos!", "Rellenar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                detalles.Add((DetallesCompra)detallesCompraBindingSource.Current);
+                detallesCompraBindingSource1.DataSource = detalles;
+                detallesCompraBindingSource1.ResetBindings(true);
 
-            detallesCompraBindingSource.EndEdit();
-            detallesCompraBindingSource.AddNew();
+                detallesCompraBindingSource.EndEdit();
+                detallesCompraBindingSource.AddNew();
 
-            CalcularTotalFinal();
+                CalcularTotalFinal();
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            comprasBindingSource.EndEdit();
-            Compras co = new Compras();
-            co = ((Compras)comprasBindingSource.Current);
-            CCompras cCompras = new CCompras();
-            cCompras.RegistrarCompra(co);
+            if(detallesCompraDataGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("¡Aún no hay nada en el carrito!", "Rellenar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                comprasBindingSource.EndEdit();
+                Compras co = new Compras();
+                co = ((Compras)comprasBindingSource.Current);
+                CCompras cCompras = new CCompras();
+                cCompras.RegistrarCompra(co);
 
-            CDetallesCompra cDetalles = new CDetallesCompra();
-            cDetalles.GuardarMaestroDetalle(detalles);
+                CDetallesCompra cDetalles = new CDetallesCompra();
+                cDetalles.GuardarMaestroDetalle(detalles);
 
-            MessageBox.Show("¡Compra Realizada con éxito!", "Compra", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("¡Compra Realizada con éxito!", "Compra", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            detallesCompraDataGridView.Rows.Clear();
         }
 
         private void cantidadNumericUpDown_ValueChanged_1(object sender, EventArgs e)

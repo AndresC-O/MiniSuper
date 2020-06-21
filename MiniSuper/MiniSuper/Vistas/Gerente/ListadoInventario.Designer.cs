@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.inventarioDataGridView = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnEditarEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.pbActualizar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -45,12 +42,17 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnEditarEliminar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.pbActualizar = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // inventarioDataGridView
@@ -58,6 +60,15 @@
             this.inventarioDataGridView.AllowUserToAddRows = false;
             this.inventarioDataGridView.AutoGenerateColumns = false;
             this.inventarioDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.inventarioDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.inventarioDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.inventarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.inventarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -68,65 +79,18 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.inventarioDataGridView.DataSource = this.inventarioBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.inventarioDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.inventarioDataGridView.Location = new System.Drawing.Point(51, 145);
             this.inventarioDataGridView.Name = "inventarioDataGridView";
             this.inventarioDataGridView.Size = new System.Drawing.Size(900, 445);
             this.inventarioDataGridView.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(269, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(514, 39);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "PRODUCTOS EN INVENTARIO";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // btnEditarEliminar
-            // 
-            this.btnEditarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarEliminar.Location = new System.Drawing.Point(212, 621);
-            this.btnEditarEliminar.Name = "btnEditarEliminar";
-            this.btnEditarEliminar.Size = new System.Drawing.Size(190, 67);
-            this.btnEditarEliminar.TabIndex = 3;
-            this.btnEditarEliminar.Text = "Editar o eliminar seleccionado";
-            this.btnEditarEliminar.UseVisualStyleBackColor = true;
-            this.btnEditarEliminar.Click += new System.EventHandler(this.btnEditarEliminar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(581, 621);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(190, 67);
-            this.btnNuevo.TabIndex = 4;
-            this.btnNuevo.Text = "Nuevo Producto";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // pbActualizar
-            // 
-            this.pbActualizar.Image = global::MiniSuper.Properties.Resources.actualizar;
-            this.pbActualizar.Location = new System.Drawing.Point(926, 115);
-            this.pbActualizar.Name = "pbActualizar";
-            this.pbActualizar.Size = new System.Drawing.Size(21, 23);
-            this.pbActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbActualizar.TabIndex = 6;
-            this.pbActualizar.TabStop = false;
-            this.pbActualizar.Click += new System.EventHandler(this.pbActualizar_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MiniSuper.Properties.Resources.salir;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 23);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -134,7 +98,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idInventario";
             this.dataGridViewTextBoxColumn1.HeaderText = "ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 43;
+            this.dataGridViewTextBoxColumn1.Width = 46;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -196,6 +160,65 @@
             // 
             this.inventarioBindingSource.DataSource = typeof(MiniSuper.Entidades.Inventario);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(269, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(514, 39);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "PRODUCTOS EN INVENTARIO";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // btnEditarEliminar
+            // 
+            this.btnEditarEliminar.BackColor = System.Drawing.Color.Teal;
+            this.btnEditarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEditarEliminar.Location = new System.Drawing.Point(212, 621);
+            this.btnEditarEliminar.Name = "btnEditarEliminar";
+            this.btnEditarEliminar.Size = new System.Drawing.Size(190, 67);
+            this.btnEditarEliminar.TabIndex = 3;
+            this.btnEditarEliminar.Text = "Editar o eliminar seleccionado";
+            this.btnEditarEliminar.UseVisualStyleBackColor = false;
+            this.btnEditarEliminar.Click += new System.EventHandler(this.btnEditarEliminar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.Teal;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(581, 621);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(190, 67);
+            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.Text = "Nuevo Producto";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // pbActualizar
+            // 
+            this.pbActualizar.Image = global::MiniSuper.Properties.Resources.actualizar;
+            this.pbActualizar.Location = new System.Drawing.Point(926, 115);
+            this.pbActualizar.Name = "pbActualizar";
+            this.pbActualizar.Size = new System.Drawing.Size(21, 23);
+            this.pbActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbActualizar.TabIndex = 6;
+            this.pbActualizar.TabStop = false;
+            this.pbActualizar.Click += new System.EventHandler(this.pbActualizar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MiniSuper.Properties.Resources.salir;
+            this.pictureBox2.Location = new System.Drawing.Point(28, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // ListadoInventario
             // 
             this.ClientSize = new System.Drawing.Size(1010, 751);
@@ -210,11 +233,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.ListadoInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventarioDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

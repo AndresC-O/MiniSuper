@@ -36,12 +36,23 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.idCategoriaLabel1 = new System.Windows.Forms.Label();
+            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombreCategoriaTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             idInventarioLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idInventarioLabel
+            // 
+            idInventarioLabel.AutoSize = true;
+            idInventarioLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idInventarioLabel.ForeColor = System.Drawing.Color.DimGray;
+            idInventarioLabel.Location = new System.Drawing.Point(129, 26);
+            idInventarioLabel.Name = "idInventarioLabel";
+            idInventarioLabel.Size = new System.Drawing.Size(28, 19);
+            idInventarioLabel.TabIndex = 33;
+            idInventarioLabel.Text = "Id:";
             // 
             // btnHabEdi
             // 
@@ -128,6 +139,10 @@
             this.idCategoriaLabel1.TabIndex = 30;
             this.idCategoriaLabel1.Text = "label1";
             // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataSource = typeof(MiniSuper.Entidades.Categorias);
+            // 
             // nombreCategoriaTextBox
             // 
             this.nombreCategoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriasBindingSource, "nombreCategoria", true));
@@ -136,17 +151,6 @@
             this.nombreCategoriaTextBox.Name = "nombreCategoriaTextBox";
             this.nombreCategoriaTextBox.Size = new System.Drawing.Size(321, 27);
             this.nombreCategoriaTextBox.TabIndex = 32;
-            // 
-            // idInventarioLabel
-            // 
-            idInventarioLabel.AutoSize = true;
-            idInventarioLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idInventarioLabel.ForeColor = System.Drawing.Color.DimGray;
-            idInventarioLabel.Location = new System.Drawing.Point(129, 26);
-            idInventarioLabel.Name = "idInventarioLabel";
-            idInventarioLabel.Size = new System.Drawing.Size(28, 19);
-            idInventarioLabel.TabIndex = 33;
-            idInventarioLabel.Text = "Id:";
             // 
             // label2
             // 
@@ -158,10 +162,6 @@
             this.label2.Size = new System.Drawing.Size(159, 19);
             this.label2.TabIndex = 34;
             this.label2.Text = "Nombre Categoria:";
-            // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataSource = typeof(MiniSuper.Entidades.Categorias);
             // 
             // CRUD_Categorias
             // 
@@ -179,6 +179,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnNuevo);
             this.Name = "CRUD_Categorias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CRUD_Categorias";
             this.Load += new System.EventHandler(this.CRUD_Categorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();

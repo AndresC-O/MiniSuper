@@ -32,6 +32,7 @@
             System.Windows.Forms.Label idInventarioLabel;
             this.label2 = new System.Windows.Forms.Label();
             this.apellidosClienteTextBox = new System.Windows.Forms.TextBox();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.duiTextBox = new System.Windows.Forms.TextBox();
             this.idClienteLabel1 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             idInventarioLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,10 @@
             this.apellidosClienteTextBox.Name = "apellidosClienteTextBox";
             this.apellidosClienteTextBox.Size = new System.Drawing.Size(303, 27);
             this.apellidosClienteTextBox.TabIndex = 5;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataSource = typeof(MiniSuper.Entidades.Clientes);
             // 
             // direccionTextBox
             // 
@@ -269,10 +273,6 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataSource = typeof(MiniSuper.Entidades.Clientes);
-            // 
             // CRUD_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,6 +299,7 @@
             this.Controls.Add(idInventarioLabel);
             this.Controls.Add(this.label2);
             this.Name = "CRUD_Clientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CRUD_Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.ResumeLayout(false);

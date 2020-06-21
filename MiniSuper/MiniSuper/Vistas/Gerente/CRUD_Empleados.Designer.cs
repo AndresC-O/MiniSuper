@@ -345,6 +345,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnNuevo);
             this.Name = "CRUD_Empleados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CRUD_Empleados";
             this.Load += new System.EventHandler(this.CRUD_Empleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).EndInit();

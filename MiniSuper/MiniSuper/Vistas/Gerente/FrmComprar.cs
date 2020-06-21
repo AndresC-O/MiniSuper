@@ -119,7 +119,7 @@ namespace MiniSuper.Vistas.Gerente
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (precioTextBox.Text.Equals("") || cantidadNumericUpDown.Value.Equals(0) || totalTextBox.Text.Equals(""))
+            if (precioTextBox.Text.Equals("0") && cantidadNumericUpDown.Value.Equals(0) && totalTextBox.Text.Equals("0"))
             {
                 MessageBox.Show("¡Complete todos los campos!", "Rellenar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -173,5 +173,6 @@ namespace MiniSuper.Vistas.Gerente
         {
             Calculo();
         }
+      
     }
 }

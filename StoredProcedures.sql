@@ -368,3 +368,19 @@ Insert into DetallesCompra(idCompra, idInventario, cantidad, precio, total)
 values (@id, @idInventario, @cantidad, @precio, @total);
 End
 Go
+
+--[GUARDAR MAESTRO DETALLE VENTAS]-------------------------------------------------
+Create procedure sp_MaestroDetalleVENTAS
+@idInventario int, @cantidad int, @precio decimal(18,5), @total decimal(18,5)
+As
+declare @id int
+Select top 1
+@id = idVenta
+from Ventas
+order by idVenta desc
+begin
+set nocount on;
+Insert into DetallesVenta(idVenta, idInventario, cantidad, precio, total)
+values (@id, @idInventario, @cantidad, @precio, @total);
+End
+Go

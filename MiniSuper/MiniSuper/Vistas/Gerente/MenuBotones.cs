@@ -107,7 +107,7 @@ namespace MiniSuper.Vistas.Gerente
 
         private void pbVenta_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormHijo(new frmVentas());
         }
 
         private void lblVenta_Click(object sender, EventArgs e)

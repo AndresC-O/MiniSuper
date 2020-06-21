@@ -36,6 +36,7 @@
             System.Windows.Forms.Label idInventarioLabel;
             System.Windows.Forms.Label precioLabel;
             System.Windows.Forms.Label totalLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -165,44 +166,51 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(326, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(352, 39);
+            this.label2.Size = new System.Drawing.Size(342, 41);
             this.label2.TabIndex = 13;
             this.label2.Text = "AREA DE COMPRAS";
             // 
             // btnGuardar
             // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Teal;
             this.btnGuardar.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(686, 624);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(256, 57);
             this.btnGuardar.TabIndex = 32;
             this.btnGuardar.Text = "COMPRAR";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnNuevaOrden
             // 
+            this.btnNuevaOrden.BackColor = System.Drawing.Color.Teal;
             this.btnNuevaOrden.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaOrden.ForeColor = System.Drawing.Color.White;
             this.btnNuevaOrden.Location = new System.Drawing.Point(604, 90);
             this.btnNuevaOrden.Name = "btnNuevaOrden";
             this.btnNuevaOrden.Size = new System.Drawing.Size(298, 72);
             this.btnNuevaOrden.TabIndex = 30;
             this.btnNuevaOrden.Text = "Nueva Orden";
-            this.btnNuevaOrden.UseVisualStyleBackColor = true;
+            this.btnNuevaOrden.UseVisualStyleBackColor = false;
             this.btnNuevaOrden.Click += new System.EventHandler(this.btnNuevaOrden_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(604, 168);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(298, 75);
             this.button1.TabIndex = 31;
             this.button1.Text = "Agregar al Carrito";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // fechaDateTimePicker
@@ -265,6 +273,15 @@
             this.detallesCompraDataGridView.AllowUserToDeleteRows = false;
             this.detallesCompraDataGridView.AutoGenerateColumns = false;
             this.detallesCompraDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.detallesCompraDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.detallesCompraDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.detallesCompraDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.detallesCompraDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -360,6 +377,7 @@
             this.idInventarioComboBox.Size = new System.Drawing.Size(200, 29);
             this.idInventarioComboBox.TabIndex = 45;
             this.idInventarioComboBox.ValueMember = "idInventario";
+            
             // 
             // precioTextBox
             // 
@@ -399,6 +417,7 @@
             this.lblRetornoID.Size = new System.Drawing.Size(35, 13);
             this.lblRetornoID.TabIndex = 51;
             this.lblRetornoID.Text = "label1";
+            this.lblRetornoID.Visible = false;
             // 
             // FrmComprar
             // 

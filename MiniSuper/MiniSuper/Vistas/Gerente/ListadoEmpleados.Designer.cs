@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.empleadosDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEditarEliminar = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -43,6 +43,8 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEditarEliminar = new System.Windows.Forms.Button();
             this.pbActualizar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosDataGridView)).BeginInit();
@@ -66,6 +68,15 @@
             // 
             this.empleadosDataGridView.AutoGenerateColumns = false;
             this.empleadosDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.empleadosDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.empleadosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.empleadosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.empleadosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -77,32 +88,18 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.empleadosDataGridView.DataSource = this.empleadosBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.empleadosDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.empleadosDataGridView.Location = new System.Drawing.Point(34, 123);
             this.empleadosDataGridView.Name = "empleadosDataGridView";
             this.empleadosDataGridView.Size = new System.Drawing.Size(937, 455);
             this.empleadosDataGridView.TabIndex = 13;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(601, 610);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(190, 67);
-            this.btnNuevo.TabIndex = 15;
-            this.btnNuevo.Text = "Nuevo Cliente";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnEditarEliminar
-            // 
-            this.btnEditarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarEliminar.Location = new System.Drawing.Point(232, 610);
-            this.btnEditarEliminar.Name = "btnEditarEliminar";
-            this.btnEditarEliminar.Size = new System.Drawing.Size(190, 67);
-            this.btnEditarEliminar.TabIndex = 14;
-            this.btnEditarEliminar.Text = "Editar o eliminar seleccionado";
-            this.btnEditarEliminar.UseVisualStyleBackColor = true;
-            this.btnEditarEliminar.Click += new System.EventHandler(this.btnEditarEliminar_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -110,7 +107,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idEmpleado";
             this.dataGridViewTextBoxColumn1.HeaderText = "ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 43;
+            this.dataGridViewTextBoxColumn1.Width = 46;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -168,6 +165,32 @@
             // empleadosBindingSource
             // 
             this.empleadosBindingSource.DataSource = typeof(MiniSuper.Entidades.Empleados);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.Teal;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(601, 610);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(190, 67);
+            this.btnNuevo.TabIndex = 15;
+            this.btnNuevo.Text = "Nuevo Cliente";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnEditarEliminar
+            // 
+            this.btnEditarEliminar.BackColor = System.Drawing.Color.Teal;
+            this.btnEditarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEditarEliminar.Location = new System.Drawing.Point(232, 610);
+            this.btnEditarEliminar.Name = "btnEditarEliminar";
+            this.btnEditarEliminar.Size = new System.Drawing.Size(190, 67);
+            this.btnEditarEliminar.TabIndex = 14;
+            this.btnEditarEliminar.Text = "Editar o eliminar seleccionado";
+            this.btnEditarEliminar.UseVisualStyleBackColor = false;
+            this.btnEditarEliminar.Click += new System.EventHandler(this.btnEditarEliminar_Click);
             // 
             // pbActualizar
             // 

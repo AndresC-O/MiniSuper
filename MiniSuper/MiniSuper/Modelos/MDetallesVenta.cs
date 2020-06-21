@@ -2,6 +2,7 @@
 using MiniSuper.Entidades;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -43,6 +44,21 @@ namespace MiniSuper.Modelos
             lista = cn.Query<DetallesVenta>("sp_ConsultarDetallesVenta", commandType: CommandType.StoredProcedure).ToList();
             cn.Close();
             return lista;
+        }
+        internal void GuardarMaestroDetalle(BindingList<DetallesVenta> detatlles)
+        {
+            foreach (DetallesVenta det in detatlles)
+            {
+                IDbConnection cn = Conexion.Conexion.Conectar();
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@idInventario", det.idInventario, DbType.Int32);
+                parametros.Add("@cantidad", det.cantidad, DbType.Int32);
+                parametros.Add("@precio", det.precio, DbType.Double);
+                parametros.Add("@total", det.total, DbType.Double);
+                cn.Open();
+                cn.Execute("sp_MaestroDetalleVENTAS", parametros, commandType: CommandType.StoredProcedure);
+                cn.Close();
+            }
         }
     }
 }

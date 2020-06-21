@@ -47,6 +47,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // idInventarioLabel
+            // 
+            idInventarioLabel.AutoSize = true;
+            idInventarioLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idInventarioLabel.ForeColor = System.Drawing.Color.DimGray;
+            idInventarioLabel.Location = new System.Drawing.Point(139, 25);
+            idInventarioLabel.Name = "idInventarioLabel";
+            idInventarioLabel.Size = new System.Drawing.Size(28, 19);
+            idInventarioLabel.TabIndex = 0;
+            idInventarioLabel.Text = "Id:";
+            // 
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedoresBindingSource, "direccion", true));
@@ -106,17 +117,6 @@
             this.label2.Size = new System.Drawing.Size(160, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre Proveedor:";
-            // 
-            // idInventarioLabel
-            // 
-            idInventarioLabel.AutoSize = true;
-            idInventarioLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idInventarioLabel.ForeColor = System.Drawing.Color.DimGray;
-            idInventarioLabel.Location = new System.Drawing.Point(139, 25);
-            idInventarioLabel.Name = "idInventarioLabel";
-            idInventarioLabel.Size = new System.Drawing.Size(28, 19);
-            idInventarioLabel.TabIndex = 0;
-            idInventarioLabel.Text = "Id:";
             // 
             // idProveedorLabel1
             // 
@@ -227,6 +227,7 @@
             this.Controls.Add(this.nombreProveedorTextBox);
             this.Controls.Add(this.telefonoTextBox);
             this.Name = "CRUD_Proveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CRUD_Proveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).EndInit();
             this.ResumeLayout(false);

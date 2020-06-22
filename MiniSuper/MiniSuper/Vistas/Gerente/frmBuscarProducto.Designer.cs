@@ -109,6 +109,7 @@
             this.inventarioDataGridView.ReadOnly = true;
             this.inventarioDataGridView.Size = new System.Drawing.Size(620, 220);
             this.inventarioDataGridView.TabIndex = 103;
+            this.inventarioDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventarioDataGridView_CellDoubleClick);
             this.inventarioDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inventarioDataGridView_KeyDown);
             // 
             // dataGridViewTextBoxColumn1

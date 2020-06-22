@@ -68,5 +68,12 @@ namespace MiniSuper.Vistas.Gerente
                 MenuBotones.ventas.cantidadNumericUpDown.Value = 0;
             }
         }
+
+        private void inventarioDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Envio();
+            this.Close();
+            MenuBotones.ventas.cantidadNumericUpDown.Value = 0;
+        }
     }
 }

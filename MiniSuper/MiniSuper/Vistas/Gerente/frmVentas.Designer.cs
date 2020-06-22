@@ -49,12 +49,17 @@
             this.ventasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.detallesVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detallesVentaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.inventarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detallesVentaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cantidadNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.idInventarioComboBox = new System.Windows.Forms.ComboBox();
-            this.inventarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.precioTextBox = new System.Windows.Forms.TextBox();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.btnNuevaOrden = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -63,12 +68,7 @@
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnBuscarProdcuto = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioTextBox = new System.Windows.Forms.TextBox();
             idClienteLabel = new System.Windows.Forms.Label();
             idDocumentoLabel = new System.Windows.Forms.Label();
             idEmpleadoLabel = new System.Windows.Forms.Label();
@@ -84,9 +84,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesVentaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesVentaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesVentaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidadNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -283,6 +283,54 @@
             this.detallesVentaDataGridView.TabIndex = 42;
             this.detallesVentaDataGridView.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.detallesVentaDataGridView_RowsRemoved);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idDetalleVenta";
+            this.dataGridViewTextBoxColumn1.HeaderText = "idDetalleVenta";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "idVenta";
+            this.dataGridViewTextBoxColumn2.HeaderText = "idVenta";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "idInventario";
+            this.dataGridViewTextBoxColumn3.DataSource = this.inventarioBindingSource1;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "nombreProducto";
+            this.dataGridViewTextBoxColumn3.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn3.HeaderText = "PRODUCTO";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ValueMember = "idInventario";
+            // 
+            // inventarioBindingSource1
+            // 
+            this.inventarioBindingSource1.DataSource = typeof(MiniSuper.Entidades.Inventario);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "cantidad";
+            this.dataGridViewTextBoxColumn4.HeaderText = "CANTIDAD";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "precio";
+            this.dataGridViewTextBoxColumn5.HeaderText = "PRECIO";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "total";
+            this.dataGridViewTextBoxColumn6.HeaderText = "TOTAL";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // detallesVentaBindingSource1
             // 
             this.detallesVentaBindingSource1.DataSource = typeof(MiniSuper.Entidades.DetallesVenta);
@@ -312,23 +360,9 @@
             this.idInventarioComboBox.TabIndex = 47;
             this.idInventarioComboBox.ValueMember = "idInventario";
             // 
-            // inventarioBindingSource1
-            // 
-            this.inventarioBindingSource1.DataSource = typeof(MiniSuper.Entidades.Inventario);
-            // 
             // inventarioBindingSource
             // 
             this.inventarioBindingSource.DataSource = typeof(MiniSuper.Entidades.Inventario);
-            // 
-            // precioTextBox
-            // 
-            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventarioBindingSource1, "precioVenta", true));
-            this.precioTextBox.Enabled = false;
-            this.precioTextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioTextBox.Location = new System.Drawing.Point(200, 284);
-            this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(121, 31);
-            this.precioTextBox.TabIndex = 51;
             // 
             // totalTextBox
             // 
@@ -423,54 +457,22 @@
             this.btnBuscarProdcuto.UseVisualStyleBackColor = true;
             this.btnBuscarProdcuto.Click += new System.EventHandler(this.btnBuscarProdcuto_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // precioTextBox
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idDetalleVenta";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idDetalleVenta";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "idVenta";
-            this.dataGridViewTextBoxColumn2.HeaderText = "idVenta";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "idInventario";
-            this.dataGridViewTextBoxColumn3.DataSource = this.inventarioBindingSource1;
-            this.dataGridViewTextBoxColumn3.DisplayMember = "nombreProducto";
-            this.dataGridViewTextBoxColumn3.HeaderText = "PRODUCTO";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn3.ValueMember = "idInventario";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "cantidad";
-            this.dataGridViewTextBoxColumn4.HeaderText = "CANTIDAD";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "precio";
-            this.dataGridViewTextBoxColumn5.HeaderText = "PRECIO";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "total";
-            this.dataGridViewTextBoxColumn6.HeaderText = "TOTAL";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.detallesVentaBindingSource, "precio", true));
+            this.precioTextBox.Enabled = false;
+            this.precioTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioTextBox.Location = new System.Drawing.Point(200, 284);
+            this.precioTextBox.Name = "precioTextBox";
+            this.precioTextBox.Size = new System.Drawing.Size(121, 27);
+            this.precioTextBox.TabIndex = 60;
             // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 751);
+            this.Controls.Add(this.precioTextBox);
             this.Controls.Add(this.btnBuscarProdcuto);
             this.Controls.Add(this.fechaDateTimePicker);
             this.Controls.Add(this.idClienteComboBox);
@@ -482,7 +484,6 @@
             this.Controls.Add(idInventarioLabel);
             this.Controls.Add(this.idInventarioComboBox);
             this.Controls.Add(precioLabel);
-            this.Controls.Add(this.precioTextBox);
             this.Controls.Add(totalLabel);
             this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.detallesVentaDataGridView);
@@ -506,9 +507,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesVentaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesVentaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesVentaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidadNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.ResumeLayout(false);

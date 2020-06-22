@@ -175,15 +175,23 @@ namespace MiniSuper.Vistas.Gerente
                 CDetallesVenta cDetalles = new CDetallesVenta();
                 cDetalles.GuardarMaestroDetalle(detalles);
 
-                MessageBox.Show("¡Compra Realizada con éxito!", "Compra", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("¡Ventas Realizada con éxito!", "Compra", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             detallesVentaDataGridView.Rows.Clear();
+            if (detallesVentaDataGridView.Rows.Count == 0)
+            {
+                totalVentaTextBox.Text = "0.00";
+            }
         }
 
         private void detallesVentaDataGridView_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             CalcularTotalFinal();
+            if (detallesVentaDataGridView.Rows.Count == 0)
+            {
+                totalVentaTextBox.Text = "0.00";
+            }
         }
 
         private void totalTextBox_TextChanged(object sender, EventArgs e)

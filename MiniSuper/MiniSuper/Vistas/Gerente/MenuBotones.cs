@@ -105,9 +105,19 @@ namespace MiniSuper.Vistas.Gerente
             
         }
 
+        public static frmVentas ventas = new frmVentas();
         private void pbVenta_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new frmVentas());
+            //AbrirFormHijo(new frmVentas());
+            flpPanelScroll.AutoScroll = false;
+            PanelContenedor.Visible = true;
+            if (this.PanelContenedor.Controls.Count > 0)
+                this.PanelContenedor.Controls.RemoveAt(0);
+            ventas.TopLevel = false;
+            ventas.Dock = DockStyle.Fill;
+            this.PanelContenedor.Controls.Add(ventas);
+            this.PanelContenedor.Tag = ventas;
+            ventas.Show();
         }
 
         private void lblVenta_Click(object sender, EventArgs e)

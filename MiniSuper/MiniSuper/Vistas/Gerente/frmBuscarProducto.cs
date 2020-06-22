@@ -20,7 +20,18 @@ namespace MiniSuper.Vistas.Gerente
         {
             InitializeComponent();
         }
+        public void Envio()
+        {
+            String idPrd = inventarioDataGridView.CurrentRow.Cells[0].Value.ToString();
+            int idPrdConv = Convert.ToInt32(idPrd);
+            String nombreProd = inventarioDataGridView.CurrentRow.Cells[1].Value.ToString();
+            String precio = inventarioDataGridView.CurrentRow.Cells[6].Value.ToString();
 
+            MenuBotones.ventas.idInventarioComboBox.SelectedValue = idPrdConv;
+            MenuBotones.ventas.precioTextBox.Text = precio;
+
+            MenuBotones.ventas.cantidadNumericUpDown.Focus();
+        }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -46,6 +57,16 @@ namespace MiniSuper.Vistas.Gerente
         private void frmBuscarProducto_Load(object sender, EventArgs e)
         {
             inventarioBindingSource.DataSource = cInventario.ListadoInventarios();
+        }
+
+        private void inventarioDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Envio();
+                this.Close();
+                MenuBotones.ventas.cantidadNumericUpDown.Value = 0;
+            }
         }
     }
 }

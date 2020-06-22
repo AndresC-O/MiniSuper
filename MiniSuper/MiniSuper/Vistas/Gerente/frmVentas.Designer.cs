@@ -49,12 +49,6 @@
             this.ventasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.detallesVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detallesVentaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detallesVentaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cantidadNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.idInventarioComboBox = new System.Windows.Forms.ComboBox();
@@ -69,6 +63,12 @@
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnBuscarProdcuto = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idClienteLabel = new System.Windows.Forms.Label();
             idDocumentoLabel = new System.Windows.Forms.Label();
             idEmpleadoLabel = new System.Windows.Forms.Label();
@@ -283,44 +283,6 @@
             this.detallesVentaDataGridView.TabIndex = 42;
             this.detallesVentaDataGridView.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.detallesVentaDataGridView_RowsRemoved);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idDetalleVenta";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idDetalleVenta";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "idVenta";
-            this.dataGridViewTextBoxColumn2.HeaderText = "idVenta";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "idInventario";
-            this.dataGridViewTextBoxColumn3.HeaderText = "PRODUCTO";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "cantidad";
-            this.dataGridViewTextBoxColumn4.HeaderText = "CANTIDAD";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "precio";
-            this.dataGridViewTextBoxColumn5.HeaderText = "PRECIO";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "total";
-            this.dataGridViewTextBoxColumn6.HeaderText = "TOTAL";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
             // detallesVentaBindingSource1
             // 
             this.detallesVentaBindingSource1.DataSource = typeof(MiniSuper.Entidades.DetallesVenta);
@@ -461,6 +423,49 @@
             this.btnBuscarProdcuto.UseVisualStyleBackColor = true;
             this.btnBuscarProdcuto.Click += new System.EventHandler(this.btnBuscarProdcuto_Click);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idDetalleVenta";
+            this.dataGridViewTextBoxColumn1.HeaderText = "idDetalleVenta";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "idVenta";
+            this.dataGridViewTextBoxColumn2.HeaderText = "idVenta";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "idInventario";
+            this.dataGridViewTextBoxColumn3.DataSource = this.inventarioBindingSource1;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "nombreProducto";
+            this.dataGridViewTextBoxColumn3.HeaderText = "PRODUCTO";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ValueMember = "idInventario";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "cantidad";
+            this.dataGridViewTextBoxColumn4.HeaderText = "CANTIDAD";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "precio";
+            this.dataGridViewTextBoxColumn5.HeaderText = "PRECIO";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "total";
+            this.dataGridViewTextBoxColumn6.HeaderText = "TOTAL";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,16 +528,7 @@
         private System.Windows.Forms.BindingSource ventasBindingSource1;
         private System.Windows.Forms.BindingSource detallesVentaBindingSource;
         private System.Windows.Forms.DataGridView detallesVentaDataGridView;
-        private System.Windows.Forms.NumericUpDown cantidadNumericUpDown;
-        private System.Windows.Forms.ComboBox idInventarioComboBox;
-        private System.Windows.Forms.TextBox precioTextBox;
         private System.Windows.Forms.TextBox totalTextBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Button btnNuevaOrden;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnGuardar;
@@ -544,5 +540,14 @@
         private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
         private System.Windows.Forms.Button btnBuscarProdcuto;
         private System.Windows.Forms.BindingSource inventarioBindingSource1;
+        public System.Windows.Forms.NumericUpDown cantidadNumericUpDown;
+        public System.Windows.Forms.ComboBox idInventarioComboBox;
+        public System.Windows.Forms.TextBox precioTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

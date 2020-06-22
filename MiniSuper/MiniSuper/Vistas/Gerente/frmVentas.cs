@@ -94,20 +94,21 @@ namespace MiniSuper.Vistas.Gerente
 
         private void frmVentas_Load(object sender, EventArgs e)
         {
-            inventarioBindingSource1.DataSource = inv;
+            //inventarioBindingSource1.DataSource = inv;
             empleadosBindingSource.DataSource = cDocumentos.ListadoDocumentos(); 
             empleadosBindingSource.DataSource = cEmpleados.ListadoEmpleados();
             clientesBindingSource.DataSource = cCliente.ListadoClientes();
-            //inventarioBindingSource.DataSource = cInventario.ListadoInventarios();
+            inventarioBindingSource1.DataSource = cInventario.ListadoInventarios();
+            documentosBindingSource.DataSource = cDocumentos.ListadoDocumentos();
 
             idEmpleadoComboBox.Enabled = false;
             idClienteComboBox.Enabled = false;
             idDocumentoComboBox.Enabled = false;
             btnBuscarProdcuto.Enabled = false;
-            idInventarioComboBox.Enabled = false;
-            precioTextBox.Enabled = false;
+            idInventarioComboBox.Enabled = true;
+            precioTextBox.Enabled = true;
             cantidadNumericUpDown.Enabled = false;
-            totalTextBox.Enabled = false;
+            totalTextBox.Enabled = true;
 
             detallesVentaDataGridView.Enabled = false;
         }

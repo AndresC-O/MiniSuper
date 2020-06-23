@@ -61,5 +61,17 @@ namespace MiniSuper.Modelos
             cn.Close();
             return lista;
         }
+
+        public List<Inventario> ListadoInventariosxPro(int pro)
+        {
+            List<Inventario> lista = new List<Inventario>();
+            IDbConnection cn = Conexion.Conexion.Conectar();
+            DynamicParameters parametros = new DynamicParameters();
+            parametros.Add("@idProveedor", DbType.Int32);
+            cn.Open();
+            lista = cn.Query<Inventario>("InvenXProveedor", parametros, commandType: CommandType.StoredProcedure).ToList();
+            cn.Close();
+            return lista;
+        }
     }
 }

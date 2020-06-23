@@ -26,5 +26,10 @@ namespace MiniSuper.Controladores
         {
             return mVentas.ListadoVentas();
         }
+
+        public List<Ventas> RetornoId()
+        {
+            return mVentas.RetornoId();
+        }
     }
 }

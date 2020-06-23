@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MiniSuper.Controladores;
 using MiniSuper.Entidades;
+using System.Diagnostics;
 
 
 namespace MiniSuper.Vistas.Gerente
@@ -31,6 +32,7 @@ namespace MiniSuper.Vistas.Gerente
         CEmpleados cEmpleados = new CEmpleados();
         CClientes cCliente = new CClientes();
         CInventario cInventario = new CInventario();
+        CVentas cVentas = new CVentas();
 
         public BindingList<DetallesVenta> detalles = new BindingList<DetallesVenta>();
 
@@ -176,6 +178,12 @@ namespace MiniSuper.Vistas.Gerente
                 cDetalles.GuardarMaestroDetalle(detalles);
 
                 MessageBox.Show("¡Ventas Realizada con éxito!", "Compra", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                DialogResult result = MessageBox.Show("¿DESEA EMITIR UNA FACTURA?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if(result == DialogResult.OK)
+                {
+                    Process.Start(@"http://cordova/Reports/browse/InformesMinisuper");
+                }
             }
 
             detallesVentaDataGridView.Rows.Clear();

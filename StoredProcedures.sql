@@ -384,3 +384,11 @@ Insert into DetallesVenta(idVenta, idInventario, cantidad, precio, total)
 values (@id, @idInventario, @cantidad, @precio, @total);
 End
 Go
+
+--[BUSCAR PRODS POR PROVEEDOR]-------------------------------------------------
+Create procedure InvenXProveedor
+@idProveedor int
+As
+Begin
+Select * from Inventario where idProveedor = @idProveedor
+End

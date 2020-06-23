@@ -262,6 +262,8 @@
             this.idProveedorComboBox.Size = new System.Drawing.Size(200, 29);
             this.idProveedorComboBox.TabIndex = 40;
             this.idProveedorComboBox.ValueMember = "idProveedor";
+            this.idProveedorComboBox.SelectedIndexChanged += new System.EventHandler(this.idProveedorComboBox_SelectedIndexChanged);
+            this.idProveedorComboBox.SelectedValueChanged += new System.EventHandler(this.idProveedorComboBox_SelectedValueChanged);
             // 
             // proveedoresBindingSource
             // 
@@ -377,7 +379,8 @@
             this.idInventarioComboBox.Size = new System.Drawing.Size(200, 29);
             this.idInventarioComboBox.TabIndex = 45;
             this.idInventarioComboBox.ValueMember = "idInventario";
-            
+            this.idInventarioComboBox.SelectedIndexChanged += new System.EventHandler(this.idInventarioComboBox_SelectedIndexChanged);
+            this.idInventarioComboBox.SelectedValueChanged += new System.EventHandler(this.idInventarioComboBox_SelectedValueChanged);
             // 
             // precioTextBox
             // 

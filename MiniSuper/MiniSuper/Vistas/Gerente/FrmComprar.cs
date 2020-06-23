@@ -173,6 +173,30 @@ namespace MiniSuper.Vistas.Gerente
         {
             Calculo();
         }
-      
+
+        private void idInventarioComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if (idProveedorComboBox.SelectedValue != null)
+            //{
+            //    int idPr = Convert.ToInt32(idProveedorComboBox.SelectedValue);
+            //    inventarioBindingSource.DataSource = cInventario.ListadoInventariosxPro(idPr);
+            //}
+
+        }
+
+        private void idInventarioComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idProveedorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idProveedorComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

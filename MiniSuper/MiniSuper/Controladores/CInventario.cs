@@ -31,5 +31,10 @@ namespace MiniSuper.Controladores
         {
             return mInventario.ListadoInventarios();
         }
+
+        public List<Inventario> ListadoInventariosxPro(int pro)
+        {
+            return mInventario.ListadoInventariosxPro(pro);
+        }
     }
 }

@@ -44,5 +44,15 @@ namespace MiniSuper.Modelos
             cn.Close();
             return lista;
         }
+
+        public List<Ventas> RetornoId()
+        {
+            List<Ventas> lista = new List<Ventas>();
+            IDbConnection cn = Conexion.Conexion.Conectar();
+            cn.Open();
+            lista = cn.Query<Ventas>("RotornoID", commandType: CommandType.StoredProcedure).ToList();
+            cn.Close();
+            return lista;
+        }
     }
 }

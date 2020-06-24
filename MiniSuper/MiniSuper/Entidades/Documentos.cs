@@ -10,5 +10,6 @@ namespace MiniSuper.Entidades
     {
         public int idDocumento { get; set; }
         public String tipoDocumento { get; set; }
+        public String estado { get; set; }
     }
 }

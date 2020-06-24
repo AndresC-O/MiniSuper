@@ -235,6 +235,7 @@
             this.apellidosTextBox.Name = "apellidosTextBox";
             this.apellidosTextBox.Size = new System.Drawing.Size(287, 27);
             this.apellidosTextBox.TabIndex = 35;
+            this.apellidosTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.apellidosTextBox_KeyPress);
             // 
             // empleadosBindingSource
             // 
@@ -269,6 +270,7 @@
             this.duiTextBox.Name = "duiTextBox";
             this.duiTextBox.Size = new System.Drawing.Size(287, 27);
             this.duiTextBox.TabIndex = 41;
+            this.duiTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.duiTextBox_KeyPress);
             // 
             // idSucursalComboBox
             // 
@@ -297,6 +299,7 @@
             this.nombreEmpleadoTextBox.Name = "nombreEmpleadoTextBox";
             this.nombreEmpleadoTextBox.Size = new System.Drawing.Size(287, 27);
             this.nombreEmpleadoTextBox.TabIndex = 47;
+            this.nombreEmpleadoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreEmpleadoTextBox_KeyPress);
             // 
             // usuarioTextBox
             // 

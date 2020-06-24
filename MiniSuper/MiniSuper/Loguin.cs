@@ -45,7 +45,7 @@ namespace MiniSuper
                 {
                     var lista = from em in bd.Empleados
                                 where em.contrasenia == txtContra.Text
-                                && em.usuario == txtUsuario.Text
+                                && em.usuario == txtUsuario.Text && em.estado == "Activo"
 
                                 select new
                                 {

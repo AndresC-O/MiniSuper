@@ -11,5 +11,6 @@ namespace MiniSuper.Entidades
         public int idSucursal { get; set; }
         public String nombreSucursal { get; set; }
         public String ubicacion { get; set; }
+        public String estado { get; set; }
     }
 }

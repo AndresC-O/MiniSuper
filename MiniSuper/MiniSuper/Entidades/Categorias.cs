@@ -10,5 +10,6 @@ namespace MiniSuper.Entidades
     {
         public int idCategoria { get; set; }
         public String nombreCategoria { get; set; }
+        public String estado { get; set; }
     }
 }

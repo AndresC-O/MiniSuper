@@ -62,12 +62,16 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            CEmpleados pEditar = new CEmpleados();
-            empleadosBindingSource.EndEdit();
-            pEditar.ActualizarEmpleado((Empleados)empleadosBindingSource.Current);
-            MessageBox.Show("¡Empleado editado con éxito!");
-            Limpiar();
-            this.Close();
+            DialogResult result = MessageBox.Show("¿Estás seguro que quieres modificar?", "Autorización", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                CEmpleados pEditar = new CEmpleados();
+                empleadosBindingSource.EndEdit();
+                pEditar.ActualizarEmpleado((Empleados)empleadosBindingSource.Current);
+                MessageBox.Show("¡Empleado editado con éxito!");
+                Limpiar();
+                this.Close();
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -97,21 +101,103 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            CEmpleados cEliminar = new CEmpleados();
-            empleadosBindingSource.EndEdit();
-            cEliminar.EliminarEmpleado((Empleados)empleadosBindingSource.Current);
-            MessageBox.Show("¡Empleado eliminado con éxito!");
-            Limpiar();
-            this.Close();
+            DialogResult result = MessageBox.Show("¿Estás seguro que quieres eliminar?", "Autorización", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                CEmpleados cEliminar = new CEmpleados();
+                empleadosBindingSource.EndEdit();
+                cEliminar.EliminarEmpleado((Empleados)empleadosBindingSource.Current);
+                MessageBox.Show("¡Empleado eliminado con éxito!");
+                Limpiar();
+                this.Close();
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            CEmpleados pnuevo = new CEmpleados();
-            empleadosBindingSource.EndEdit();
-            pnuevo.RegistrarEmpleado((Empleados)empleadosBindingSource.Current);
-            MessageBox.Show("¡Empleado registrado con éxito!");
-            this.Close();
+            try
+            {
+                if (nombreEmpleadoTextBox.Text.Equals("") || apellidosTextBox.Text.Equals("") || duiTextBox.Text.Equals("") || usuarioTextBox.Text.Equals("") || contraseniaTextBox.Text.Equals(""))
+                {
+                    MessageBox.Show("¡Rellene todos los campos!", "Rellenar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    CEmpleados pnuevo = new CEmpleados();
+                    empleadosBindingSource.EndEdit();
+                    pnuevo.RegistrarEmpleado((Empleados)empleadosBindingSource.Current);
+                    MessageBox.Show("¡Empleado registrado con éxito!");
+                    this.Close();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("¡Verifique las listas desplegables!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void nombreEmpleadoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void apellidosTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void duiTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

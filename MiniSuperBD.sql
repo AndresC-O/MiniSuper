@@ -21,7 +21,7 @@ Go
 
 Insert into Clientes values ('GENERICO', 'GENERICO', 'CHALATENANGO', '2301-1234', '00000000-0', '0000-000000-000-0')
 Insert into Clientes values ('SAMUEL', 'SOLORZANO', 'CHALATENANGO', '2301-1234', '00345900-0', '0987-013540-000-4')
-Insert into Clientes values ('GENERICO', 'GENERICO', 'CHALATENANGO', '2301-1234', '07659870-0', '2345-098130-000-6')
+Insert into Clientes values ('JORGE', 'GENERICO', 'CHALATENANGO', '2301-1234', '07659870-0', '2345-098130-000-6')
 
 
 Create table Proveedores(
@@ -154,3 +154,13 @@ Alter table DetallesVenta add total decimal(18,5)
 	-InsertarDetalleCompra
 	-InsertarDetalleVenta
 luego de eso, ejecutan UNICAMENTE esos dos NADA MAS.*/
+
+--Actualizacion [23/06/2020]----------------------------
+Alter table Documentos add estado varchar(15)
+Alter table Categorias add estado varchar(15)
+
+Alter table Clientes add estado varchar(15)
+Alter table Empleados add estado varchar(15)
+Alter table Inventario add estado varchar(15)
+Alter table Proveedores add estado varchar(15)
+Alter table Sucursales add estado varchar(15)

@@ -8,14 +8,14 @@ Create procedure sp_InsertarCategoria
 	As
 	Begin
 		set nocount on;
-		Insert into Categorias(nombreCategoria) values (@nombreCategoria)
+		Insert into Categorias values (@nombreCategoria, 'Activo')
 	End
 Go
 
 Create procedure sp_ConsultarCategorias
 As
 	Begin
-	Select * from Categorias
+	Select * from Categorias where estado = 'Activo'
 	End
 Go
 
@@ -31,7 +31,7 @@ Create procedure sp_EliminarCategoria
 @id int
 As
 	Begin
-	Delete from Categorias where idCategoria=@id
+	Update Categorias set estado='Inactivo' where idCategoria=@id
 	End
 Go
 
@@ -42,15 +42,15 @@ Create procedure sp_InsertarCliente
 	As
 	Begin
 		set nocount on;
-		Insert into Clientes(nombreCliente, apellidosCliente, direccion, telefono, dui, nit)
-		values (@nombresCliente, @apellidosCliente, @direccion, @telefono, @dui, @nit)
+		Insert into Clientes(nombreCliente, apellidosCliente, direccion, telefono, dui, nit, estado)
+		values (@nombresCliente, @apellidosCliente, @direccion, @telefono, @dui, @nit, 'Activo')
 	End
 Go
 
 Create procedure sp_ConsultarClientes
 As
 	Begin
-	Select * from Clientes
+	Select * from Clientes where estado = 'Activo'
 	End
 Go
 
@@ -68,7 +68,7 @@ Create procedure sp_EliminarCliente
 @id int
 As
 	Begin
-	Delete from Clientes where idCliente=@id
+	Update Clientes set estado='Inactivo' where idCliente=@id
 	End
 Go
 
@@ -182,14 +182,14 @@ Create procedure sp_InsertarDocumento
 	As
 	Begin
 		set nocount on;
-		Insert into Documentos(tipoDocumento) values(@tipoDocumento)
+		Insert into Documentos(tipoDocumento, estado) values(@tipoDocumento, 'Activo')
 	End
 Go
 
 Create procedure sp_ConsultarDocumentos
 As
 	Begin
-	Select * from Documentos
+	Select * from Documentos where estado='Activo'
 	End
 Go
 
@@ -205,7 +205,7 @@ Create procedure sp_EliminarDocumento
 @id int
 As
 	Begin
-	Delete from Documentos where idDocumento=@id
+	Update Documentos set estado='Inactivo' where idDocumento=@id
 	End
 Go
 
@@ -216,15 +216,15 @@ Create procedure sp_InsertarEmpleado
 	As
 	Begin
 		set nocount on;
-		Insert into Empleados(cargo, idSucursal, nombreEmpleado, apellidos, dui, usuario, contrasenia)
-		values(@cargo, @idSucursal, @nombreEmpleado, @apellidos, @dui, @usuario, @contrasenia)
+		Insert into Empleados(cargo, idSucursal, nombreEmpleado, apellidos, dui, usuario, contrasenia, estado)
+		values(@cargo, @idSucursal, @nombreEmpleado, @apellidos, @dui, @usuario, @contrasenia, 'Activo')
 	End
 Go
 
 Create procedure sp_ConsultarEmpleados
 As
 	Begin
-	Select * from Empleados
+	Select * from Empleados where estado='Activo'
 	End
 Go
 
@@ -242,7 +242,7 @@ Create procedure sp_EliminarEmpleado
 @id int
 As
 	Begin
-	Delete from Empleados where idEmpleado=@id
+	Update Empleados set estado='Inactivo' where idEmpleado=@id
 	End
 Go
 
@@ -253,15 +253,15 @@ Create procedure sp_InsertarInventario
 	As
 	Begin
 		set nocount on;
-		Insert into Inventario(nombreProducto, idCategoria, idProveedor, existencias, costo, precioVenta)
-		values(@nombreProducto, @idCategoria, @idProveedor, @existencias, @costo, @precioVenta)
+		Insert into Inventario(nombreProducto, idCategoria, idProveedor, existencias, costo, precioVenta, estado)
+		values(@nombreProducto, @idCategoria, @idProveedor, @existencias, @costo, @precioVenta, 'Activo')
 	End
 Go
 
 Create procedure sp_ConsultarInventario
 As
 	Begin
-	Select * from Inventario
+	Select * from Inventario where estado='Activo'
 	End
 Go
 
@@ -278,7 +278,7 @@ Create procedure sp_EliminarInventario
 @id int
 As
 	Begin
-	Delete from Inventario where idInventario=@id
+	Update Inventario set estado='Inactivo' where idInventario=@id
 	End
 Go
 
@@ -288,15 +288,15 @@ Create procedure sp_InsertarProveedor
 	As
 	Begin
 		set nocount on;
-		Insert into Proveedores(nombreProveedor, direccion, telefono) 
-		values (@nombreProveedor, @direccion, @telefono)
+		Insert into Proveedores(nombreProveedor, direccion, telefono, estado) 
+		values (@nombreProveedor, @direccion, @telefono, 'Activo')
 	End
 Go
 
 Create procedure sp_ConsultarProveedores
 As
 	Begin
-	Select * from Proveedores
+	Select * from Proveedores where estado='Activo'
 	End
 Go
 
@@ -314,7 +314,8 @@ Create procedure sp_EliminarProveedor
 @id int
 As
 	Begin
-	Delete from Proveedores where idProveedor=@id
+	Update Proveedores set estado='Inactivo'
+	where idProveedor=@id
 	End
 Go
 
@@ -324,15 +325,15 @@ Create procedure sp_InsertarSucursal
 	As
 	Begin
 		set nocount on;
-		Insert into Sucursales(nombreSucursal, ubicacion)
-		values (@nombreSucursal, @ubicacion)
+		Insert into Sucursales(nombreSucursal, ubicacion, estado)
+		values (@nombreSucursal, @ubicacion, 'Activo')
 	End
 Go
 
 Create procedure sp_ConsultarSucursal
 As
 	Begin
-	Select * from Sucursales
+	Select * from Sucursales where estado='Activo'
 	End
 Go
 
@@ -349,7 +350,8 @@ Create procedure sp_EliminarSucursal
 @id int
 As
 	Begin
-	Delete from Sucursales where idSucursal=@id
+	Update Sucursales set estado='Inactivo'
+	where idSucursal=@id
 	End
 Go
 

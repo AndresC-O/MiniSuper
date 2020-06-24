@@ -4,13 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MiniSuperModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MiniSuperModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categorias">
           <Key>
             <PropertyRef Name="idCategoria" />
           </Key>
           <Property Name="idCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombreCategoria" Type="varchar" MaxLength="15" />
+          <Property Name="estado" Type="varchar" MaxLength="15" />
         </EntityType>
         <EntityType Name="Clientes">
           <Key>
@@ -23,6 +24,7 @@
           <Property Name="telefono" Type="varchar" MaxLength="9" />
           <Property Name="dui" Type="varchar" MaxLength="10" />
           <Property Name="nit" Type="varchar" MaxLength="18" />
+          <Property Name="estado" Type="varchar" MaxLength="15" />
         </EntityType>
         <EntityType Name="Compras">
           <Key>
@@ -43,6 +45,7 @@
           <Property Name="idInventario" Type="int" Nullable="false" />
           <Property Name="cantidad" Type="int" />
           <Property Name="precio" Type="decimal" Precision="18" Scale="5" />
+          <Property Name="total" Type="decimal" Precision="18" Scale="5" />
         </EntityType>
         <EntityType Name="DetallesVenta">
           <Key>
@@ -53,6 +56,7 @@
           <Property Name="idInventario" Type="int" Nullable="false" />
           <Property Name="cantidad" Type="int" />
           <Property Name="precio" Type="decimal" Precision="18" Scale="5" />
+          <Property Name="total" Type="decimal" Precision="18" Scale="5" />
         </EntityType>
         <EntityType Name="Documentos">
           <Key>
@@ -60,6 +64,7 @@
           </Key>
           <Property Name="idDocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tipoDocumento" Type="varchar" MaxLength="25" />
+          <Property Name="estado" Type="varchar" MaxLength="15" />
         </EntityType>
         <EntityType Name="Empleados">
           <Key>
@@ -73,6 +78,7 @@
           <Property Name="dui" Type="varchar" MaxLength="10" />
           <Property Name="usuario" Type="varchar" MaxLength="20" />
           <Property Name="contrasenia" Type="varchar" MaxLength="45" />
+          <Property Name="estado" Type="varchar" MaxLength="15" />
         </EntityType>
         <EntityType Name="Inventario">
           <Key>
@@ -85,6 +91,7 @@
           <Property Name="existencias" Type="int" Nullable="false" />
           <Property Name="costo" Type="decimal" Precision="18" Scale="5" />
           <Property Name="precioVenta" Type="decimal" Precision="18" Scale="5" />
+          <Property Name="estado" Type="varchar" MaxLength="15" />
         </EntityType>
         <EntityType Name="Proveedores">
           <Key>
@@ -94,6 +101,7 @@
           <Property Name="nombreProveedor" Type="varchar" MaxLength="30" />
           <Property Name="direccion" Type="varchar" MaxLength="50" />
           <Property Name="telefono" Type="varchar" MaxLength="9" />
+          <Property Name="estado" Type="varchar" MaxLength="15" />
         </EntityType>
         <EntityType Name="Sucursales">
           <Key>
@@ -102,6 +110,7 @@
           <Property Name="idSucursal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombreSucursal" Type="varchar" MaxLength="25" />
           <Property Name="ubicacion" Type="varchar" MaxLength="50" />
+          <Property Name="estado" Type="varchar" MaxLength="15" />
         </EntityType>
         <EntityType Name="Ventas">
           <Key>
@@ -114,7 +123,7 @@
           <Property Name="totalVenta" Type="decimal" Precision="18" Scale="5" />
           <Property Name="fecha" Type="date" />
         </EntityType>
-        <Association Name="FK__Compras__idEmple__34C8D9D1">
+        <Association Name="FK__Compras__idEmple__47DBAE45">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
           <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
           <ReferentialConstraint>
@@ -126,7 +135,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Compras__idProve__35BCFE0A">
+        <Association Name="FK__Compras__idProve__48CFD27E">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
           <ReferentialConstraint>
@@ -138,7 +147,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesC__idCom__38996AB5">
+        <Association Name="FK__DetallesC__idCom__4BAC3F29">
           <End Role="Compras" Type="Self.Compras" Multiplicity="1" />
           <End Role="DetallesCompra" Type="Self.DetallesCompra" Multiplicity="*" />
           <ReferentialConstraint>
@@ -150,7 +159,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesC__idInv__398D8EEE">
+        <Association Name="FK__DetallesC__idInv__4CA06362">
           <End Role="Inventario" Type="Self.Inventario" Multiplicity="1" />
           <End Role="DetallesCompra" Type="Self.DetallesCompra" Multiplicity="*" />
           <ReferentialConstraint>
@@ -162,7 +171,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesV__idInv__4222D4EF">
+        <Association Name="FK__DetallesV__idInv__5535A963">
           <End Role="Inventario" Type="Self.Inventario" Multiplicity="1" />
           <End Role="DetallesVenta" Type="Self.DetallesVenta" Multiplicity="*" />
           <ReferentialConstraint>
@@ -174,7 +183,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesV__idVen__412EB0B6">
+        <Association Name="FK__DetallesV__idVen__5441852A">
           <End Role="Ventas" Type="Self.Ventas" Multiplicity="1" />
           <End Role="DetallesVenta" Type="Self.DetallesVenta" Multiplicity="*" />
           <ReferentialConstraint>
@@ -186,7 +195,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleados__idSuc__31EC6D26">
+        <Association Name="FK__Empleados__idSuc__44FF419A">
           <End Role="Sucursales" Type="Self.Sucursales" Multiplicity="1" />
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
           <ReferentialConstraint>
@@ -198,7 +207,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Inventari__idCat__2A4B4B5E">
+        <Association Name="FK__Inventari__idCat__3D5E1FD2">
           <End Role="Categorias" Type="Self.Categorias" Multiplicity="1" />
           <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -210,7 +219,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Inventari__idPro__2B3F6F97">
+        <Association Name="FK__Inventari__idPro__3E52440B">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -222,7 +231,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ventas__idClient__3D5E1FD2">
+        <Association Name="FK__Ventas__idClient__5070F446">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
           <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -234,7 +243,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ventas__idDocume__3E52440B">
+        <Association Name="FK__Ventas__idDocume__5165187F">
           <End Role="Documentos" Type="Self.Documentos" Multiplicity="1" />
           <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -246,7 +255,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ventas__idEmplea__3C69FB99">
+        <Association Name="FK__Ventas__idEmplea__4F7CD00D">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
           <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -270,57 +279,56 @@
           <EntitySet Name="Proveedores" EntityType="Self.Proveedores" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sucursales" EntityType="Self.Sucursales" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Compras__idEmple__34C8D9D1" Association="Self.FK__Compras__idEmple__34C8D9D1">
+          <AssociationSet Name="FK__Compras__idEmple__47DBAE45" Association="Self.FK__Compras__idEmple__47DBAE45">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Compras" EntitySet="Compras" />
           </AssociationSet>
-          <AssociationSet Name="FK__Compras__idProve__35BCFE0A" Association="Self.FK__Compras__idProve__35BCFE0A">
+          <AssociationSet Name="FK__Compras__idProve__48CFD27E" Association="Self.FK__Compras__idProve__48CFD27E">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="Compras" EntitySet="Compras" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesC__idCom__38996AB5" Association="Self.FK__DetallesC__idCom__38996AB5">
+          <AssociationSet Name="FK__DetallesC__idCom__4BAC3F29" Association="Self.FK__DetallesC__idCom__4BAC3F29">
             <End Role="Compras" EntitySet="Compras" />
             <End Role="DetallesCompra" EntitySet="DetallesCompra" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesC__idInv__398D8EEE" Association="Self.FK__DetallesC__idInv__398D8EEE">
+          <AssociationSet Name="FK__DetallesC__idInv__4CA06362" Association="Self.FK__DetallesC__idInv__4CA06362">
             <End Role="Inventario" EntitySet="Inventario" />
             <End Role="DetallesCompra" EntitySet="DetallesCompra" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesV__idInv__4222D4EF" Association="Self.FK__DetallesV__idInv__4222D4EF">
+          <AssociationSet Name="FK__DetallesV__idInv__5535A963" Association="Self.FK__DetallesV__idInv__5535A963">
             <End Role="Inventario" EntitySet="Inventario" />
             <End Role="DetallesVenta" EntitySet="DetallesVenta" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesV__idVen__412EB0B6" Association="Self.FK__DetallesV__idVen__412EB0B6">
+          <AssociationSet Name="FK__DetallesV__idVen__5441852A" Association="Self.FK__DetallesV__idVen__5441852A">
             <End Role="Ventas" EntitySet="Ventas" />
             <End Role="DetallesVenta" EntitySet="DetallesVenta" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleados__idSuc__31EC6D26" Association="Self.FK__Empleados__idSuc__31EC6D26">
+          <AssociationSet Name="FK__Empleados__idSuc__44FF419A" Association="Self.FK__Empleados__idSuc__44FF419A">
             <End Role="Sucursales" EntitySet="Sucursales" />
             <End Role="Empleados" EntitySet="Empleados" />
           </AssociationSet>
-          <AssociationSet Name="FK__Inventari__idCat__2A4B4B5E" Association="Self.FK__Inventari__idCat__2A4B4B5E">
+          <AssociationSet Name="FK__Inventari__idCat__3D5E1FD2" Association="Self.FK__Inventari__idCat__3D5E1FD2">
             <End Role="Categorias" EntitySet="Categorias" />
             <End Role="Inventario" EntitySet="Inventario" />
           </AssociationSet>
-          <AssociationSet Name="FK__Inventari__idPro__2B3F6F97" Association="Self.FK__Inventari__idPro__2B3F6F97">
+          <AssociationSet Name="FK__Inventari__idPro__3E52440B" Association="Self.FK__Inventari__idPro__3E52440B">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="Inventario" EntitySet="Inventario" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ventas__idClient__3D5E1FD2" Association="Self.FK__Ventas__idClient__3D5E1FD2">
+          <AssociationSet Name="FK__Ventas__idClient__5070F446" Association="Self.FK__Ventas__idClient__5070F446">
             <End Role="Clientes" EntitySet="Clientes" />
             <End Role="Ventas" EntitySet="Ventas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ventas__idDocume__3E52440B" Association="Self.FK__Ventas__idDocume__3E52440B">
+          <AssociationSet Name="FK__Ventas__idDocume__5165187F" Association="Self.FK__Ventas__idDocume__5165187F">
             <End Role="Documentos" EntitySet="Documentos" />
             <End Role="Ventas" EntitySet="Ventas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ventas__idEmplea__3C69FB99" Association="Self.FK__Ventas__idEmplea__3C69FB99">
+          <AssociationSet Name="FK__Ventas__idEmplea__4F7CD00D" Association="Self.FK__Ventas__idEmplea__4F7CD00D">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Ventas" EntitySet="Ventas" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MiniSuperModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -331,6 +339,7 @@
           <Property Name="idCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombreCategoria" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Inventarios" Relationship="Self.FK__Inventari__idCat__2A4B4B5E" FromRole="Categorias" ToRole="Inventario" />
+          <Property Name="estado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Cliente">
           <Key>
@@ -344,6 +353,7 @@
           <Property Name="dui" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="nit" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Ventas" Relationship="Self.FK__Ventas__idClient__3D5E1FD2" FromRole="Clientes" ToRole="Ventas" />
+          <Property Name="estado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Compra">
           <Key>
@@ -369,6 +379,7 @@
           <Property Name="precio" Type="Decimal" Precision="18" Scale="5" />
           <NavigationProperty Name="Compra" Relationship="Self.FK__DetallesC__idCom__38996AB5" FromRole="DetallesCompra" ToRole="Compras" />
           <NavigationProperty Name="Inventario" Relationship="Self.FK__DetallesC__idInv__398D8EEE" FromRole="DetallesCompra" ToRole="Inventario" />
+          <Property Name="total" Type="Decimal" Precision="18" Scale="5" />
         </EntityType>
         <EntityType Name="DetallesVenta">
           <Key>
@@ -381,6 +392,7 @@
           <Property Name="precio" Type="Decimal" Precision="18" Scale="5" />
           <NavigationProperty Name="Inventario" Relationship="Self.FK__DetallesV__idInv__4222D4EF" FromRole="DetallesVenta" ToRole="Inventario" />
           <NavigationProperty Name="Venta" Relationship="Self.FK__DetallesV__idVen__412EB0B6" FromRole="DetallesVenta" ToRole="Ventas" />
+          <Property Name="total" Type="Decimal" Precision="18" Scale="5" />
         </EntityType>
         <EntityType Name="Documento">
           <Key>
@@ -389,6 +401,7 @@
           <Property Name="idDocumento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tipoDocumento" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Ventas" Relationship="Self.FK__Ventas__idDocume__3E52440B" FromRole="Documentos" ToRole="Ventas" />
+          <Property Name="estado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Empleado">
           <Key>
@@ -405,6 +418,7 @@
           <NavigationProperty Name="Compras" Relationship="Self.FK__Compras__idEmple__34C8D9D1" FromRole="Empleados" ToRole="Compras" />
           <NavigationProperty Name="Sucursale" Relationship="Self.FK__Empleados__idSuc__31EC6D26" FromRole="Empleados" ToRole="Sucursales" />
           <NavigationProperty Name="Ventas" Relationship="Self.FK__Ventas__idEmplea__3C69FB99" FromRole="Empleados" ToRole="Ventas" />
+          <Property Name="estado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Inventario">
           <Key>
@@ -421,6 +435,7 @@
           <NavigationProperty Name="DetallesCompras" Relationship="Self.FK__DetallesC__idInv__398D8EEE" FromRole="Inventario" ToRole="DetallesCompra" />
           <NavigationProperty Name="DetallesVentas" Relationship="Self.FK__DetallesV__idInv__4222D4EF" FromRole="Inventario" ToRole="DetallesVenta" />
           <NavigationProperty Name="Proveedore" Relationship="Self.FK__Inventari__idPro__2B3F6F97" FromRole="Inventario" ToRole="Proveedores" />
+          <Property Name="estado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Proveedore">
           <Key>
@@ -432,6 +447,7 @@
           <Property Name="telefono" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Compras" Relationship="Self.FK__Compras__idProve__35BCFE0A" FromRole="Proveedores" ToRole="Compras" />
           <NavigationProperty Name="Inventarios" Relationship="Self.FK__Inventari__idPro__2B3F6F97" FromRole="Proveedores" ToRole="Inventario" />
+          <Property Name="estado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Sucursale">
           <Key>
@@ -441,6 +457,7 @@
           <Property Name="nombreSucursal" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="ubicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__idSuc__31EC6D26" FromRole="Sucursales" ToRole="Empleados" />
+          <Property Name="estado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Venta">
           <Key>
@@ -671,6 +688,7 @@
           <EntitySetMapping Name="Categorias">
             <EntityTypeMapping TypeName="MiniSuperModel.Categoria">
               <MappingFragment StoreEntitySet="Categorias">
+                <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
                 <ScalarProperty Name="nombreCategoria" ColumnName="nombreCategoria" />
               </MappingFragment>
@@ -679,6 +697,7 @@
           <EntitySetMapping Name="Clientes">
             <EntityTypeMapping TypeName="MiniSuperModel.Cliente">
               <MappingFragment StoreEntitySet="Clientes">
+                <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="idCliente" ColumnName="idCliente" />
                 <ScalarProperty Name="nombreCliente" ColumnName="nombreCliente" />
                 <ScalarProperty Name="apellidosCliente" ColumnName="apellidosCliente" />
@@ -703,6 +722,7 @@
           <EntitySetMapping Name="DetallesCompras">
             <EntityTypeMapping TypeName="MiniSuperModel.DetallesCompra">
               <MappingFragment StoreEntitySet="DetallesCompra">
+                <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="idDetalleCompra" ColumnName="idDetalleCompra" />
                 <ScalarProperty Name="idCompra" ColumnName="idCompra" />
                 <ScalarProperty Name="idInventario" ColumnName="idInventario" />
@@ -714,6 +734,7 @@
           <EntitySetMapping Name="DetallesVentas">
             <EntityTypeMapping TypeName="MiniSuperModel.DetallesVenta">
               <MappingFragment StoreEntitySet="DetallesVenta">
+                <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="idDetalleVenta" ColumnName="idDetalleVenta" />
                 <ScalarProperty Name="idVenta" ColumnName="idVenta" />
                 <ScalarProperty Name="idInventario" ColumnName="idInventario" />
@@ -725,6 +746,7 @@
           <EntitySetMapping Name="Documentos">
             <EntityTypeMapping TypeName="MiniSuperModel.Documento">
               <MappingFragment StoreEntitySet="Documentos">
+                <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="idDocumento" ColumnName="idDocumento" />
                 <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
               </MappingFragment>
@@ -733,6 +755,7 @@
           <EntitySetMapping Name="Empleados">
             <EntityTypeMapping TypeName="MiniSuperModel.Empleado">
               <MappingFragment StoreEntitySet="Empleados">
+                <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
                 <ScalarProperty Name="cargo" ColumnName="cargo" />
                 <ScalarProperty Name="idSucursal" ColumnName="idSucursal" />
@@ -747,6 +770,7 @@
           <EntitySetMapping Name="Inventarios">
             <EntityTypeMapping TypeName="MiniSuperModel.Inventario">
               <MappingFragment StoreEntitySet="Inventario">
+                <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="idInventario" ColumnName="idInventario" />
                 <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />
                 <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
@@ -760,6 +784,7 @@
           <EntitySetMapping Name="Proveedores">
             <EntityTypeMapping TypeName="MiniSuperModel.Proveedore">
               <MappingFragment StoreEntitySet="Proveedores">
+                <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
                 <ScalarProperty Name="nombreProveedor" ColumnName="nombreProveedor" />
                 <ScalarProperty Name="direccion" ColumnName="direccion" />
@@ -770,6 +795,7 @@
           <EntitySetMapping Name="Sucursales">
             <EntityTypeMapping TypeName="MiniSuperModel.Sucursale">
               <MappingFragment StoreEntitySet="Sucursales">
+                <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="idSucursal" ColumnName="idSucursal" />
                 <ScalarProperty Name="nombreSucursal" ColumnName="nombreSucursal" />
                 <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />

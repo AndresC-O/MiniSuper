@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label idInventarioLabel;
             this.direccionTextBox = new System.Windows.Forms.TextBox();
+            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombreProveedorTextBox = new System.Windows.Forms.TextBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             idInventarioLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,10 @@
             this.direccionTextBox.Size = new System.Drawing.Size(314, 27);
             this.direccionTextBox.TabIndex = 5;
             // 
+            // proveedoresBindingSource
+            // 
+            this.proveedoresBindingSource.DataSource = typeof(MiniSuper.Entidades.Proveedores);
+            // 
             // nombreProveedorTextBox
             // 
             this.nombreProveedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedoresBindingSource, "nombreProveedor", true));
@@ -84,6 +88,7 @@
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(314, 27);
             this.telefonoTextBox.TabIndex = 7;
+            this.telefonoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telefonoTextBox_KeyPress);
             // 
             // label3
             // 
@@ -202,10 +207,6 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // proveedoresBindingSource
-            // 
-            this.proveedoresBindingSource.DataSource = typeof(MiniSuper.Entidades.Proveedores);
             // 
             // CRUD_Proveedores
             // 

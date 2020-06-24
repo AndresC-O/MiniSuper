@@ -1,6 +1,6 @@
 ﻿namespace MiniSuper.Vistas.Gerente
 {
-    partial class CRUD_Categorias
+    partial class CRUD_Sucursales
     {
         /// <summary>
         /// Required designer variable.
@@ -29,30 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label idInventarioLabel;
+            System.Windows.Forms.Label nombreSucursalLabel;
+            System.Windows.Forms.Label ubicacionLabel;
+            System.Windows.Forms.Label idSucursalLabel;
             this.btnHabEdi = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.idCategoriaLabel1 = new System.Windows.Forms.Label();
-            this.nombreCategoriaTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            idInventarioLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
+            this.nombreSucursalTextBox = new System.Windows.Forms.TextBox();
+            this.ubicacionTextBox = new System.Windows.Forms.TextBox();
+            this.sucursalesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idSucursalLabel1 = new System.Windows.Forms.Label();
+            nombreSucursalLabel = new System.Windows.Forms.Label();
+            ubicacionLabel = new System.Windows.Forms.Label();
+            idSucursalLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.sucursalesBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // idInventarioLabel
-            // 
-            idInventarioLabel.AutoSize = true;
-            idInventarioLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idInventarioLabel.ForeColor = System.Drawing.Color.DimGray;
-            idInventarioLabel.Location = new System.Drawing.Point(129, 26);
-            idInventarioLabel.Name = "idInventarioLabel";
-            idInventarioLabel.Size = new System.Drawing.Size(28, 19);
-            idInventarioLabel.TabIndex = 33;
-            idInventarioLabel.Text = "Id:";
             // 
             // btnHabEdi
             // 
@@ -61,10 +54,10 @@
             this.btnHabEdi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHabEdi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHabEdi.ForeColor = System.Drawing.Color.White;
-            this.btnHabEdi.Location = new System.Drawing.Point(184, 139);
+            this.btnHabEdi.Location = new System.Drawing.Point(182, 168);
             this.btnHabEdi.Name = "btnHabEdi";
             this.btnHabEdi.Size = new System.Drawing.Size(149, 49);
-            this.btnHabEdi.TabIndex = 26;
+            this.btnHabEdi.TabIndex = 31;
             this.btnHabEdi.Text = "Habiliar Edicion";
             this.btnHabEdi.UseVisualStyleBackColor = false;
             this.btnHabEdi.Click += new System.EventHandler(this.btnHabEdi_Click);
@@ -76,10 +69,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(339, 139);
+            this.btnEliminar.Location = new System.Drawing.Point(337, 168);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(149, 49);
-            this.btnEliminar.TabIndex = 27;
+            this.btnEliminar.TabIndex = 32;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -91,10 +84,10 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(29, 139);
+            this.btnModificar.Location = new System.Drawing.Point(27, 168);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(149, 49);
-            this.btnModificar.TabIndex = 24;
+            this.btnModificar.TabIndex = 29;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -106,10 +99,10 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(339, 139);
+            this.btnGuardar.Location = new System.Drawing.Point(337, 168);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(149, 49);
-            this.btnGuardar.TabIndex = 28;
+            this.btnGuardar.TabIndex = 33;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -121,69 +114,96 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(29, 139);
+            this.btnNuevo.Location = new System.Drawing.Point(27, 168);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(149, 49);
-            this.btnNuevo.TabIndex = 25;
+            this.btnNuevo.TabIndex = 30;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // idCategoriaLabel1
+            // nombreSucursalLabel
             // 
-            this.idCategoriaLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriasBindingSource, "idCategoria", true));
-            this.idCategoriaLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idCategoriaLabel1.Location = new System.Drawing.Point(163, 25);
-            this.idCategoriaLabel1.Name = "idCategoriaLabel1";
-            this.idCategoriaLabel1.Size = new System.Drawing.Size(100, 23);
-            this.idCategoriaLabel1.TabIndex = 30;
-            this.idCategoriaLabel1.Text = "label1";
+            nombreSucursalLabel.AutoSize = true;
+            nombreSucursalLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreSucursalLabel.Location = new System.Drawing.Point(46, 66);
+            nombreSucursalLabel.Name = "nombreSucursalLabel";
+            nombreSucursalLabel.Size = new System.Drawing.Size(168, 22);
+            nombreSucursalLabel.TabIndex = 36;
+            nombreSucursalLabel.Text = "Nombre Sucursal:";
             // 
-            // nombreCategoriaTextBox
+            // nombreSucursalTextBox
             // 
-            this.nombreCategoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriasBindingSource, "nombreCategoria", true));
-            this.nombreCategoriaTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreCategoriaTextBox.Location = new System.Drawing.Point(167, 53);
-            this.nombreCategoriaTextBox.Name = "nombreCategoriaTextBox";
-            this.nombreCategoriaTextBox.Size = new System.Drawing.Size(321, 27);
-            this.nombreCategoriaTextBox.TabIndex = 32;
-            this.nombreCategoriaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreCategoriaTextBox_KeyPress);
+            this.nombreSucursalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sucursalesBindingSource, "nombreSucursal", true));
+            this.nombreSucursalTextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreSucursalTextBox.Location = new System.Drawing.Point(218, 63);
+            this.nombreSucursalTextBox.Name = "nombreSucursalTextBox";
+            this.nombreSucursalTextBox.Size = new System.Drawing.Size(253, 31);
+            this.nombreSucursalTextBox.TabIndex = 37;
             // 
-            // label2
+            // ubicacionLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(2, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 19);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Nombre Categoria:";
+            ubicacionLabel.AutoSize = true;
+            ubicacionLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ubicacionLabel.Location = new System.Drawing.Point(105, 103);
+            ubicacionLabel.Name = "ubicacionLabel";
+            ubicacionLabel.Size = new System.Drawing.Size(107, 22);
+            ubicacionLabel.TabIndex = 38;
+            ubicacionLabel.Text = "Ubicacion:";
             // 
-            // categoriasBindingSource
+            // ubicacionTextBox
             // 
-            this.categoriasBindingSource.DataSource = typeof(MiniSuper.Entidades.Categorias);
+            this.ubicacionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sucursalesBindingSource, "ubicacion", true));
+            this.ubicacionTextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ubicacionTextBox.Location = new System.Drawing.Point(218, 100);
+            this.ubicacionTextBox.Name = "ubicacionTextBox";
+            this.ubicacionTextBox.Size = new System.Drawing.Size(253, 31);
+            this.ubicacionTextBox.TabIndex = 39;
             // 
-            // CRUD_Categorias
+            // sucursalesBindingSource
+            // 
+            this.sucursalesBindingSource.DataSource = typeof(MiniSuper.Entidades.Sucursales);
+            // 
+            // idSucursalLabel
+            // 
+            idSucursalLabel.AutoSize = true;
+            idSucursalLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idSucursalLabel.Location = new System.Drawing.Point(178, 37);
+            idSucursalLabel.Name = "idSucursalLabel";
+            idSucursalLabel.Size = new System.Drawing.Size(34, 22);
+            idSucursalLabel.TabIndex = 39;
+            idSucursalLabel.Text = "ID:";
+            // 
+            // idSucursalLabel1
+            // 
+            this.idSucursalLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sucursalesBindingSource, "idSucursal", true));
+            this.idSucursalLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idSucursalLabel1.Location = new System.Drawing.Point(218, 37);
+            this.idSucursalLabel1.Name = "idSucursalLabel1";
+            this.idSucursalLabel1.Size = new System.Drawing.Size(100, 23);
+            this.idSucursalLabel1.TabIndex = 40;
+            this.idSucursalLabel1.Text = "label1";
+            // 
+            // CRUD_Sucursales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(525, 203);
-            this.Controls.Add(idInventarioLabel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.idCategoriaLabel1);
-            this.Controls.Add(this.nombreCategoriaTextBox);
+            this.ClientSize = new System.Drawing.Size(533, 245);
+            this.Controls.Add(idSucursalLabel);
+            this.Controls.Add(this.idSucursalLabel1);
+            this.Controls.Add(nombreSucursalLabel);
+            this.Controls.Add(this.nombreSucursalTextBox);
+            this.Controls.Add(ubicacionLabel);
+            this.Controls.Add(this.ubicacionTextBox);
             this.Controls.Add(this.btnHabEdi);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnNuevo);
-            this.Name = "CRUD_Categorias";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CRUD_Categorias";
-            this.Load += new System.EventHandler(this.CRUD_Categorias_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
+            this.Name = "CRUD_Sucursales";
+            this.Load += new System.EventHandler(this.CRUD_Sucursales_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.sucursalesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,9 +216,9 @@
         public System.Windows.Forms.Button btnModificar;
         public System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.BindingSource categoriasBindingSource;
-        private System.Windows.Forms.Label idCategoriaLabel1;
-        private System.Windows.Forms.TextBox nombreCategoriaTextBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.BindingSource sucursalesBindingSource;
+        private System.Windows.Forms.TextBox nombreSucursalTextBox;
+        private System.Windows.Forms.TextBox ubicacionTextBox;
+        private System.Windows.Forms.Label idSucursalLabel1;
     }
 }

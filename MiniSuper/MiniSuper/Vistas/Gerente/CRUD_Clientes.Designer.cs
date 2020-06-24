@@ -32,7 +32,6 @@
             System.Windows.Forms.Label idInventarioLabel;
             this.label2 = new System.Windows.Forms.Label();
             this.apellidosClienteTextBox = new System.Windows.Forms.TextBox();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.duiTextBox = new System.Windows.Forms.TextBox();
             this.idClienteLabel1 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             idInventarioLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -83,10 +83,7 @@
             this.apellidosClienteTextBox.Name = "apellidosClienteTextBox";
             this.apellidosClienteTextBox.Size = new System.Drawing.Size(303, 27);
             this.apellidosClienteTextBox.TabIndex = 5;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataSource = typeof(MiniSuper.Entidades.Clientes);
+            this.apellidosClienteTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.apellidosClienteTextBox_KeyPress);
             // 
             // direccionTextBox
             // 
@@ -105,6 +102,7 @@
             this.duiTextBox.Name = "duiTextBox";
             this.duiTextBox.Size = new System.Drawing.Size(303, 27);
             this.duiTextBox.TabIndex = 11;
+            this.duiTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.duiTextBox_KeyPress);
             // 
             // idClienteLabel1
             // 
@@ -124,6 +122,7 @@
             this.nitTextBox.Name = "nitTextBox";
             this.nitTextBox.Size = new System.Drawing.Size(303, 27);
             this.nitTextBox.TabIndex = 13;
+            this.nitTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nitTextBox_KeyPress);
             // 
             // nombreClienteTextBox
             // 
@@ -133,6 +132,7 @@
             this.nombreClienteTextBox.Name = "nombreClienteTextBox";
             this.nombreClienteTextBox.Size = new System.Drawing.Size(303, 27);
             this.nombreClienteTextBox.TabIndex = 3;
+            this.nombreClienteTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreClienteTextBox_KeyPress);
             // 
             // telefonoTextBox
             // 
@@ -142,6 +142,7 @@
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(303, 27);
             this.telefonoTextBox.TabIndex = 9;
+            this.telefonoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telefonoTextBox_KeyPress);
             // 
             // label1
             // 
@@ -272,6 +273,10 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataSource = typeof(MiniSuper.Entidades.Clientes);
             // 
             // CRUD_Clientes
             // 

@@ -65,13 +65,16 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            CInventario cEliminar = new CInventario();
-            inventarioBindingSource.EndEdit();
-            cEliminar.EliminarInventario((Inventario)inventarioBindingSource.Current);
-            MessageBox.Show("¡Producto eliminado con éxito!");
-            Limpiar();
-            this.Close();
-         
+            DialogResult result = MessageBox.Show("¿Estás seguro que quieres eliminar?", "Autorización", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                CInventario cEliminar = new CInventario();
+                inventarioBindingSource.EndEdit();
+                cEliminar.EliminarInventario((Inventario)inventarioBindingSource.Current);
+                MessageBox.Show("¡Producto eliminado con éxito!");
+                Limpiar();
+                this.Close();
+            }
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -83,11 +86,16 @@ namespace MiniSuper.Vistas.Gerente
         {
             Calculo();
 
-            CInventario pEditar = new CInventario();
-            inventarioBindingSource.EndEdit();
-            pEditar.ActualizarInventario((Inventario)inventarioBindingSource.Current);
-            MessageBox.Show("¡Producto editado con éxito!");
-            Limpiar();
+            DialogResult result = MessageBox.Show("¿Estás seguro que quieres modificar?", "Autorización", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                CInventario pEditar = new CInventario();
+                inventarioBindingSource.EndEdit();
+                pEditar.ActualizarInventario((Inventario)inventarioBindingSource.Current);
+                MessageBox.Show("¡Producto editado con éxito!");
+                Limpiar();
+            }
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -107,12 +115,25 @@ namespace MiniSuper.Vistas.Gerente
         {
             Calculo();
 
-            CInventario pnuevo = new CInventario();
-            inventarioBindingSource.EndEdit();
-            pnuevo.RegistrarInventario((Inventario)inventarioBindingSource.Current);
-            MessageBox.Show("¡Producto registrado con éxito!");
-            this.Close();
-           
+            try
+            {
+                if (txtNombreProd.Text.Equals("") || txtExistencias.Text.Equals("") || txtCosto.Text.Equals("") || txtPrecioVenta.Text.Equals(""))
+                {
+                    MessageBox.Show("¡Rellene todos los campos!", "Rellenar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    CInventario pnuevo = new CInventario();
+                    inventarioBindingSource.EndEdit();
+                    pnuevo.RegistrarInventario((Inventario)inventarioBindingSource.Current);
+                    MessageBox.Show("¡Producto registrado con éxito!");
+                    this.Close();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("¡Verifique las listas despleagables!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            } 
         }
 
         private void txtCosto_TextChanged(object sender, EventArgs e)
@@ -165,6 +186,50 @@ namespace MiniSuper.Vistas.Gerente
             txtExistencias.Text = "";
             txtCosto.Text = "";
             txtPrecioVenta.Text = "";
+        }
+
+        private void txtExistencias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCosto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

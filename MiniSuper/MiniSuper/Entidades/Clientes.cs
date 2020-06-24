@@ -15,5 +15,6 @@ namespace MiniSuper.Entidades
         public String telefono { get; set; }
         public String dui { get; set; }
         public String nit { get; set; }
+        public String estado { get; set; }
     }
 }

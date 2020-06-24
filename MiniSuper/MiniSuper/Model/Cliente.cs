@@ -27,6 +27,7 @@ namespace MiniSuper.Model
         public string telefono { get; set; }
         public string dui { get; set; }
         public string nit { get; set; }
+        public string estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Ventas { get; set; }

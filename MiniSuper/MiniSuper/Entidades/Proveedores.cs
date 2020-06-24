@@ -12,6 +12,7 @@ namespace MiniSuper.Entidades
         public String nombreProveedor { get; set; }
         public String direccion { get; set; }
         public String telefono { get; set; }
+        public String estado { get; set; }
 
     }
 }

@@ -221,6 +221,7 @@
             this.txtCosto.Size = new System.Drawing.Size(102, 27);
             this.txtCosto.TabIndex = 14;
             this.txtCosto.TextChanged += new System.EventHandler(this.txtCosto_TextChanged);
+            this.txtCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCosto_KeyPress);
             // 
             // txtExistencias
             // 
@@ -230,6 +231,7 @@
             this.txtExistencias.Name = "txtExistencias";
             this.txtExistencias.Size = new System.Drawing.Size(203, 27);
             this.txtExistencias.TabIndex = 12;
+            this.txtExistencias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExistencias_KeyPress);
             // 
             // cmbCategoria
             // 

@@ -15,5 +15,6 @@ namespace MiniSuper.Entidades
         public int existencias { get; set; }
         public Double costo { get; set; }
         public Double precioVenta { get; set; }
+        public String estado { get; set; }
     }
 }

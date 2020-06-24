@@ -22,6 +22,7 @@ namespace MiniSuper.Model
     
         public int idCategoria { get; set; }
         public string nombreCategoria { get; set; }
+        public string estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Inventario> Inventarios { get; set; }

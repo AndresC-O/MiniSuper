@@ -44,21 +44,36 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            CCategoria nCateg = new CCategoria();
-            categoriasBindingSource.EndEdit();
-            nCateg.ActualizarCategoria((Categorias)categoriasBindingSource.Current);
-            MessageBox.Show("¡Categoria editado con éxito!");
-            Limpiar();
+            if (nombreCategoriaTextBox.Text.Equals(""))
+            {
+                MessageBox.Show("¡Rellene todos los campos!", "Rellenar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("¿Estás seguro que quieres modificar?", "Autorización", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    CCategoria nCateg = new CCategoria();
+                    categoriasBindingSource.EndEdit();
+                    nCateg.ActualizarCategoria((Categorias)categoriasBindingSource.Current);
+                    MessageBox.Show("¡Categoria editado con éxito!");
+                    Limpiar();
+                }
+            }   
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            CCategoria cEliminar = new CCategoria();
-            categoriasBindingSource.EndEdit();
-            cEliminar.EliminarCategoria((Categorias)categoriasBindingSource.Current);
-            MessageBox.Show("¡Categoria eliminado con éxito!");
-            Limpiar();
-            this.Close();
+            DialogResult result = MessageBox.Show("¿Estás seguro que quieres eliminar?", "Autorización", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                CCategoria cEliminar = new CCategoria();
+                categoriasBindingSource.EndEdit();
+                cEliminar.EliminarCategoria((Categorias)categoriasBindingSource.Current);
+                MessageBox.Show("¡Categoria eliminado con éxito!");
+                Limpiar();
+                this.Close();
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -71,11 +86,42 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            CCategoria cnuevo = new CCategoria();
-            categoriasBindingSource.EndEdit();
-            cnuevo.RegistrarCategoria((Categorias)categoriasBindingSource.Current);
-            MessageBox.Show("¡Categoria registrado con éxito!");
-            this.Close();
+            if (nombreCategoriaTextBox.Text.Equals(""))
+            {
+                MessageBox.Show("¡Rellene todos los campos!", "Rellenar", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
+            else
+            {
+                CCategoria cnuevo = new CCategoria();
+                categoriasBindingSource.EndEdit();
+                cnuevo.RegistrarCategoria((Categorias)categoriasBindingSource.Current);
+                MessageBox.Show("¡Categoria registrado con éxito!");
+                this.Close();
+            }
+        }
+
+        private void nombreCategoriaTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

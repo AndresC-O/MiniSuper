@@ -29,6 +29,7 @@ namespace MiniSuper.Model
         public string dui { get; set; }
         public string usuario { get; set; }
         public string contrasenia { get; set; }
+        public string estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compra> Compras { get; set; }

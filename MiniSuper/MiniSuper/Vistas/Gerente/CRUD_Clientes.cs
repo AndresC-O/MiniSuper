@@ -72,30 +72,157 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            CClientes cnuevo = new CClientes();
-            clientesBindingSource.EndEdit();
-            cnuevo.RegistrarCliente((Clientes)clientesBindingSource.Current);
-            MessageBox.Show("¡Cliente registrado con éxito!");
-            this.Close();
+            if(nombreClienteTextBox.Text.Equals("") || apellidosClienteTextBox.Text.Equals("")|| direccionTextBox.Text.Equals("") || telefonoTextBox.Text.Equals("") || duiTextBox.Text.Equals("") || nitTextBox.Text.Equals(""))
+            {
+                MessageBox.Show("¡Rellene todos los campos!", "Rellenar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                CClientes cnuevo = new CClientes();
+                clientesBindingSource.EndEdit();
+                cnuevo.RegistrarCliente((Clientes)clientesBindingSource.Current);
+                MessageBox.Show("¡Cliente registrado con éxito!");
+                this.Close();
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            CClientes nCliente = new CClientes();
-            clientesBindingSource.EndEdit();
-            nCliente.ActualizarCliente((Clientes)clientesBindingSource.Current);
-            MessageBox.Show("¡Cliente editado con éxito!");
-            Limpiar();
+            DialogResult result = MessageBox.Show("¿Estás seguro que quieres modificar?", "Autorización", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                CClientes nCliente = new CClientes();
+                clientesBindingSource.EndEdit();
+                nCliente.ActualizarCliente((Clientes)clientesBindingSource.Current);
+                MessageBox.Show("¡Cliente editado con éxito!");
+                Limpiar();
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            CClientes cEliminar = new CClientes();
-            clientesBindingSource.EndEdit();
-            cEliminar.EliminarCliente((Clientes)clientesBindingSource.Current);
-            MessageBox.Show("¡Cliente eliminado con éxito!");
-            Limpiar();
-            this.Close();
+            DialogResult result = MessageBox.Show("¿Estás seguro que quieres eliminar?", "Autorización", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                CClientes cEliminar = new CClientes();
+                clientesBindingSource.EndEdit();
+                cEliminar.EliminarCliente((Clientes)clientesBindingSource.Current);
+                MessageBox.Show("¡Cliente eliminado con éxito!");
+                Limpiar();
+                this.Close();
+            }
+        }
+
+        private void nombreClienteTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void apellidosClienteTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void telefonoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void duiTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void nitTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

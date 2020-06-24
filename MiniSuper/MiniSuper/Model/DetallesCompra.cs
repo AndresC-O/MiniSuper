@@ -19,6 +19,7 @@ namespace MiniSuper.Model
         public int idInventario { get; set; }
         public Nullable<int> cantidad { get; set; }
         public Nullable<decimal> precio { get; set; }
+        public Nullable<decimal> total { get; set; }
     
         public virtual Compra Compra { get; set; }
         public virtual Inventario Inventario { get; set; }

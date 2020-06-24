@@ -172,7 +172,7 @@ namespace MiniSuper.Vistas.Gerente
 
         private void pbSucursal_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormHijo(new ListadoSucursales());
         }
 
         private void lblSucursal_Click(object sender, EventArgs e)
@@ -217,7 +217,7 @@ namespace MiniSuper.Vistas.Gerente
 
         private void pbDocumentos_Click(object sender, EventArgs e)
         {
-
+            AbrirFormHijo(new ListadoDocumentos());
         }
 
         private void pbComprar_Click(object sender, EventArgs e)

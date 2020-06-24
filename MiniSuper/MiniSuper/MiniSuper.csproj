@@ -181,6 +181,12 @@
     <Compile Include="Vistas\Gerente\CRUD_Clientes.Designer.cs">
       <DependentUpon>CRUD_Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Gerente\CRUD_Documentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Gerente\CRUD_Documentos.Designer.cs">
+      <DependentUpon>CRUD_Documentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Gerente\CRUD_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,12 @@
     </Compile>
     <Compile Include="Vistas\Gerente\CRUD_Proveedores.Designer.cs">
       <DependentUpon>CRUD_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Gerente\CRUD_Sucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Gerente\CRUD_Sucursales.Designer.cs">
+      <DependentUpon>CRUD_Sucursales.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Gerente\frmBuscarProducto.cs">
       <SubType>Form</SubType>
@@ -229,6 +241,12 @@
     <Compile Include="Vistas\Gerente\ListadoClientes.Designer.cs">
       <DependentUpon>ListadoClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Gerente\ListadoDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Gerente\ListadoDocumentos.Designer.cs">
+      <DependentUpon>ListadoDocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Gerente\ListadoEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +264,12 @@
     </Compile>
     <Compile Include="Vistas\Gerente\ListadoProveedores.Designer.cs">
       <DependentUpon>ListadoProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Gerente\ListadoSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Gerente\ListadoSucursales.Designer.cs">
+      <DependentUpon>ListadoSucursales.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Gerente\MenuBotones.cs">
       <SubType>Form</SubType>
@@ -275,6 +299,9 @@
     <EmbeddedResource Include="Vistas\Gerente\CRUD_Clientes.resx">
       <DependentUpon>CRUD_Clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Gerente\CRUD_Documentos.resx">
+      <DependentUpon>CRUD_Documentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\CRUD_Empleados.resx">
       <DependentUpon>CRUD_Empleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\CRUD_Proveedores.resx">
       <DependentUpon>CRUD_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Gerente\CRUD_Sucursales.resx">
+      <DependentUpon>CRUD_Sucursales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\frmBuscarProducto.resx">
       <DependentUpon>frmBuscarProducto.cs</DependentUpon>
@@ -299,6 +329,9 @@
     <EmbeddedResource Include="Vistas\Gerente\ListadoClientes.resx">
       <DependentUpon>ListadoClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Gerente\ListadoDocumentos.resx">
+      <DependentUpon>ListadoDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\ListadoEmpleados.resx">
       <DependentUpon>ListadoEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\ListadoProveedores.resx">
       <DependentUpon>ListadoProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Gerente\ListadoSucursales.resx">
+      <DependentUpon>ListadoSucursales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gerente\MenuBotones.resx">
       <DependentUpon>MenuBotones.cs</DependentUpon>

@@ -16,5 +16,6 @@ namespace MiniSuper.Entidades
         public String dui { get; set; }
         public String usuario { get; set; }
         public String contrasenia { get; set; }
+        public String estado { get; set; }
     }
 }

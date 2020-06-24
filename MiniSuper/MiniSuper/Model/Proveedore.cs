@@ -25,6 +25,7 @@ namespace MiniSuper.Model
         public string nombreProveedor { get; set; }
         public string direccion { get; set; }
         public string telefono { get; set; }
+        public string estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compra> Compras { get; set; }

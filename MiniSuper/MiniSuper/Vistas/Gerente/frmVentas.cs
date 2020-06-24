@@ -168,22 +168,30 @@ namespace MiniSuper.Vistas.Gerente
             }
             else
             {
-                ventasBindingSource.EndEdit();
-                Ventas ven = new Ventas();
-                ven = ((Ventas)ventasBindingSource.Current);
-                CVentas cVentas = new CVentas();
-                cVentas.RegistrarVenta(ven);
-
-                CDetallesVenta cDetalles = new CDetallesVenta();
-                cDetalles.GuardarMaestroDetalle(detalles);
-
-                MessageBox.Show("¡Ventas Realizada con éxito!", "Compra", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                DialogResult result = MessageBox.Show("¿DESEA EMITIR UNA FACTURA?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                if(result == DialogResult.OK)
+                try
                 {
-                    Process.Start(@"http://cordova/Reports/browse/InformesMinisuper");
+                    ventasBindingSource.EndEdit();
+                    Ventas ven = new Ventas();
+                    ven = ((Ventas)ventasBindingSource.Current);
+                    CVentas cVentas = new CVentas();
+                    cVentas.RegistrarVenta(ven);
+
+                    CDetallesVenta cDetalles = new CDetallesVenta();
+                    cDetalles.GuardarMaestroDetalle(detalles);
+
+                    MessageBox.Show("¡Ventas Realizada con éxito!", "Compra", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    DialogResult result = MessageBox.Show("¿DESEA EMITIR UNA FACTURA?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    if (result == DialogResult.OK)
+                    {
+                        Process.Start(@"http://cordova/Reports/browse/InformesMinisuper");
+                    }
                 }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("ERROR 404");
+                }
+                
             }
 
             detallesVentaDataGridView.Rows.Clear();

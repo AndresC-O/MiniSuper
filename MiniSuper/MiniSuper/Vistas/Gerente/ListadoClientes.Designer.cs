@@ -155,7 +155,7 @@
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(190, 67);
             this.btnNuevo.TabIndex = 12;
-            this.btnNuevo.Text = "Nuevo Empleado";
+            this.btnNuevo.Text = "Nuevo Cliente";
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 

@@ -41,11 +41,12 @@ namespace MiniSuper.Vistas
             }
         }
 
+        public static frmVentas v = new frmVentas();
         private void AccesoCajero_Load(object sender, EventArgs e)
         {
             lblUsuario.Text = lo.txtUsuario.Text;
             lblHora.Text = DateTime.Now.ToShortTimeString();
-            frmVentas v = new frmVentas();
+            
             v.MdiParent = this;
             v.Dock = DockStyle.Fill;
             v.Show();

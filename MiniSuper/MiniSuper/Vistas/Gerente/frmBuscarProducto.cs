@@ -30,7 +30,11 @@ namespace MiniSuper.Vistas.Gerente
             MenuBotones.ventas.idInventarioComboBox.SelectedValue = idPrdConv;
             MenuBotones.ventas.precioTextBox.Text = precio;
 
+            AccesoCajero.v.idInventarioComboBox.SelectedValue = idPrdConv;
+            AccesoCajero.v.precioTextBox.Text = precio;
+
             MenuBotones.ventas.cantidadNumericUpDown.Focus();
+            AccesoCajero.v.cantidadNumericUpDown.Focus();
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -39,19 +43,8 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (inventarioDataGridView.Rows.Count == 0)
-            {
-                MessageBox.Show("¡Aún no hay categorias para modificar/eliminar!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                Inventario inv = new Inventario();
-                inv = (Inventario)inventarioBindingSource.Current;
-
-                frmVentas crud = new frmVentas(inv);
-                this.Close();
-                
-            }
+            Envio();
+            this.Close();
         }
 
         private void frmBuscarProducto_Load(object sender, EventArgs e)

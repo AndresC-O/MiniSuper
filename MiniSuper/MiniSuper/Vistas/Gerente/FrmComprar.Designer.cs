@@ -406,10 +406,10 @@
             // 
             this.totalCompraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.comprasBindingSource, "TotalCompra", true));
             this.totalCompraTextBox.Enabled = false;
-            this.totalCompraTextBox.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalCompraTextBox.Location = new System.Drawing.Point(259, 659);
+            this.totalCompraTextBox.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCompraTextBox.Location = new System.Drawing.Point(259, 651);
             this.totalCompraTextBox.Name = "totalCompraTextBox";
-            this.totalCompraTextBox.Size = new System.Drawing.Size(141, 31);
+            this.totalCompraTextBox.Size = new System.Drawing.Size(141, 41);
             this.totalCompraTextBox.TabIndex = 50;
             // 
             // lblRetornoID

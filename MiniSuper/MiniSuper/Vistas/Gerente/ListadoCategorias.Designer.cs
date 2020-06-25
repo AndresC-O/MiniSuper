@@ -185,9 +185,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
         private System.Windows.Forms.DataGridView categoriasDataGridView;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnEditarEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        public System.Windows.Forms.Button btnNuevo;
+        public System.Windows.Forms.Button btnEditarEliminar;
     }
 }

@@ -10,12 +10,16 @@ using System.Windows.Forms;
 using MiniSuper.Controladores;
 using MiniSuper.Entidades;
 using MiniSuper.Model;
+using MiniSuper.Vistas;
 using MiniSuper.Vistas.Gerente;
 
 namespace MiniSuper
 {
     public partial class Loguin : Form
     {
+        frmVentas ven = new frmVentas();
+        public static AccesoGerente manager = new AccesoGerente();
+
         public Loguin()
         {
             InitializeComponent();
@@ -43,6 +47,8 @@ namespace MiniSuper
             {
                 using (MiniSuperEntities1 bd = new MiniSuperEntities1())
                 {
+                    Empleado emp = new Empleado();
+
                     var lista = from em in bd.Empleados
                                 where em.contrasenia == txtContra.Text
                                 && em.usuario == txtUsuario.Text && em.estado == "Activo"
@@ -54,22 +60,28 @@ namespace MiniSuper
 
                     if (lista.Count() > 0)
                     {
-                        foreach (var iterar in lista)
-                        {
-                            if (iterar.cargo == 1)
-                            {
-                                AccesoGerente manager = new AccesoGerente();
+                        string usuario = txtUsuario.Text;
+
+                        emp = bd.Empleados.Where(Buscar => Buscar.usuario == usuario).First();
+                        int cargo = emp.cargo;
+
+                        
+                            if (cargo == 1)
+                            {                                
                                 manager.Show();
                                 manager.lblUsuario.Text = txtUsuario.Text;
+
                                 this.Hide();
                                 Limpiar();
                             }
-                            else if (iterar.cargo == 2)
+                            else if (cargo == 2)
                             {
-                                MessageBox.Show("Funciona, su cargo es: Cajero");
-                                Limpiar();
+                            AccesoCajero acj = new AccesoCajero();
+                            acj.Show();
+                            
+                                
                             }
-                        }
+                        
                     }
                     else
                     {

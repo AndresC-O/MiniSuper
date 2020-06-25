@@ -108,7 +108,7 @@ namespace MiniSuper.Vistas.Gerente
         public static frmVentas ventas = new frmVentas();
         private void pbVenta_Click(object sender, EventArgs e)
         {
-            //AbrirFormHijo(new frmVentas());
+            
             flpPanelScroll.AutoScroll = false;
             PanelContenedor.Visible = true;
             if (this.PanelContenedor.Controls.Count > 0)
@@ -223,6 +223,11 @@ namespace MiniSuper.Vistas.Gerente
         private void pbComprar_Click(object sender, EventArgs e)
         {
             AbrirFormHijo(new FrmComprar());
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

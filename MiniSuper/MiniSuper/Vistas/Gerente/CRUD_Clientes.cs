@@ -72,7 +72,8 @@ namespace MiniSuper.Vistas.Gerente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(nombreClienteTextBox.Text.Equals("") || apellidosClienteTextBox.Text.Equals("")|| direccionTextBox.Text.Equals("") || telefonoTextBox.Text.Equals("") || duiTextBox.Text.Equals("") || nitTextBox.Text.Equals(""))
+            if(nombreClienteTextBox.Text.Equals("") || apellidosClienteTextBox.Text.Equals("")|| direccionTextBox.Text.Equals("") ||
+                telefonoTextBox.Text.Equals("") || duiTextBox.Text.Equals("") || nitTextBox.Text.Equals(""))
             {
                 MessageBox.Show("¡Rellene todos los campos!", "Rellenar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

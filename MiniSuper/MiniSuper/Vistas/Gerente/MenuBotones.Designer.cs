@@ -100,6 +100,7 @@
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1054, 1800);
             this.PanelContenedor.TabIndex = 8;
+            this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
             // 
             // pnlBotonoes
             // 
@@ -457,6 +458,7 @@
 
         #endregion
         private System.Windows.Forms.Panel pnlBotonoes;
+        private System.Windows.Forms.Panel pnCliente;
         private System.Windows.Forms.PictureBox pbCliente;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Panel pnProducto;
@@ -485,6 +487,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pbComprar;
-        public System.Windows.Forms.Panel pnCliente;
     }
 }
